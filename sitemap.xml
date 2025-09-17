@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/about</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/about" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/services</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/services" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/gallery</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/gallery" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/testimonials</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/testimonials" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/contact</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/contact" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog" />
+  </url>
+
+  <!-- مقالات المدونة القديمة -->
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-polyps</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-polyps" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-fluid-ear</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-fluid-ear" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-tinnitus</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-tinnitus" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-tympanoplasty</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-tympanoplasty" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-tonsil</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-tonsil" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-aso</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-aso" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-smell</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-smell" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-migraine</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-migraine" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/blog-snoring</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/blog-snoring" />
+  </url>
+
+  <!-- صفحات أخرى -->
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/q&a</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/q&a" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/role</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="canonical" href="https://ent.drmsharabi.com/role" />
+  </url>
+
+</urlset>
