@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة غير موجودة - عيادة د. مختار الشرعبي</title>
+    <title>الصفحة غير موجودة - الموقع القديم</title>
     <meta name="robots" content="noindex, follow">
 
     <!-- تحويل تلقائي إلى الموقع الجديد بعد ثانيتين -->
@@ -29,6 +29,15 @@
         p { font-size: 1.2rem; margin-bottom: 30px; }
         a { color: #00796b; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
+
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 25px; }
+        .btn { display: inline-flex; align-items: center; background: #004d40; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-size: 1rem; font-weight: bold; transition: all 0.3s; }
+        .btn:hover { background: #00796b; }
+
+        .search-box { max-width: 500px; margin: 0 auto; }
+        .search-form { display: flex; border: 2px solid #b2dfdb; border-radius: 50px; overflow: hidden; }
+        .search-input { flex: 1; padding: 12px 20px; border: none; font-size: 1rem; outline: none; }
+        .search-button { background: #00796b; color: white; border: none; padding: 0 20px; cursor: pointer; font-size: 1rem; }
     </style>
 </head>
 <body>
@@ -39,6 +48,19 @@
             سيتم تحويلك تلقائيًا إلى صفحة 404 في الموقع الجديد خلال ثانيتين.<br>
             إذا لم يتم التحويل، <a href="https://ent.drmsharabi.com/404.html">اضغط هنا للانتقال للموقع الجديد</a>.
         </p>
+
+        <div class="btn-group">
+            <a href="https://ent.drmsharabi.com/" class="btn"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+            <a href="https://ent.drmsharabi.com/contact" class="btn"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+        </div>
+
+        <div class="search-box">
+            <form class="search-form" action="https://www.google.com/search" method="get">
+                <input type="text" name="q" class="search-input" placeholder="ابحث في الموقع الجديد...">
+                <input type="hidden" name="sitesearch" value="ent.drmsharabi.com">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
