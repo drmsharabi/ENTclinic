@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Auto-generated sitemap (lastmod auto-updated on build) -->
+
+  <!-- الصفحات الأساسية -->
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/about</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/about" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/services</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/services" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/contact</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/contact" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/gallery</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/gallery" />
+  </url>
+
+  <url>
+    <loc>https://drmsharabi.github.io/ENTclinic/testimonials</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ent.drmsharabi.com/testimonials" />
+  </url>
+
+</urlset>
