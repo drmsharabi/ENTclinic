@@ -1,2 +1,1 @@
-# تحويل كل الزوار من drmsharabi.github.io/ENTclinic إلى الموقع الجديد
-* https://ent.drmsharabi.com/:splat 301!
+/ENTclinic/*  https://ent.drmsharabi.com/:splat  301
