@@ -2,7 +2,19 @@
 <html>
   <head>
     <script>
-      var newUrl = 'https://ent.drmsharabi.com' + window.location.pathname;
+      // 1. نحصل على المسار الكامل (مثلاً: /ENTclinic/about)
+      var fullPath = window.location.pathname;
+      
+      // 2. نحدد النص المراد حذفه وهو اسم المستودع القديم
+      var oldRepo = '/ENTclinic';
+      
+      // 3. نحذف هذا النص من بداية المسار
+      var newPath = fullPath.replace(oldRepo, '');
+      
+      // 4. ننشئ الرابط الجديد ونضيف له المسار الجديد
+      var newUrl = 'https://ent.drmsharabi.com' + newPath;
+      
+      // 5. نقوم بعملية إعادة التوجيه
       window.location.replace(newUrl);
     </script>
   </head>
