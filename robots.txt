@@ -1,6 +1,4 @@
-# السماح لجميع محركات البحث بفهرسة جميع الصفحات
 User-agent: *
 Allow: /
 
-# تحديد موقع خريطة الموقع (Sitemap)
 Sitemap: https://drmsharabi.com/sitemap.xml
