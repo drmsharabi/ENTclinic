@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      var fullPath = window.location.pathname;
-      var oldRepo = '/ENTclinic';
-      var newPath = fullPath.replace(oldRepo, '');
-      var newUrl = 'https://drmokhtarent.org/' + newPath;
-      window.location.replace(newUrl);
-    </script>
-  </head>
-  <body>
-    <p>جاري التحويل إلى الموقع الجديد...</p>
-  </body>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+
+<script>
+const path = window.location.pathname;
+window.location.replace(
+  "https://drmokhtarent.org" + path
+);
+</script>
+
+</head>
+<body></body>
 </html>
