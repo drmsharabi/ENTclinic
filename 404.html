@@ -11,6 +11,8 @@
 
 <meta name="robots" content="noindex, follow">
 
+<meta name="theme-color" content="#001E8B">
+
 <link rel="canonical" href="https://drmokhtarent.org/404.html">
    <link rel="stylesheet" href="style.css">
 <link rel="preload"
@@ -47,7 +49,7 @@
       
       --text-color: #333;
       --green-color: #00C7A2;
-      
+      -
 
     
       --red-color: #BC0052;
@@ -72,7 +74,6 @@
          --border-color: #FFDE7A;
           --link-color: #0353B0;
             --border-y:#FFFA92;
-            
          
      }
 
@@ -94,7 +95,7 @@ body {
 }
    header {
       margin-bottom: 4px;
-      background: linear-gradient(to left, var(--primary-color), var(--accent-color));
+      background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
       border-bottom: 3px solid var(--green-color);
       color: #fff;
       padding: 20px;
@@ -180,11 +181,11 @@ body {
     }
     /* ---------- headings & text (موحدة) ---------- */
     h1 {
-      background-color: var(--tr);
+      background-color: #fff;
       border: 2px solid #fff;
-      color: white;
+      color: #C30056;
       text-align: center;
-      padding: 5px 15px;
+      padding: 0 15px;
       box-shadow: 0 0 6px #001925b3;
       border-radius: 15px;
       font-size: 15px;
@@ -195,10 +196,10 @@ body {
 
     @media (min-width: 750px) {
       h1 {
-        padding: 30px  !important;
+        padding: 0 !important;
         border: 7px solid #fff;
         border-radius: 10px;
-        font-size: 57px;
+        font-size: 47px;
         margin: 20px auto;
       }
     }
@@ -248,7 +249,6 @@ footer {
 
 @media (min-width: 750px) {
   footer {
-      margin-top: 150px;
     border-top: 12px solid #fff;
   
   }
@@ -287,18 +287,17 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 }
 
 .copyright-container {
-  background: var(--card-white);
+  background: var(--card-white), transparent);
   padding: 1px 15px;
   font-weight: 500;
-  font-size: 6px;
-  color: black;
+  font-size: 7px;
   margin-top: 10px;
  
 }
 
 @media (min-width: 750px) {
   .copyright-container {
-    font-size: 16px !important;
+    font-size: 19px !important;
     margin-bottom: 11px; padding: 6px 10px;
   }
 }
@@ -404,22 +403,20 @@ display:flex;
 gap:14px;
 justify-content:center;
 flex-wrap:wrap;
-
+margin-top:25px
 }
 
 .btn{
-    font-size: 12px;
 display:inline-flex;
 align-items:center;
 justify-content:center;
 padding:13px 24px;
 border-radius:50px;
-background:var(--primary-color);
+background:#001E8B;
 color:#fff;
 text-decoration:none;
 font-weight:700;
-transition:.3s;
-margin:20px auto;
+transition:.3s
 }
 
 .btn:hover{
@@ -428,7 +425,7 @@ transform:translateY(-2px)
 }
 
 .search-box{
-margin:90px 10px;
+margin-top:30px
 }
 
 .search-form{
@@ -436,13 +433,12 @@ display:flex;
 overflow:hidden;
 border-radius:50px;
 border:2px solid #cce7ff;
-background:white
+background:#fff
 }
 
 .search-input{
 flex:1;
-max-width: 85%;
-padding:4px 1px;
+padding:14px 18px;
 border:none;
 outline:none;
 font-size:1rem
@@ -452,15 +448,14 @@ font-size:1rem
 border:none;
 background:#001E8B;
 color:#fff;
-padding:0 12px;
+padding:0 22px;
 cursor:pointer;
-font-size:0.7rem
+font-size:1rem
 }
 
 .quick-links{
 margin-top:30px;
 display:flex;
-
 flex-wrap:wrap;
 justify-content:center;
 gap:10px
@@ -469,27 +464,19 @@ gap:10px
 
 .quick-links a{
 text-decoration:underline;
-color: var(--tertiary-color);
-background:#fff;
+color:#001E8B;
+background:#eef4ff;
 padding:8px 14px;
 border-radius:40px;
 font-size:.95rem;
 font-weight: 600;
-margin:20px auto
 }
 
 .quick-links a:hover{
 background:#dbe9ff
 }
 @media (min-width:750px){
-.btn-group{
-margin-top:95px
-}
-.quick-links a{
-    margin:30px 90px;
-     font-size:28px!important;
-     padding: 20px 50px!important;
-}
+
 body{
 padding:0;
 }
@@ -505,6 +492,12 @@ border-radius:32px;
 font-size:8rem;
 }
 
+h1{
+font-size:2.2rem;
+margin:20px 0;
+co
+}
+
 p{
 font-size:1.2rem;
 max-width:750px;
@@ -517,10 +510,6 @@ margin-top:35px;
 }
 
 .btn{
-    
-
-margin:40px auto;
-
 font-size:1.1rem;
 padding:16px 34px;
 min-width:220px;
@@ -528,16 +517,16 @@ min-width:220px;
 
 .search-box{
 max-width:700px;
-margin:140px auto ;
+margin:40px auto 0;
 }
 
 .search-input{
-font-size:1rem;
+font-size:1.1rem;
 padding:18px 24px;
 }
 
 .search-button{
-font-size:1rem;
+font-size:1.1rem;
 padding:0 30px;
 }
 
@@ -549,44 +538,17 @@ margin-top:40px;
 .quick-links a{
 font-size:1.05rem;
 padding:12px 20px;
-}}
-   
-.main-h{border-right:2px solid var(--card-white);margin:0 20px;padding:15px 25px!important;background:white;align-content:center;justify-content:center; text-align: center;   }
-    .main-section p{
-         font-size:12px
-    }
+}
 
-    .main-section {
-       border: 0.5px groove var(--card-white);
-   font-size:12px ;
-      padding: 10px 15px;
-      margin: 10px 10px;
-      border-radius: 1px;
-      box-shadow: 0 0 14px rgba(111,130,111,.03);    text-align: center;
-          background: white;
-      
-    }
 
-    @media (min-width: 750px) {
-          .main-h{margin:0 30px;padding:15px 45px;}
-  
-      .main-section p{
-         font-size:22px
-    }
-      .main-section {
-        font-size: 26px;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 15px 20px;
-      }
-    }
 </style>
 
 </head>
 
 <body>
-   <header class="header-logo">
-     <img
+    <header>
+ <div class="header-logo">
+<img
   src="images/clinic-logo.webp"
   alt="شعار العيادة"
   width="85"
@@ -594,18 +556,17 @@ padding:12px 20px;
   fetchpriority="high"
   decoding="async"
 />
- <div class="header-text">
-<div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
-<div class="sub-title">للأنف والأذن والحنجرة والرأس والعنق</div>
-</div>
-
-</header>
-<div class="main-h"><div class="error-code" style="justify-content:0">404</div>
+    </div>
+    <div class="header-text">
+        <div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
+        <div class="sub-title">للأنف والأذن والحنجرة والرأس والعنق</div>
+    </div>
+</header><div class="main-h"><div class="error-code">404</div>
 <br>
 <h1 style="display:flex;margin:10px auto">عذراً، الصفحة غير موجودة</h1>
 </div><br>
 <p>
-<div class="main-section"><p>
+
 الصفحة التي تبحث عنها غير متوفرة أو ربما تم نقلها أو حذفها.
 
 يمكنك العودة للصفحة الرئيسية أو استخدام البحث للوصول إلى المحتوى المطلوب.
@@ -623,7 +584,7 @@ padding:12px 20px;
 </a>
 
 </div>
-</div>
+
 <div class="search-box">
 
 <form
@@ -660,15 +621,15 @@ aria-label="بحث"
 
 <div class="quick-links">
 
-<a href="drmokhtarent.org/about.html"><em>عن العيادة</em></a>
+<a href="drmokhtarent.com/about.html"><em>عن العيادة</em></a>
 
-<a href="drmokhtarent.org/gallery.html"><em>معرض الصور</em></a>
+<a href="drmokhtarent.com/gallery.html"><em>معرض الصور</em></a>
 
-<a href="drmokhtarent.org/blog.html"><em>المقالات الطبية </em></a>
+<a href="drmokhtarent.com/blog.html"><em>المقالات الطبية </em></a>
 
-<a href="drmokhtarent.org/testimonials.html"><em>آراء المرضى</em></a>
+<a href="drmokhtarent.com/testimonials.html"><em>آراء المرضى</em></a>
 
-<a href="drmokhtarent.org/q&a.html"><em>الأسئلة الشائعة</em></a>
+<a href="drmokhtarent.com/q&a.html"><em>الأسئلة الشائعة</em></a>
 
 </div>
 
@@ -688,7 +649,7 @@ aria-label="بحث"
         </a>
         <a href="https://wa.me/967730433592" class="social-icon" target="_blank"
   rel="noopener noreferrer external">
-          <img src="images/social/whatsapp1.webp"   width="60"   height="60"   loading="lazy"   decoding="async"  alt="واتساب" />
+          <img src="images/social/whatsapp.webp"   width="60"   height="60"   loading="lazy"   decoding="async"  alt="واتساب" />
         </a>
        <a
   href="https://youtube.com/@ENTsharabi"
@@ -716,7 +677,7 @@ aria-label="بحث"
         </a>
       </div>
       <div class="working-hours">⏰ مواعيد العمل: السبت - الخميس: 10:00 صباحاً - 1:00 ظهراً</div>
-      <div class="copyright-container">© 2026 جميع الحقوق محفوظة - عيادة الدكتور/ مختار الشرعبي </div>
+      <div class="copyright-container">© 2026 جميع الحقوق محفوظة - عيادة الدكتور/ مختار الشرعبي -- </div>
     </footer>
     
   
