@@ -180,7 +180,7 @@
 
   
 body {
-  background: var(--card-white);
+  background: white!important;
   line-height: 1.6;
   color: #1a2c3e;
   margin: 0 !important;
@@ -640,7 +640,7 @@ ul {
      
         .booking-button.sms,  .booking-button.whatsapp {
      font-size: 20px;
-      padding: 1px 4px;
+      padding: 1px 14px;
       border: 2px solid var(--tertiary-color);
             box-shadow: 2px 2px 0 var(--border-color);
       }
@@ -973,8 +973,9 @@ hr {
   align-content: center;
   padding: 30px 5px 40px;
   margin:  0;
-  box-shadow: 4px 0 1px 5px var(--primary-color);
-  background-color: white;
+  box-shadow: 4px 0 1px 5px var(--card-white);
+  background-color:
+white
 }
 
 @media (min-width: 750px) {
@@ -989,13 +990,13 @@ hr {
 
 .danger-section {
   background-color: #FFF2EF;
-  box-shadow: 0 0 6px #00006199;
+   box-shadow: 0 0 11px 1px rgba(0,0,0, .1);
   border: 1px solid #f44336;
   border-radius: 12px;
   padding: 5px;
   margin: 10px 0;
   text-align: center;
-  font-size: 22px;
+  font-size: 12px;
 }
 
 @media (min-width: 750px) {
@@ -1064,48 +1065,51 @@ hr {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  padding: 5px 5px 10px 5px;
-  margin: 40px 10px 15px;
+  align-items: relative;
+  background-color: var(--dark-color);
+  padding: 2px!important;
+  margin: 40px 5px;
   border-radius: 8px;
-  overflow: visible;    background: #0D88AF;
-}
+  overflow: visible; }
 
 
 .profile-image img {
-  width: 100%;
+  width: 100%; 
   max-width: 100%;
   height: auto;
   border-bottom: 1px solid #0D88AF;
    display: block;
-  margin:  0 ; overflow: hidden;
-  gap: -5px 0 0 10px !important; background: #0D88AF;
+ ; overflow: visible;object-fit: fit-content;box-sizing: border-box;  border-radius: 0 0 15px 0!important;
+  margin:   0!important; border: 0!important;  border: 1px solid var(--light-color)!important;
 }
-.profile-image {
-  border-radius: 0 0 15px 0;
-    overflow: hidden;
-    border: 1px solid white;
+.profile-image {background: transparent;  object-fit:stretch;background: var(--dark-color);
+  border-radius: 0 0 15px 0!important;
+    overflow: visible;
+    padding: 0!important;
+    margin:  10px 1px 0 10px;
+  
+    
     
 }
 
 .profile-text {
     
-  border: 1px solid #0D88AF;
-  max-width: 90%;
+  border: 2px solid var(--light-color);
+  max-width: 100%;
   background-color: #E4FAFF;
   border-radius: 0 0 30px 5px;
-  margin: -9px 10px 10px 5px;
+  margin: 0 10px 10px 5px;
   color: #000;
   text-align: right;
   line-height: 1.9;
   width: 90%;
   padding: 12px 15px 10px 15px!important;
   box-sizing: border-box;
-    border-top: 10px solid #02647C;
+
 }
 
-
+ .profile-text p{
+     font-size: 12px;}
 
 
 .profile-text h2 {
@@ -1125,40 +1129,50 @@ hr {
     align-items:stretch; /* يجعل العمودين بنفس الارتفاع */
     justify-content:space-between;
 
-    width:q00%;
+    width:100%;
     max-width:1000px;
 
-    margin:20px auto;
+    margin:10px auto;
     padding:8px;
     gap:0;
 
-    background:white;
+  
     border-radius:12px;
     border:4px double var(--link-color);
 
     overflow:hidden;
-    display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center;gap:10px;max-width:1000px;margin:50px auto;padding:20px 2px;background:#fff;border:5px double #fff;border-radius:10px;box-sizing:border-box
+    display:flex;
+    flex-direction:row;
+    align-items:stretch!important;
+    justify-content:center;
+    gap:0;
+    max-width:1000px;
+    margin:50px auto;
+    padding:5px 2px; 
+    background:var(--border-y)!:
+    border:5px double var(--card-white);
+    border-radius:10px;
+    box-sizing:border-box;
+    background: var(--body-color);
   }
 
 
   /* نصف الصفحة للصورة */
   .profile-image{
   
-flex:1 1 55%;
-  max-width:100%;
+    flex:1 1 40%;
+    max-width:100%;
     display:flex;
-    align-items:stretch;
+    align-items:relative;
     justify-content:center;
-
    vertical-align:middle;
     padding:0;
-margin: 0!important;
-    background:#fff;
-
-    border-radius:25px 10px 10px 25px!important;
-   margin-left: 0!important;
+    margin: 10px 3px 10px 10px!important;
+    background:var(--primary-color);
+      margin-left: 0!important;
     overflow:hidden;
-    box-shadow:0 0 4px rgba(0,50,0,.25);%;padding:5px;background:var(--card-white);border-radius:0 10px 10px 0;box-sizing:border-box
+    box-shadow:0 0 4px rgba(0,50,0,.25);%;padding:5px;
+    border-radius:55px 0 10px 35px;box-sizing:border-box
   }
 
   /* الصورة تملأ العمود بالكامل */
@@ -1168,15 +1182,15 @@ margin: 0!important;
     height:100%;
    border-radius:45px 0 0  25px!important;
   
-    object-fit:cover;
+  
  
     margin:0;
     padding:0;
  
     display:block;
-
+  border:2px solid white;
     border-radius:0;
-    border:none;
+   
     background:none;
     
     
@@ -1184,11 +1198,28 @@ margin: 0!important;
 
   /* نصف الصفحة للنص */
   .profile-text{
-  flex:0 0 45%;padding:2px!important;background:#fff;border-radius:4px 40px 40px 4px;border-right:1px solid var(--border-color);border-left:3px solid var(--tertiary-color)!important;border-top:19px solid var(--primary-color);border-bottom:19px solid var(--primary-color);line-height:1.8;box-sizing:border-box;
-         margin: 3px -5px 0 0!important
-  }.profile-text h2{font-size:20px!important;margin:3px align-items;color:var(--red-color)!important;background:#fff;border:none;padding:0}.profile-text p{color:#000;padding-right:2px;font-size:17px!important;font-weight:500;vertical-align:middle}
+     flex:0 0 50%;
+     padding:2px!important;
+     background:#fff;
+     border-radius:4px 40px 40px 4px;
+     border-right:1px solid var(--border-color);
+     border-left:3px solid var(--tertiary-color)!important;
+     border-top:5px solid var(--primary-color);
+     border-bottom:5px solid var(--primary-color);
+     line-height:1.8;box-sizing:border-box;
+      margin: 10px -5px 10px 8px!important;     
+      
+    
+}
+  .profile-text h2{font-size:28px;margin:3px align-items;color:var(--red-color)!important;background:#fff;border:none;padding:0}
+  .profile-text p{color:#000;padding-right:2px;font-size:22px!important;font-weight:500;vertical-align:middle
+      
+  }
 
 }
+@media (man-width: 748px) {
+    .profile-text h2{font-size:20px
+ }}.profile-text p{color:#000;padding-right:2px;font-size:15px}}
 .main-image {
   width: 70% !important;
   max-width: 600px;
@@ -1322,9 +1353,8 @@ margin: 0!important;
   max-width: 1280px;
   margin: 20px auto;
   background: var(--body-color);
-  border-radius: 2rem;
-  box-shadow: 0 8px 18px #0f2b3d;
-  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 11px 1px rgba(0,0,0, .3);  overflow: hidden;
   transition: all 0.2s ease;
   padding: 10px;
 }
@@ -1453,7 +1483,7 @@ margin: 0!important;
 }
 .experience-list {
   padding: 0 5px;
-  background-color: var(--light1-color);
+  background-color: white;
   border: 1px solid var(--secondary-color);
   margin: 0 2px 10px 2px;
   box-shadow: 0 0 1px var(--light-color);
@@ -1484,7 +1514,7 @@ margin: 0!important;
   gap:10px;
   margin: 0!important;
   padding: 21px 1px 0 1px;
-  background-color: var(--body-color);
+  background-color: white;
  
   height: auto;
   border-bottom: 1px solid var(--primary-color);
@@ -1592,9 +1622,10 @@ margin: 0!important;
     font-size: 0.8rem
   font-weight: 500;
   color: #2c475c;
-  padding: 8px 12px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
+  padding: 8px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
   border-radius: 10px;
   border: 2px solid var(--secondary-color);
+  width: 98%!important;
   line-height: 1.65;
   background-color: white;
   box-shadow: 1px 1px 15px rgba(255, 254, 250, 0.5);
@@ -1770,7 +1801,7 @@ margin: 0!important;
   decoding="async"
   style="max-width: 100%; height: auto;   border-radius:10% 10% 10% 0; padding:10px">
 
-
+</div>
   <div class="profile-text">
 
 <h2 style="color: #a1005a">د. مختار عبده خالد الشرعبي</h2>
@@ -1895,7 +1926,8 @@ margin: 0!important;
   </section>
 
      <div class="whatsapp-section" style="background: var(--body-color)">
-        <a href="https://youtube.com/@entsharabi" target="_blank" rel="noopener noreferrer external">
+        <a href="https://youtube.com/@entsharabi" target="_blank" rel="noopener noreferrer external" 
+          aria-label="قناتنا على اليوتيوب">
           <img style="margin-bottom: 20px" src="images/social/youtube.jpeg" alt="يوتيوب" class="whatsapp-icon" />
         </a>
         <a
