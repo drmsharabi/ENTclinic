@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://drmsharabi.com/">
-    <title>| استشاري أنف أذن حنجرة ممتاز في تعز | د. مختار الشرعبي</title>
+    <title>| استشاري أنف أذن حنجرة ممتاز في تعز| د. مختار الشرعبي</title>
     <meta
       name="description"
       content="عيادة د. مختار الشرعبي للأنف والأذن والحنجرة في تعز. خدمة متكاملة بتقنيات ومناظير حديثة لعلاج أمراض الأنف والأذن والحنجرة بخبرة وكفاءة عالية في محافظة تعز."
@@ -163,52 +163,57 @@
           --secondary-color: #007A9F;
       --accent-color: #01849F;
             --primary-color: #005B7F;
+           
+            --background-g:linear-gradient(180deg, #003152  50%,#03456F 95%);
+              --background-b: linear-gradient(160deg, #005476  20%,#057EA5 65%);
+              
+            
              --shadow-bd: #0a32fae6;
              --tertiary-color: #006AB5;
              --red-color: #BC0052;
-               --light-color: #00F2FF;
+               --light-color: #6CF8FF;
       --light1-color: #DBFFFD;
          --dark-color: #013358;
-         --body-color: #EEF7F2;
+         --body-color: #E9FFFD;
          --border-color: #FFDE7A;
           --link-color: #0353B0;
-            --border-y:#FFFA92;
-         
+            --border-y:#F8FFE2;
+         --background-d: linear-gradient(45deg, #03456F 20%, var(--primary-color) 70%);
      }
 
 
 
   
 body {
-  background: linear-gradient(145deg, #eef2f7 0%, #d9e0e8 100%);
+  background: var(--background-d) ;
   line-height: 1.7;
   color: #1a2c3e;
   margin: 0 !important;
-  padding: 0 0 35px 0 !important;
+  padding: 0  !important;
+
 }
 
 @media (min-width: 750px) {
   body {
-    padding: 0 0 103px 0 !important;
+    padding: 0  !important;
   }
 }
 /* --- الأنماط الأساسية للشريط (الهاتف أولاً) --- */
 .bottom-nav {
   position: fixed;
-  bottom: 2px;
+  bottom: 5px;
   left: 0;
   right: 0;
   width: 100%;
-  background: rgba(205, 250, 146, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(1px);
-  
+  background: rgba(255, 250, 246, 0.7);
+  backdrop-filter: blur(.6px);
+ 
+       
   z-index: 1000;
   direction: rtl;
-  border: 3px double var(--card-white);
-  padding: 1px 10px;
-  box-sizing: border-box;
+  border: 1px solid  white;
+  padding: 3px 10px;
+  box-sizing: border-box; box-shadow: 0 0 5px var(--tertiary-color);
 }
 
 .nav-container {
@@ -244,8 +249,8 @@ body {
   padding: 2px 10px;
   border-radius: 20px;
   white-space: nowrap;
-  border: 0.5px solid white;
-  flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
+   border: 1px solid white; 
+    box-shadow: 0 0 5px blue;flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
 }
 
 .nav-link.active, .nav-link:hover {
@@ -256,14 +261,14 @@ body {
 
 .more-btn {
   background: var(--body-color);
-  font-size: 1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   color: var(--tr);
   border-radius: 5px;
   box-shadow: 0 0 2px blue;
   font-weight: bold;
   border: 1px solid white;
-  padding: 0 0 1px 0;
+  padding: 0 0 2px 0;
 
   display: inline-flex;
   align-items: center;
@@ -311,25 +316,26 @@ body {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    width: 95%;
+    width: 98%;
     max-width: 950px; 
     bottom: 15px;
     border-radius: 15px;
-    padding: 12px 20px;
-    border: 4px double var(--card-white);
+    padding: 6px 20px;
+    border: 2px solid  white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  
   }
 
-  .nav-link {
-    font-size: 18px; /* تم تعديله من 24px (الضخمة جداً) إلى 15px ليتوافق مع الحسابات */
+  .nav-link {  border: 5px double white;
+    font-size: 17px; /* تم تعديله من 24px (الضخمة جداً) إلى 15px ليتوافق مع الحسابات */
     margin: 0;       /* تم تصفير المارجن والاعتماد على الـ gap البرمجي */
     padding: 5px 16px;
   }
 
   .more-btn {
-    font-size: 4.2rem;
-    padding: 0 0 3px 0;
-    max-height: 70px;
+    font-size: 1.8rem;
+    padding: 0 5px 3px 5px;
+    max-height: 40px;
     border: 3px solid var(--tertiary-color);
 
     
@@ -349,8 +355,8 @@ body {
 
    header {
       margin-bottom: 4px;
-      background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-      border-bottom: 3px solid var(--green-color);
+      background: var(--dark-color);
+      border-bottom: 7px solid var(--light-color);
       color: #fff;
       padding: 20px;
       display: flex;
@@ -359,7 +365,7 @@ body {
       flex-wrap: wrap;
       gap: 18px;
       border-radius: 0 0 15px 15px;
-      box-shadow: 0 13px 6px #001f3366;
+      box-shadow: 0 13px 6px var(--dark-color);
  
     }
 
@@ -478,7 +484,7 @@ body {
  h3 {
       font-weight: 700;
       margin: 3px 12px;
-      color: #9E03B8;
+      color: yellow;
       padding: 4px 0;
       text-align: right;
       display: inline-block;
@@ -526,8 +532,8 @@ ul {
 }
 
       .booking-container {
-      background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-      border: 3px double var(--light1-color);
+      background:var(--body-color);
+      border: 1px double var(--light-color);
      
     
       border-radius: 8px 0 8px 0;
@@ -537,17 +543,15 @@ ul {
 
     @media (min-width: 750px) {
       .booking-container {
-        max-width: 90%;
-        border-right: 9px solid #ffc107;
-        border-radius: 68px 10px;
+      
+        border: 3px solid var(--light-color);
+        border-radius:10px;
         padding: 20px 10px;
         line-height: 1.8;
-        margin: 40px auto;
+        margin: 40px 10px;
       }
-    }
-
-    .booking-title {
-      color: #ff0;
+    } .booking-title {
+      color: var(--red-color);
       font-weight: 700;
       font-size: 13px;
       text-align: center;
@@ -561,10 +565,10 @@ ul {
 
     .booking-subtitle {
       font-weight: 700;
-      color: #F8F8FF;
+      color:  var(--primary-dark);
       font-size: 11px;
       text-align: center;
-      margin: 15px 60px;
+      margin: 15px 10px;
       line-height: 2;
     }
 
@@ -575,8 +579,8 @@ ul {
     }
 
     .booking-numbers {
-      color: #D6FFF6;
-      font-size: 10px;
+      color:  var(--tertiary-color);
+      font-size: 12px;
       font-weight: 700;
       text-align: center;
       margin-bottom: 18px;
@@ -609,11 +613,10 @@ ul {
       max-width: fit-content;
       align-items: center;
       gap: 8px;
-      padding: 1px 16px;
+      padding: 0 16px;
       font-weight: 700;
-      font-size: 14px;
-      box-shadow: 1px 2px 2px #215f61b3;
-      border-radius: 10px;
+      font-size: 12px;
+        border-radius: 10px;
       text-decoration: none;
       transition: all 0.3s ease;
       margin: 20px auto;
@@ -629,11 +632,11 @@ ul {
     }
 
     .booking-button.sms,  .booking-button.whatsapp {
-       background: var(--border-y);
-      color: black;
-      padding: 1px 4px;
-      border: 1px solid var(--accent-color);
-            box-shadow: 1px 1px 1px var(--body-color);
+       background: var(--tertiary-color);
+      color: white;
+      padding: 1px 6px;
+      border: 4px double white;
+            box-shadow: 2px 0 3px 1px var(--card-white);
       }
 
 
@@ -645,9 +648,8 @@ ul {
         .booking-button.sms,  .booking-button.whatsapp {
      font-size: 20px;
       padding: 1px 14px;
-      border: 2px solid var(--tertiary-color);
-            box-shadow: 2px 2px 0 var(--border-color);
-      }
+      border: 7px double var(--body-color);
+ }
 
     }
 
@@ -656,16 +658,18 @@ ul {
     
      
       padding: 3px 16px;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
       text-align: center;
       text-decoration: none;
       cursor: pointer;
-      background: var(--tr);
-      color: white;
-      border: 1px solid #fff;
+      text-decoration: underline;
+      background: transparent;
+  color: var(--border-y);
+            text-shadow: 0 0 5px  var(--tertiary-color);
+  
       border-radius: 10px;
-      box-shadow: 1px 2px 2px #0d476fcc;
+     
      
      
     }
@@ -674,12 +678,12 @@ ul {
           display: flex;
                 border-radius: 10px;
   justify-content: center;
-   background:var(--primary-color);
+   background:transparent;
   margin: 20px auto;
   flex-wrap: inline-block;
  
   width: fit-content;
-  color: white;
+  color: var(--border-y);
   }
 
     @media (min-width: 750px) {
@@ -693,35 +697,38 @@ ul {
 
 footer {
   border-top: 4px solid #fff;
-  background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+  background:var(--background-g);
   color: #fff !important;
 
   text-align: center;
-  margin-bottom: 10px !important;
-  padding: 10px 0;
+  border-bottom: 50px solid white;
+  padding: 10px 0 0 0;
   font-size: 9px;
   line-height: 1.7;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
+             box-shadow: 0 -7px  0  var(--light-color);
+  border-radius: 20px 20px 0 0;
+  width: 100%; 
 }
 
 @media (min-width: 750px) {
-  footer {
-    border-top: 12px solid #fff;
+  footer {  box-shadow: 0 -12px  0  var(--light-color);
+   border-bottom: 80px solid white;
+
+    border-top: 4px solid #fff; border-radius: 30px 30px 0 0;
+
   
   }
 }
 
 .address-card {
   max-width: 90%;
-background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
-  padding: 2px 10px;
-  border-block: 0.5px solid #fff;
-  display: inline-block;
-  font-size: 12px;
+background:var(--background-g);
+  padding: 2px 10px 2px 15px;
+   display: inline-block;
+  font-size: 11px;font-weight: 400;
   line-height: 1.5;
   letter-spacing: 1px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px;
 }
 
 @media (min-width: 750px) {
@@ -749,14 +756,14 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
   padding: 8px 15px;
   font-weight: 500;
   font-size: 9px;
-  margin-top: 10px;
-  border-top: 1px solid yellow;
+  margin: 10px auto 0 auto;
+  border-block:  1px solid var(--light-color);
 }
 
 @media (min-width: 750px) {
   .copyright-container {
     font-size: 19px !important;
-    margin-bottom: 11px; padding: 6px 10px;
+   padding: 6px 10px;
   }
 }
 
@@ -773,7 +780,7 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 
 @media (min-width: 750px) {
   .working-hours {
-    font-size: 19px!important;
+    font-size: 21px!important;
     padding: 4px 10px;
     white-space: normal;
     max-width: 90%;
@@ -782,12 +789,13 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 
 .social-icons {
   display: flex;
-  gap: 5px;
+  gap: 5px; 
+
   margin: 5px auto;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 5px 0;
+  padding: 5px 0 0 0;
   
 }
 
@@ -796,7 +804,7 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
   background: var(--primary-color);
   height: 24px !important;
   border-radius: 50%;
-  border: 0.5px solid var(--green-color) !important;
+  border: 0.5px dashed  var(--light-color) !important;
   display: block;
   object-fit: cover;
 
@@ -804,11 +812,13 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 }
 
 @media (min-width: 750px) {
-  .social-icon {
-    width: 80px !important;
-    height: 80px !important;
-    border: 1px solid var(--primary-blue);
-    padding: 6px !important;
+    .social-icons {padding: 6px ;}
+  .social-icon {  background: var(--primary-color);
+margin-left: 21px!important;
+    width: 60px !important;
+    height: 60px !important;
+    border: 1px dashed  var(--light-color);
+    padding: 6px ;
     border-radius: 50% !important;
    ;
   }
@@ -840,23 +850,25 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 .whatsapp-section {
   text-align: center;
   flex-wrap: wrap;
-  display: flex;
+  display: flex;background: var(--background-b)!important;
   flex-direction: column;
-  align-items: center;
+  align-items: center;padding: 20px;
 }
 
 .whatsapp-icon {
   background-color: #F4FCFF;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
    object-fit: contain;
 
 }
 
 @media (min-width: 750px) {
+    .whatsapp-section {padding: 30px;
+}
   .whatsapp-icon {
-    width: 185px;
-    height: 185px;
+    width: 83px;
+    height: 83px;
   }
 }
 
@@ -865,19 +877,19 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 .whatsapp-link {
   text-align: center;
   margin: 10px 0;
-    padding: 5px 12px ;
+    padding: 2px 12px ;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
      border-radius: 10px;
-    border: 4px double white;
+    border: 2px double white;
    background: var(--red-color);
 }
 
 .whatsapp-link a {
   background: var(--red-color);
   color: #fff;
-  padding: 5px 12px ;
+  padding: 3px 12px ;
   border-radius: 10px;
   font-size: 12px;
   font-weight: 700;
@@ -889,15 +901,15 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 @media (min-width: 750px) {
   .whatsapp-link a {
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 25px!important;
     border-radius: 16px;
-    padding: 6px 18px;
+    padding: 3px 18px;
   }
     .whatsapp-link  {
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 25px;
     border-radius: 16px;
-    padding: 6px 18px;
+    padding: 3px 18px;
   }
 }
 
@@ -919,39 +931,48 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 }
 
 .warning-box {
-  background-color: #fffde7;
+  background-color: var(--background-g);
   border: 0.5px solid #5783D8;
   border-radius:10px;
-  padding: 16px 8px;
+  padding: 6px 8px;
   box-shadow: 0 0 14px #0d47231a;
-  margin: 0 20px;
+  margin: 0 5px;
   font-size: 12px;
+  color: black;
   position: relative;
 }
-
+.danger-section p{
+ color: black!important;}
 @media (min-width: 750px) {
   .warning-box {
     border-radius:15px;
     border: 1px solid #01556C;
     padding: 15px;
     max-width: 99%;
-    margin: 0 25px 15px;
+    margin: 0 20px!important ;
     position: relative;
   }
 }
 
 hr {
-  margin: 15px 0;
+  margin: 15px auto;
   padding: 0 1px;
  
   background: linear-gradient(130deg, var(--tertiary-color), var(--light-color), var(--tr)) !important;
-  height: 5px;
  
-  height: 3px;  
-  border: none;
+ 
+  height: 5px;  
+  border:none;
  
 }
+@media (min-width: 750px) {
+ 
+  
+hr {
 
+ 
+  height: 8px;
+}}
 .imp-section {
   background-color: #00709E;
   padding: 3px 2px;
@@ -973,9 +994,9 @@ hr {
   }
   
 hr {
-  margin: 95px 0;
+  margin: 35px 0;
   height: 5px;
-}
+}}
     @media (max-width: 480px) {
       .main-image {
         margin: 30px auto 0 auto;
@@ -984,32 +1005,41 @@ hr {
 
     .intro-text {
       border: 1px solid #15313A;
-     background: var(--primary-light);
-      border-radius: 0 0 30px 30px;
+     background: transparent;
+      border-radius: 10px ;
       color: white;
-      line-height: 1.7;
+      line-height: 2.1;
       padding: 15px;
+       text-shadow: 0 0 5px  var(--tertiary-color);
+  
+      margin:15px  5px;
+        font-weight: 400;
       box-sizing: border-box;
-      text-align: center;
+      text-align: center;  border: 0.5px solid #5783D8;
     }
 
     .main-section {
-      border-radius: 15px;
+      border-radius: 10px;
       align-items: center;
       align-content: center;
-      padding: 30px 5px 40px;
-      margin: 25px 10px;
-   
-      box-shadow: 0 0 14px rgba(0,50,0,.1);
-      background-color: #fff;
-    }
-
-    @media (min-width: 750px) {
-      .main-section {
+      padding: 0 3px 20px 3px!important ;
+      margin: 0 2px 25px 2px;
+   border: 1px solid var(--light-color);
+  
+      box-shadow: 0 0 8px  #07BCF7;
+     background:var(--background-g)     ;}
+   .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9;      
+  }
+   .subsection p,.subsection li{ color:var(--text-color);
+   }
+   p{color: inherit;}
+  
+   @media (min-width: 750px) {
+      .main-section {border: 3px solid var(--light-color);
         position: relative;
-        max-width: 99%;
-        margin: 45px 25px;
-        padding: 10px 25px;
+        max-width: 100%;
+        margin:0 10px 45px 10px;
+        padding: 30px 35px;
         font-size: 12px !important;
       }
       .main-section li {
@@ -1027,20 +1057,22 @@ hr {
 .danger-section {
   background-color: #FFF2EF;
    box-shadow: 0 0 11px 1px rgba(0,0,0, .1);
-  border: 1px solid #f44336;
+  border: 1px solid red;
   border-radius: 12px;
-  padding: 5px;
+  padding: 15px 5px;
   margin: 10px 0;
   text-align: center;
   font-size: 12px;
 }
-
+.danger-section:before{content:"⛔️";position:relative;top:-10px;right:10%;background-color:#fff;color:var(--text-muted);width:30px!important;height:30px!important;margin-top:-20px;margin-bottom:-20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px!important;border:2px solid var(--red-color)}
 @media (min-width: 750px) {
-  .danger-section {
-    border-radius: 40px;
-    margin: 90px auto;
+  .danger-section {border:4px solid var(--red-color);
+    border-radius: 20px;
+    margin: 90px 20px!important;
     padding: 30px;
   }
+  .danger-section:before{width:60px!important;height:60px!important;font-size:35px!important;top:-30px
+ }
 }
 
 .main-content {
@@ -1072,18 +1104,22 @@ hr {
 }
 
 .subsection {
-  padding: 5px 18px 10px 4px!important;
-  background-color: white;
-  box-shadow: 0 0 1px rgba(55,65,55, .5);
- border-right: 5px solid var(--tertiary-color);
-  border-radius: 15px;
+  padding: 15px 18px 10px 14px!important;
+  background-color: var(--body-color);
+ color: black;
+ text-align: right;
+ font-weight: 400;
+ border: 1px solid var(--card-white);
+  border-radius: 5px;
   align-items: center;
   font-weight: 600;
   display: block;
+
   white-space: wrap;
   text-decoration: none;
   max-width: fit-content;
-  margin: 10px 3px;
+  margin:10px 5px 20px 5px!important; 
+
 }
 
 @media (min-width: 750px) {
@@ -1091,18 +1127,18 @@ hr {
   
     font-size: 26px;
     border-radius: 20;
-    padding: 30px 10px;
-    margin: 10px 20px;
+    padding: 30px 10px 5px 10px;
+    margin: 30px 20px;
   }
 }
 
 .profile-section {
-  border: 1px solid #e5eaf1;
+  border: 1px solid ;
 
   display: flex;
   flex-direction: column;
   align-items: relative;
-  background-color: var(--dark-color);
+  background: var(--background-b);
   padding: 2px!important;
   margin: 40px 5px;
   border-radius: 8px;
@@ -1189,8 +1225,7 @@ hr {
     border:5px double var(--card-white);
     border-radius:10px;
     box-sizing:border-box;
-    background: var(--body-color);
-  }
+    }
 
 
   /* نصف الصفحة للصورة */
@@ -1253,9 +1288,10 @@ hr {
   }
 
 }
-@media (man-width: 748px) {
+@media (max-width: 767px) {
+    
     .profile-text h2{font-size:20px
- }}.profile-text p{color:#000;padding-right:2px;font-size:15px}}
+ }.profile-text p{color:#000;padding-right:2px;font-size:15px}}
 .main-image {
   width: 70% !important;
   max-width: 600px;
@@ -1416,20 +1452,22 @@ hr {
 }
 
 .experience-header {
-  background: #0f2b3d;
+  background: var(--light-color);
+  
+ 
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1.5rem;
   padding: 2rem 2.5rem;
-  border-bottom: 5px solid var(--light-color);
-  border-radius: 20px 20px 0 0;
-  margin: 0 auto !important;
+  border-block: 2px solid black!important;
+  border-radius: 0 ;
+  margin: 0 3px !important;border-right: 5px solid var(--light-color)!important;border-left: 5px solid var(--light-color)!important;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 750px) {
   .experience-header {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem; margin: 0 10px!important ; border-block: 5px solid black!important;
   }
 }
 
@@ -1443,7 +1481,7 @@ hr {
 }
 
 .experience-header h2 {
-  color: var(--border-y);
+  color: var(--red-color);
   font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: -0.3px;
@@ -1479,7 +1517,7 @@ hr {
 }
 
 .subhead {
-  color: var(--body-color);
+  color:black;
   font-size:10px;
   margin: 0;
   font-weight: 500;
@@ -1495,8 +1533,8 @@ hr {
 
 @media (max-width: 750px) {
   .subhead {
-    border-left: none;
-    border-right: 3px solid var(--light-color);
+  
+    border-right: 3px solid var(--tertiary-color);
     padding: 0;
     padding-right: 10px;
 
@@ -1519,9 +1557,9 @@ hr {
 }
 .experience-list {
   padding: 0 5px;
-  background-color: white;
+  background-color: var(--background-g);
   border: 1px solid var(--secondary-color);
-  margin: 0 2px 10px 2px;
+  margin: 0 auto 10px auto;
   box-shadow: 0 0 1px var(--light-color);
   border-top: 0;
   box-sizing: border-box;
@@ -1550,7 +1588,7 @@ hr {
   gap:10px;
   margin: 0!important;
   padding: 21px 1px 0 1px;
-  background-color: white;
+  background-color: transparent;
  
   height: auto;
   border-bottom: 1px solid var(--primary-color);
@@ -1567,7 +1605,7 @@ hr {
 }
 
 .exp-date {
-      border: 4px double white;
+      border: 1px dashed white!important;
   flex: 0 0 180px;
   background: var(--tertiary-color);
   border-radius: 2rem;
@@ -1589,7 +1627,7 @@ hr {
     width: fit-content;
     font-size: 90%;
     padding: 2px 9px;
-    margin-top: 0;
+    margin-top: 0; margin-left: 10px;
   }
 }
 
@@ -1616,13 +1654,13 @@ hr {
 .exp-title {
   font-size:14px;
   font-weight: 800;
-  color: var(--red-color);
+  color:yellow;
   margin-bottom: 14px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.65rem;
-  text-shadow: 1px 1px 2px white;
+
 
   overflow-wrap: anywhere; 
  
@@ -1660,11 +1698,10 @@ hr {
   color: #2c475c;
   padding: 8px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
   border-radius: 10px;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--card-white)!important;
   width: 98%!important;
   line-height: 1.65;
-  background-color: white;
-  box-shadow: 1px 1px 15px rgba(255, 254, 250, 0.5);
+  background-color: var(--body-color);
   margin: 5px 3px;
   
   /* ترسانة الحماية الأمنية لمنع خروج النصوص نهائياً */
@@ -1693,10 +1730,10 @@ hr {
 
 @media (max-width: 750px) {
   .exp-description {
-    border: 2px solid var(--card-white);
+    border: 4px solid var(--card-white);
     margin :3px auto;
     font-size: 0.8rem;       /* وحدة مرنة متوافقة تماماً مع تكبير خط نظام التشغيل */
-    padding: 12px;
+    padding: 32px!important;
     overflow: hidden;  
     
   }
@@ -1714,7 +1751,7 @@ hr {
     margin: 20px auto;
     font-size:20px;
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;   border: 4px solid var(--card-white);   padding: 32px!important;
   }
 }
 
@@ -1769,13 +1806,25 @@ hr {
   
 }
 
+.highlight{color:var(--primary-dark);font-size:13px}
+.hero{       background-color: var(--background-g)!important;
+  border: 0.5px solid #5783D8;
+  border-radius:10px;
+  padding: 6px 8px;
+  box-shadow: 0 0 14px #0d47231a;
+  margin: 0 5px;
+  font-size: 12px;
+  color: yellow;
+  position: relative;}
+.hero:before{content:"🎯";position:relative;top:-17px;right:10%;background-color:white;color:var(--text-muted);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border:2px outset var(--light-color);padding:3px}
+
 @media (min-width: 750px) {
- .hero{font-size:24px;border-radius:18px 18px 0 0;padding:26px;margin:0 20px 20px 20px!;
+ .hero{font-size:27px!important;border-radius:18px 18px 0 0;padding:26px;margin: 40px 15px 70px 15px ;border:5px double  var(--light-color); 
 
  }
+ .hero:before{width:60px!important;height:60px!important;font-size:45px!important;top:-47px;}
+ 
 }
-.highlight{color:var(--primary-light)!important;font-size:14px}
-.hero{      box-shadow: 0 0 1px rgba(0,0,0, .1);background:var(--light-color)!important;border-radius:0 0 18px 18px;padding:6px;margin:-2px 20px 70px  20px;max-width:88%;text-align:center;border:5px double ; color:var(--tertiary-color);max-width:88%;border:5px double var(--light1-color);border-top:0}
 
 </style>
 
@@ -1798,13 +1847,6 @@ hr {
 </header>
 <main>
  <br>
-<p style="margin-top: 10px; color: black;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
-
-<div class="cta-button">
-<a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer">
-<em>drmokhtarent.org</em>
-</a>
-</div>
 <div class="search-box">
 <form class="search-form" action="/search.html" method="get">
 <input type="text" name="q" class="search-input" placeholder="ابحث في الموقع...">
@@ -1817,6 +1859,13 @@ hr {
 </div>
 <br>
 
+<p style="margin-top: 10px; color: white;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
+
+<div class="cta-button">
+<a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer">
+<em>drmokhtarent.org</em>
+</a>
+</div>
         <section class="profile-section">
 
     <div class="profile-image">
@@ -1857,9 +1906,8 @@ hr {
     </div>
  </div>
   </section>
-<br> 
-  <section class="main-section">
-      
+
+
 <div class="experience-header">
 <h2>
     
@@ -1870,29 +1918,30 @@ hr {
 
 للأنف والأذن والحنجرة
 والرأس والعنق </div>
-  </div>
-    <p style="color:var(--tertiary-color);line-height:2.3 ">
+  </div>  <section class="main-section" >
+   
+    <p style="line-height:2.3 ">
       مرحباً بكم في صفحة عيادة الدكتور مختار الشرعبي للاستشارات المتخصصة
       في أمراض وجراحة الأنف والأذن والحنجرة والمناظير التشخيصية والجراحية،
       حيث نحرص على تقديم رعاية طبية دقيقة وحديثة وفق أحدث المعايير الطبية،
       مع التركيز على التشخيص الصحيح والمتابعة المستمرة لكل حالة.
-    </p>
-<br> 
-      
-      <div class="exp-item"  >
-<!-- دكتوراه مهنية -->
-<p>
+    </p>  </div><hr>
+
+  <p>
           تمثل عيادة الدكتور مختار الشرعبي مركزاً طبياً متخصصاً في تشخيص وعلاج
           أمراض الأنف والأذن والحنجرة لدى الأطفال والبالغين،
           مع توفير خدمات المناظير التشخيصية والعلاجية الحديثة،
           ومتابعة اضطرابات السمع والاتزان والشخير وحساسية الأنف والتهابات الجيوب الأنفية.
-        </p> <hr>
-    
-      <div class="subsection">
- 
+        </p> </div></div> </section><hr><br>
+      <div class="experience-header">
+<h2>
+    خدمات عيادة افضل دكتور انف واذن وحنجرة في تعز </h2>
+     </div><section class="main-section">  
+
+   
      
 
-        <h3>خدمات العيادة الطبية</h3>
+      
 
       <p>
         تقدم العيادة مجموعة واسعة من الخدمات الطبية والاستشارية المتخصصة،
@@ -1911,17 +1960,12 @@ hr {
         <li>متابعة مشاكل السمع والتأخر اللغوي عند الأطفال.</li>
       </ul>
 
+     <hr>
+
+    
+   <h3>المناظير التشخيصية والجراحية</h3>
      
- </div> <hr>
-     <div class="imp-section">
-        <p>
-          تعتمد العيادة على الدمج بين الخبرة الطبية والتقنيات الحديثة
-          للوصول إلى تشخيص دقيق وخطة علاج مناسبة لكل مريض.
-        </p>
-      </div>
-<br> 
-      <div class="subsection">
-        <h3>المناظير التشخيصية والجراحية</h3>
+     
      
 
       <p>
@@ -1932,17 +1976,23 @@ hr {
         وأسباب انسداد الأنف أو صعوبة التنفس والبلع.
       </p>
 
-    </div>     <br>  <div class="subsection">
-        <h3>الاهتمام براحة المريض</h3>
-     
-
+    </div>     <hr> 
+     <h3>الاهتمام براحة المريض</h3>
+  
       <p>
         تحرص العيادة على توفير بيئة طبية منظمة ومريحة،
         مع الاهتمام بالتواصل الواضح مع المرضى وشرح تفاصيل الحالة والخطة العلاجية،
         لضمان أفضل تجربة علاجية ممكنة.
       </p>
-</div>   </div> </div> <hr>   <div <div class="warning-box" style="margin:20px 5px">
-        <p>
+</div>   </div> </section> <hr> 
+<div class="hero" >
+        <p   >
+          تعتمد العيادة على الدمج بين الخبرة الطبية والتقنيات الحديثة
+          للوصول إلى تشخيص دقيق وخطة علاج مناسبة لكل مريض.
+        </p>
+      </div>
+      <hr><div ></div><div class="warning-box" style="margin:20px 5px; ">
+        <p style="color:white">
           يساعد التشخيص المبكر باستخدام المناظير الطبية الحديثة
           في اكتشاف العديد من الحالات المرضية بدقة،
           مما يساهم في تحسين نتائج العلاج وتقليل المضاعفات.
@@ -1962,7 +2012,7 @@ hr {
 
   </section>
 
-      <hr><div class="whatsapp-section" style="background: white">
+      <hr><div class="whatsapp-section" >
         <a href="https://youtube.com/@entsharabi" target="_blank" rel="noopener noreferrer external" 
           aria-label="قناتنا على اليوتيوب">
           <img style="margin-bottom: 20px" src="images/social/youtube.jpeg" alt="يوتيوب" class="whatsapp-icon" />
@@ -1976,15 +2026,14 @@ rel="noopener noreferrer"
           
         >
           شاهد نماذج عملياتنا
-        </a><br> 
+        </a>
       </div>
 <hr> 
 
-  <section class="resume-card">
 
     <div class="experience-header">
 
-      <h2>
+     <h2>
         الخبرات والخدمات الطبية المتخصصة
       </h2>
 
@@ -1993,7 +2042,7 @@ rel="noopener noreferrer"
       </div>
 
     </div>
-
+ <section class="main-section"> 
     <div class="experience-list">
 
       <div class="exp-item">
@@ -2071,9 +2120,11 @@ rel="noopener noreferrer"
 <hr>
 <!-- الموقع -->
 
-<div class="main-section" ><h3>📍 موقع العيادة :</h3><br> 
-<p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p>
-<div class="cta-button"> <a href="contact.html" style="color:white" > <em> العنوان ←</em> </a> </div>
+<section class="main-section"><h2 style="color:yellow">📍 موقع العيادة :</h2>
+
+<p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection">
+<div class="cta-button"> <a href="contact.html" style="color:var(--tr);       text-shadow: 0 0 0  var(--tertiary-color);
+  " > <em> العنوان ←</em> </a> </div>
 <p style="margin-top: 12px;text-align:center"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
 <br> <iframe class="map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s"
@@ -2081,17 +2132,17 @@ rel="noopener noreferrer"
     loading="lazy"
     title="خريطة موقع العيادة">
   </iframe>
-</div><hr> 
-<div class="warning-box" style=" text-align: center; margin-top: 20px;">
+</div></div></section> <hr> 
+<div class="hero" style=" text-align: center; margin-top: 20px; color:white">
 <em><p>
 “إذا كنت تبحث عن أفضل دكتور أنف وأذن وحنجرة في اليمن أو استشاري حنجرة موثوق في تعز، فإن
-<strong style="color: #d4177b;">الدكتور مختار الشرعبي</strong> هو خيارك الأمثل”
+<strong style="color:var(--light-color) ;">الدكتور مختار الشرعبي</strong> هو خيارك الأمثل”
 </em></p>
 </div>
 <hr>
 
-    <section class="booking-container">
-
+  
+ <div class="booking-container" style="margin-bottom:20px">
     <div class="booking-title">
       الحجز والاستفسار
     </div>
@@ -2099,7 +2150,7 @@ rel="noopener noreferrer"
     <div class="booking-subtitle">
       يمكنكم التواصل مع العيادة للحجز والاستفسارات غير الطبية 
       أو متابعة المواعيد والخدمات الطبية المتوفرة عبر الرسائل النصية أو عبر الواتس على الأرقام : .
-    </div> </div>
+    </div> 
 <div class="booking-numbers">📱 730433592 &nbsp;&nbsp;|&nbsp;&nbsp; 777421224</div>
 <hr>
   <div class="booking-subtitle">
@@ -2108,8 +2159,8 @@ rel="noopener noreferrer"
 <a href="sms:730433592?body=أريد حجز موعد" class="booking-button sms" aria-label="مراسله عبر  رسالة نصية ">📩 رسالة نصية</a>
 <a href="https://wa.me/967730433592?text=أريد%20حجز%20موعد" class="booking-button whatsapp" target="_blank" rel="noopener noreferrer"  aria-label="مراسلة مراسله عبر الواتساب ">💬 واتساب</a>
 </div>
-</div>
-</section> <br>
+</div></div>
+<br><br>
 </main>    <footer>
       <div class="address-card" >
         <span>ركن مفرق ماوية، مبنى مختبرات دار الصحة</span>
