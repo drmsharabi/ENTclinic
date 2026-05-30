@@ -28,8 +28,7 @@
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:alt" content="صورة شعار عيادة د. مختار الشرعبي"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
     <meta property="og:image:width" content="85" />
     <meta property="og:image:height" content="85" />
  <link
@@ -49,7 +48,6 @@
 <meta name="googlebot" content="index, follow" />
 <meta name="bingbot" content="index, follow" />
 <meta name="language" content="ar" />
-<meta property="og:type" content="website" />
 <meta name="geo.region" content="YE" />
 <meta name="geo.placename" content="Taiz" />
 <meta name="geo.position" content="13.654188;44.130363" />
@@ -148,7 +146,7 @@
       
       --text-color: #333;
       --green-color: #00C7A2;
-      -
+    
 
     
       --red-color: #BC0052;
@@ -164,15 +162,15 @@
       --accent-color: #01849F;
             --primary-color: #005B7F;
            
-            --background-g:linear-gradient(180deg, #003152  50%,#03456F 95%);
-              --background-b: linear-gradient(160deg, #005476  20%,#057EA5 65%);
-              
+            --background-gradient-2:linear-gradient(180deg, #003152  50%,#03456F 95%);
+              --background-gradient-2radient-1: linear-gradient(160deg, #005476  20%,#057EA5 65%);
+              --background-gradient-3:linear-gradient(110deg,#FCFFA5, var(--body-color),#FFFF8D );
             
              --shadow-bd: #0a32fae6;
              --tertiary-color: #006AB5;
              --red-color: #BC0052;
                --light-color: #6CF8FF;
-      --light1-color: #DBFFFD;
+      --light1-color: #DBFdFD;
          --dark-color: #013358;
          --body-color: #E9FFFD;
          --border-color: #FFDE7A;
@@ -195,6 +193,7 @@ body {
 
 @media (min-width: 750px) {
   body {
+      margin: 0!important;
     padding: 0  !important;
   }
 }
@@ -206,14 +205,13 @@ body {
   right: 0;
   width: 100%;
   background: rgba(255, 250, 246, 0.7);
-  backdrop-filter: blur(.6px);
- 
-       
+  backdrop-filter: blur(.6);
   z-index: 1000;
   direction: rtl;
   border: 1px solid  white;
   padding: 3px 10px;
-  box-sizing: border-box; box-shadow: 0 0 5px var(--tertiary-color);
+  box-sizing: border-box;
+  box-shadow: 0 0 5px var(--tertiary-color);
 }
 
 .nav-container {
@@ -250,7 +248,8 @@ body {
   border-radius: 20px;
   white-space: nowrap;
    border: 1px solid white; 
-    box-shadow: 0 0 5px blue;flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
+    box-shadow: 0 0 2px blue;
+    flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
 }
 
 .nav-link.active, .nav-link:hover {
@@ -314,22 +313,23 @@ body {
 @media (min-width: 750px) {
   .bottom-nav {
     left: 50%;
+  right: 0;
     right: auto;
     transform: translateX(-50%);
-    width: 98%;
-    max-width: 950px; 
+    width: 100%;
+    max-width: 990px; 
     bottom: 15px;
     border-radius: 15px;
-    padding: 6px 20px;
+    padding: 6px 10px;
     border: 2px solid  white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);  box-sizing: border-box;
   
   }
 
   .nav-link {  border: 5px double white;
     font-size: 17px; /* تم تعديله من 24px (الضخمة جداً) إلى 15px ليتوافق مع الحسابات */
     margin: 0;       /* تم تصفير المارجن والاعتماد على الـ gap البرمجي */
-    padding: 5px 16px;
+    padding: 5px 14px;
   }
 
   .more-btn {
@@ -379,13 +379,13 @@ body {
       height: 55px;
       width: auto;
       border-radius: 50%;
-      border: 1px solid #A8FFEF;
+      border: 3px solid var(--light-color);
     }
 
     @media (min-width: 750px) {
       .header-logo img {
         height: 110px;
-        border: 2px solid #A8FFEF;
+        border: 6px solid var(--light-color);
       }
     }
  @media (max-width: 480px) {
@@ -407,7 +407,7 @@ body {
     .main-title {
       font-size: 13px;
       font-weight: 700;
-      color: var(--border-y);
+      color: #ffa;
       white-space: nowrap;
     }
 
@@ -424,7 +424,7 @@ body {
     }
 .sub-title {
   font-size: 12px;
-  color: var(--light1-color);
+  color: #dfd;
   white-space: nowrap;
 }
 
@@ -441,14 +441,16 @@ body {
     }
     /* ---------- headings & text (موحدة) ---------- */
     h1 {
-      background-color: #fff;
-      border: 2px solid #fff;
-      color: #C30056;
+      background: var(--background-gradient-3);
+      border: .5px solid var(--dark-color);
+      color: var(--red-color);
+      
+   
       text-align: center;
-      padding: 0 15px;
-      box-shadow: 0 0 1px rgba(0,0,0, .3);
-      border-radius: 15px;
-      font-size: 15px;
+      padding: 2px 15px;
+     
+      border-radius: 5px;
+      font-size: 13px;
       margin: 0 auto;
       width: 100%;
       max-width: fit-content;
@@ -456,10 +458,10 @@ body {
 
     @media (min-width: 750px) {
       h1 {
-        padding: 0 !important;
+        padding: 0 20px !important;
         border: 7px solid #fff;
         border-radius: 10px;
-        font-size: 47px;
+        font-size: 27px;
         margin: 20px auto;
       }
     }
@@ -482,9 +484,10 @@ body {
       }
     }
  h3 {
+       border-bottom: 1px dashed #dfd;
       font-weight: 700;
       margin: 3px 12px;
-      color: yellow;
+      color: #ffa;
       padding: 4px 0;
       text-align: right;
       display: inline-block;
@@ -496,6 +499,7 @@ body {
     font-size: 26px;
     padding: 30px auto;
     margin: 30px 10px -10px !important;
+    border-bottom: 2px dotted #dfd;
     border-radius: 20px 20px 0 0;
   }}
   
@@ -532,7 +536,7 @@ ul {
 }
 
       .booking-container {
-      background:var(--body-color);
+      background:var(--background-gradient-3);
       border: 1px double var(--light-color);
      
     
@@ -544,11 +548,11 @@ ul {
     @media (min-width: 750px) {
       .booking-container {
       
-        border: 3px solid var(--light-color);
+        border: 3px solid black;
         border-radius:10px;
         padding: 20px 10px;
         line-height: 1.8;
-        margin: 40px 10px;
+        margin: 40px 30px;
       }
     } .booking-title {
       color: var(--red-color);
@@ -665,7 +669,7 @@ ul {
       cursor: pointer;
       text-decoration: underline;
       background: transparent;
-  color: var(--border-y);
+  color:#ffc;
             text-shadow: 0 0 5px  var(--tertiary-color);
   
       border-radius: 10px;
@@ -696,8 +700,8 @@ ul {
 
 
 footer {
-  border-top: 4px solid #fff;
-  background:var(--background-g);
+  border-top: 4px solid var(--tertiary-color);
+  background:var(--background-gradient-2);
   color: #fff !important;
 
   text-align: center;
@@ -711,70 +715,85 @@ footer {
 }
 
 @media (min-width: 750px) {
-  footer {  box-shadow: 0 -12px  0  var(--light-color);
+  footer {  box-shadow: 0 -17px  0  var(--light-color);
    border-bottom: 80px solid white;
 
-    border-top: 4px solid #fff; border-radius: 30px 30px 0 0;
+     border-top: 12px solid var(--tertiary-color);border-radius: 40px 40px 0 0;
 
   
   }
 }
 
 .address-card {
-  max-width: 90%;
-background:var(--background-g);
-  padding: 2px 10px 2px 15px;
+  max-width: 100%;
+background:var(--background-gradient-2);
+color: #dfd;
+  padding: 4px 10px ;
    display: inline-block;
-  font-size: 11px;font-weight: 400;
+  font-size: 11px;
   line-height: 1.5;
-  letter-spacing: 1px;
-  border-radius: 10px 10px;
+;
+  font-weight: 400;  border-block:  .8px solid var(--secondary-color);
+  border-radius:0 0 8px 8px;
 }
 
 @media (min-width: 750px) {
   .address-card {
-    font-size: 28px ;
-    margin: 10px auto;
+    font-size: 22px ;
+    margin:20px auto 10px auto;
+ border-block:  1.3px solid var(--secondary-color);
+ 
     padding: 10px 40px !important;
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 20px 15px;
   }
 }
 
 @media (max-width: 480px) {
   .address-card {
-    font-size: 10px;;
-    padding: 6px 12px;
+    font-size: 9px;;
+    padding: 4px 10px;
     margin: 8px auto;
-    max-width: 95%;
+    max-width: 100%;
     white-space: normal;
     word-break: break-word;
   }
 }
 
 .copyright-container {
-  background: linear-gradient(90deg, transparent, #ffffff1a, transparent);
-  padding: 8px 15px;
-  font-weight: 500;
-  font-size: 9px;
-  margin: 10px auto 0 auto;
-  border-block:  1px solid var(--light-color);
+  background: var(--background-gradient-3);
+  padding: 2px 5px;
+  color: black;
+  font-weight: 400;
+  font-size: 7px;
+  margin: 10px auto 10px auto;
+  border-block:  1px outset var(--dark-color);
 }
 
 @media (min-width: 750px) {
   .copyright-container {
     font-size: 19px !important;
-   padding: 6px 10px;
+   padding: 6px 10px;  border-block:  .4px outset var(--dark-color);
   }
 }
-
-.working-hours{display:inline-block;padding:6px 25px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:25px;text-align:center; background-color: #ff0;  color: var(--text-color);}
+@media (max-width: 480px) {
+    .copyright-container {
+    font-size: 7px }
+}
+.working-hours{display:inline-block;padding:4px 10px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:9px 9px 0 0;text-align:center; background: var(--background-gradient-2);  color: #dfd;  border-block:  .1px outset var(--light-color); 
+  line-height: 1.5;
+;
+  font-weight: 400;  border-block:  .8px solid var(--secondary-color);
+  border-radius:8px 8px 0 0;max-width: 100%;
+ }
 
 @media (max-width: 480px) {
   .working-hours {
-    font-size: 9px!important;
-    padding: 4px 10px;
+    font-size: 7px!important;
+    padding: 4px 1px;
+    margin: 8px auto;
+   
     white-space: normal;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -783,7 +802,12 @@ background:var(--background-g);
     font-size: 21px!important;
     padding: 4px 10px;
     white-space: normal;
+      line-height: 1.5;
+ border-block:  1px solid var(--secondary-color);
+ 
     max-width: 90%;
+      padding: 10px 40px !important;
+    border-radius: 40px 40px 0 0;
   }
 }
 
@@ -798,15 +822,24 @@ background:var(--background-g);
   padding: 5px 0 0 0;
   
 }
-
-.social-icon img {
+.social-icon{
+      border: 0.5px ridge  var(--secondary-color) !important;
+       background: var(--dark-color);
+         border-radius: 50%;
+          vertical-align: center;
   width: 24px !important;
-  background: var(--primary-color);
+   justify-content: center;
   height: 24px !important;
-  border-radius: 50%;
-  border: 0.5px dashed  var(--light-color) !important;
+
+}
+.social-icon img {
+  width: 22px !important;
+
+  height: 22px !important;
+ 
   display: block;
   object-fit: cover;
+  justify-items: center;
 
   padding: 3px;
 }
@@ -815,8 +848,8 @@ background:var(--background-g);
     .social-icons {padding: 6px ;}
   .social-icon {  background: var(--primary-color);
 margin-left: 21px!important;
-    width: 60px !important;
-    height: 60px !important;
+    width: 50px !important;
+    height: 50px !important;
     border: 1px dashed  var(--light-color);
     padding: 6px ;
     border-radius: 50% !important;
@@ -824,25 +857,25 @@ margin-left: 21px!important;
   }
 
   .social-icon img {
-    width: 48px !important;
-    height: 48px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 }
 
 @media (max-width: 480px) {
   .social-icon {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
 
   .social-icon img {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 }
 
 .social-icon:hover {
-  background: yellow;
+  background: #dfd;
   transform: translateY(-5px);
   border: 5px solid white;
 }
@@ -850,7 +883,7 @@ margin-left: 21px!important;
 .whatsapp-section {
   text-align: center;
   flex-wrap: wrap;
-  display: flex;background: var(--background-b)!important;
+  display: flex;background: var(--background-gradient-2radient-1)!important;
   flex-direction: column;
   align-items: center;padding: 20px;
 }
@@ -931,7 +964,7 @@ margin-left: 21px!important;
 }
 
 .warning-box {
-  background-color: var(--background-g);
+  background-color: var(--background-gradient-2);
   border: 0.5px solid #5783D8;
   border-radius:10px;
   padding: 6px 8px;
@@ -955,13 +988,13 @@ margin-left: 21px!important;
 }
 
 hr {
-  margin: 15px auto;
+  margin: 15px 5px ;
   padding: 0 1px;
  
   background: linear-gradient(130deg, var(--tertiary-color), var(--light-color), var(--tr)) !important;
  
  
-  height: 5px;  
+  height: 1px;  
   border:none;
  
 }
@@ -969,9 +1002,9 @@ hr {
  
   
 hr {
-
+ margin: 45px 25px !important;
  
-  height: 8px;
+  height: 4px;
 }}
 .imp-section {
   background-color: #00709E;
@@ -1007,7 +1040,7 @@ hr {
       border: 1px solid #15313A;
      background: transparent;
       border-radius: 10px ;
-      color: white;
+      color: #dfd;
       line-height: 2.1;
       padding: 15px;
        text-shadow: 0 0 5px  var(--tertiary-color);
@@ -1023,24 +1056,29 @@ hr {
       align-items: center;
       align-content: center;
       padding: 0 3px 20px 3px!important ;
-      margin: 0 2px 25px 2px;
+      margin: 0 auto 25px auto;
    border: 1px solid var(--light-color);
   
       box-shadow: 0 0 8px  #07BCF7;
-     background:var(--background-g)     ;}
-   .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9;      
+     background:var(--background-gradient-2)     ;}
+   .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9; font-size: 12px ;
+       
   }
-   .subsection p,.subsection li{ color:var(--text-color);
+   .subsection p,.subsection li{ color:var(--text-color);   font-size: 12px ;
+  
    }
    p{color: inherit;}
   
    @media (min-width: 750px) {
-      .main-section {border: 3px solid var(--light-color);
-        position: relative;
-        max-width: 100%;
-        margin:0 10px 45px 10px;
+      
+      .main-section {border: 1px solid var(--light-color);
+        position: center;
+         align-items: center;
+      align-content: center;
+        max-width: 100%!important;
+        margin:  10px auto;
         padding: 30px 35px;
-        font-size: 12px !important;
+        font-size: 22px !important;
       }
       .main-section li {
         font-size: 24px !important;
@@ -1064,9 +1102,9 @@ hr {
   text-align: center;
   font-size: 12px;
 }
-.danger-section:before{content:"⛔️";position:relative;top:-10px;right:10%;background-color:#fff;color:var(--text-muted);width:30px!important;height:30px!important;margin-top:-20px;margin-bottom:-20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px!important;border:2px solid var(--red-color)}
+.danger-section:before{content:"⛔️";position:relative;top:-10px;right:10%;background-color:#fff;color:var(--text-muted);width:30px!important;height:30px !important;margin-top:-20px;margin-bottom:-20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px!important;border:1px solid var(--red-color)}
 @media (min-width: 750px) {
-  .danger-section {border:4px solid var(--red-color);
+  .danger-section {border:2px solid var(--red-color);
     border-radius: 20px;
     margin: 90px 20px!important;
     padding: 30px;
@@ -1075,17 +1113,8 @@ hr {
  }
 }
 
-.main-content {
-  margin: 30px 10px;
-}
 
-.main {
-  margin-bottom: 20px;
-  padding: 5px;
-  background-color: white;
-       box-shadow: 0 0 11px 1px rgba(0,0,0, .1);
-       border-left: 5px solid #00A19D;
-}
+
 
 .main-section a, .warning-box a {
   color: #00108E;
@@ -1104,7 +1133,7 @@ hr {
 }
 
 .subsection {
-  padding: 15px 18px 10px 14px!important;
+  padding: 15px 5px 10px 5px!important;
   background-color: var(--body-color);
  color: black;
  text-align: right;
@@ -1118,7 +1147,7 @@ hr {
   white-space: wrap;
   text-decoration: none;
   max-width: fit-content;
-  margin:10px 5px 20px 5px!important; 
+  margin:10px auto; 
 
 }
 
@@ -1128,7 +1157,7 @@ hr {
     font-size: 26px;
     border-radius: 20;
     padding: 30px 10px 5px 10px;
-    margin: 30px 20px;
+    margin: 30px auto;
   }
 }
 
@@ -1138,9 +1167,9 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: relative;
-  background: var(--background-b);
-  padding: 2px!important;
-  margin: 40px 5px;
+  background: var(--background-gradient-2radient-1);
+  padding: 2px 0!important;
+  margin: 40px 2px;
   border-radius: 8px;
   overflow: hidden; }
 
@@ -1175,19 +1204,19 @@ hr {
   text-align: right;
   line-height: 1.9;
   width: 90%;
-  padding: 12px 15px 10px 15px!important;
+  padding: 12px 2px 10px 2px!important;
   box-sizing: border-box;
 
 }
 
  .profile-text p{
-     font-size: 12px;}
+     font-size: 12px!important;font-weight:400}
 
 
 .profile-text h2 {
-  font-size: 15px;
+  font-size: 13px!important;
   margin-bottom: 10px;
-  padding-bottom: 2px;
+  padding: 2px;
   padding-top: 5px;
 }
 /* =========================
@@ -1198,7 +1227,7 @@ hr {
   .profile-section{
     display:flex;
     flex-direction:row;
-    align-items:stretch; /* يجعل العمودين بنفس الارتفاع */
+    align-items:center; /* يجعل العمودين بنفس الارتفاع */
     justify-content:space-between;
 
     width:100%;
@@ -1234,7 +1263,7 @@ hr {
     flex:1 1 40%;
     max-width:100%;
     display:flex;
-    align-items:relative;
+ 
     justify-content:center;
    vertical-align:middle;
     padding:0;
@@ -1252,6 +1281,7 @@ hr {
     vertical-align:middle;
     height:100%;
    border-radius:45px 0 0  25px!important;
+   
   
   
  
@@ -1290,8 +1320,10 @@ hr {
 }
 @media (max-width: 767px) {
     
-    .profile-text h2{font-size:20px
- }.profile-text p{color:#000;padding-right:2px;font-size:15px}}
+    .profile-text h2{font-size:18px
+ !important}.profile-text p{color:#000;padding-right:2px;font-size:16px!important}
+
+}
 .main-image {
   width: 70% !important;
   max-width: 600px;
@@ -1302,19 +1334,6 @@ hr {
   border-radius: 12px;
 }
 
-.main-h {
-  margin: 0 20px;
-  padding: 25px;
-  background-color: #F2FAFF;
-  box-shadow: 0 0 6px #035f6199;
-  border-left: 5px solid #00A19D;
-}
-
-@media (min-width: 750px) {
-  .main-h {
-    margin: 0 60px;
-  }
-}
 
 .certificate-link  {
   font-size: 12px !important;
@@ -1330,22 +1349,6 @@ hr {
     margin-bottom: 22px; color: var(--link-color)
   }
   
-}
-
-.wrap {
-  max-width: 920px;
-  margin: 10px;
-  background: var(--card);
-  border: 1px solid #e5eaf1;
-  border-radius: 18px;
-  padding: 8px 6px 22px;
-  box-shadow: 0 8px 14px #0d476f80;
-}
-
-@media (min-width: 750px) {
-  .wrap {
-    margin: 20px 40px;
-  }
 }
 
 .search-box {
@@ -1369,7 +1372,7 @@ hr {
   border-radius: 50px;
   overflow: hidden;
   background: #fff;
-  height: 40px;  padding: 0 5px 0 -15px
+  height: 30px;  padding: 0 5px 0 -15px
 }
 
 @media (min-width: 750px) {
@@ -1380,23 +1383,24 @@ hr {
 
 .search-input {
   flex: 1;
-  padding: 0 5px;
+  padding:8px;
   border: none;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   outline: none;
   height: 80%;
 }
 
 @media (min-width: 750px) {
+  
   .search-input {
-    font-size: 1rem;
+    font-size: .8rem;padding: 3px 40px;
   }
 }
 
 .search-button {
   background: #01439B;
   border: none;
-  width: 54px;
+  width: 34px;
     padding: 0 5px
   cursor: pointer;
   display: flex;
@@ -1407,7 +1411,8 @@ hr {
 
 @media (min-width: 750px) {
   .search-button {
-    width: 50px;
+    width: 80px;
+    
   }
 }
 
@@ -1416,43 +1421,20 @@ hr {
   height: 18px;
   display: block;
 }
-
+@media (min-width: 750px) {.search-button svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+}
 .search-button:hover {
   background: #00796b;
 }
 
-.resume-card {
-  max-width: 1280px;
-  margin: 20px auto;
-  background: var(--body-color);
-  border-radius: 2px;
-  box-shadow: 0 0 11px 1px rgba(0,0,0, .3);  overflow: hidden;
-  transition: all 0.2s ease;
-  padding: 10px;
-}
-
-@media (max-width: 480px) {
-  .resume-card {
-    padding: 6px;
-    margin: 12px auto;
-  }
-}
-
-@media print {
-  body {
-    background: #fff;
-    padding: 0;
-  }
-
-  .resume-card {
-    box-shadow: none;
-    border: 1px solid #ccc;
-    margin: 0;
-  }
-}
+  
 
 .experience-header {
-  background: var(--light-color);
+  background: var(--background-gradient-3);
   
  
   display: grid;
@@ -1460,9 +1442,9 @@ hr {
   align-items: center;
   gap: 1.5rem;
   padding: 2rem 2.5rem;
-  border-block: 2px solid black!important;
+  border-block: 4px solid var(--tertiary-color)!important;
   border-radius: 0 ;
-  margin: 0 3px !important;border-right: 5px solid var(--light-color)!important;border-left: 5px solid var(--light-color)!important;
+  margin: 10px 5px !important;border-right: 4px solid var(--border-color)!important;border-left: 4px solid var(--border-color)!important;
 }
 
 @media (min-width: 750px) {
@@ -1546,19 +1528,11 @@ hr {
          font-size: 0.8rem;
      }
 }
-.experience-list {
-  padding: 0 5px ;
-  background-color: var(--light1-color);
-  border: 1px solid var(--secondary-color);
-  margin:0 2px  10px 2px;
-   box-shadow: 0 0 1px var(--light-color);
 
-  border-top: 0;
-}
 .experience-list {
   padding: 0 5px;
-  background-color: var(--background-g);
-  border: 1px solid var(--secondary-color);
+  background-color: var(--background-gradient-2);
+ 
   margin: 0 auto 10px auto;
   box-shadow: 0 0 1px var(--light-color);
   border-top: 0;
@@ -1591,7 +1565,7 @@ hr {
   background-color: transparent;
  
   height: auto;
-  border-bottom: 1px solid var(--primary-color);
+
     width: 100%;  flex-wrap: wrap; 
 }
 
@@ -1633,14 +1607,14 @@ hr {
 
 @media (min-width: 750px) {
   .exp-date {
-    margin-top: 95px;
+  
    ;
-    padding-right: 1rem;
+    padding-right: 3px 8px;
     text-align: center;
     font-size: 112%;
      font-size:24px!important;
     padding: 3px 10px!important;
-    border: 2px  outset var(--primary-light); 
+    border: 4px  outset var(--primary-light); margin: 5px 20px 20px 20px;
    
   }
 }
@@ -1652,12 +1626,16 @@ hr {
 }
 
 .exp-title {
-  font-size:14px;
-  font-weight: 800;
-  color:yellow;
+
+  
+  font-size:13px;
+;  padding: 2px 0 ;
+  font-weight: 700;
+  color:#ffa;
   margin-bottom: 14px;
-  display: flex;
+  display: wrap;
   align-items: center;
+  overflow: hidden;
   flex-wrap: wrap;
   gap: 0.65rem;
 
@@ -1665,10 +1643,8 @@ hr {
   overflow-wrap: anywhere; 
  
     box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  overflow-wrap: break-word; 
-  word-break: break-word;
+  width: fit-content;
+  max-width:fit-content;
 
 }
 
@@ -1690,18 +1666,25 @@ hr {
 
 @media (min-width: 750px) {
   .exp-title {
-    font-size: 1.2rem!important;
+       
+      margin-right: 20px;
+     overflow-wrap: break-word;
+  word-break: break-word;
+  display: block;
+  max-width: fit-content;
+  font-size:28px;  
+  
   }
 }.exp-description {
     font-size: 0.8rem
-  font-weight: 500;
-  color: #2c475c;
-  padding: 8px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
+  font-weight: 400;
+  color: #fff;
+  padding: 3px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
   border-radius: 10px;
-  border: 2px solid var(--card-white)!important;
+  border: 1px solid var(--accent-color)!important;
   width: 98%!important;
   line-height: 1.65;
-  background-color: var(--body-color);
+  background: var(--background-gradient-2);
   margin: 5px 3px;
   
   /* ترسانة الحماية الأمنية لمنع خروج النصوص نهائياً */
@@ -1721,7 +1704,8 @@ hr {
 /* لضمان السيطرة الكاملة في حال وجود أي وسم p بالخطأ */
 .exp-description p {
   margin: 0;
-  padding: 0;
+  color: #ffd;
+  padding: 0;font-weight: 400;
   font-size: inherit;
   line-height: inherit;
   display: inline;
@@ -1730,6 +1714,7 @@ hr {
 
 @media (max-width: 750px) {
   .exp-description {
+      
     border: 4px solid var(--card-white);
     margin :3px auto;
     font-size: 0.8rem;       /* وحدة مرنة متوافقة تماماً مع تكبير خط نظام التشغيل */
@@ -1747,11 +1732,12 @@ hr {
 }
 
 @media (min-width: 750px) {
+    
   .exp-description {
     margin: 20px auto;
     font-size:20px;
-    width: 100%;
-    max-width: 100%;   border: 4px solid var(--card-white);   padding: 32px!important;
+    width: 100%; overflow: hidden;  
+    max-width: 100%;  border-radius: 20px;   border: 4px solid var(--card-white);   padding: 12px 22px!important;
   }
 }
 
@@ -1770,17 +1756,21 @@ hr {
   background: #eab30840;
   color: #0f2b3d;
 }
-
-
 .map {
-  width: 90%;
+  width: 100%;
   height: 300px;
   border: 1px solid var(--card-white);
   border-radius: 10px;
   margin: 20px auto;
   display: block;
 }
+.map{width:100%;aspect-ratio:16/9;border-radius:16px;border:none;margin:16px 0;display:block}
+@media (min-width: 750px) {
     
+.map { width: 80%;
+    margin: 5px auto;
+   aspect-ratio:11/5;margin:60px 18px 30px!important;border-radius:16px;width:90%
+}}
 @media (max-width: 748px) {
   main {
     font-size: 100%;
@@ -1807,25 +1797,29 @@ hr {
 }
 
 .highlight{color:var(--primary-dark);font-size:13px}
-.hero{       background-color: var(--background-g)!important;
+.hero{       background-color: var(--background-gradient-2)!important;
   border: 0.5px solid #5783D8;
   border-radius:10px;
   padding: 6px 8px;
   box-shadow: 0 0 14px #0d47231a;
   margin: 0 5px;
   font-size: 12px;
-  color: yellow;
+  color: #aff;
   position: relative;}
 .hero:before{content:"🎯";position:relative;top:-17px;right:10%;background-color:white;color:var(--text-muted);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border:2px outset var(--light-color);padding:3px}
 
 @media (min-width: 750px) {
- .hero{font-size:27px!important;border-radius:18px 18px 0 0;padding:26px;margin: 40px 15px 70px 15px ;border:5px double  var(--light-color); 
+ .hero{font-size:27px!important;border-radius:18px 18px 0 0;padding:26px;margin: 40px 15px 70px 15px ;border:1px double  var(--light-color); 
 
  }
  .hero:before{width:60px!important;height:60px!important;font-size:45px!important;top:-47px;}
  
 }
-
+@media (min-width: 750px) {
+ body,maain{
+           margin: 0!important;
+           padding: 0!important;
+       }}
 </style>
 
 </head>
@@ -1859,7 +1853,7 @@ hr {
 </div>
 <br>
 
-<p style="margin-top: 10px; color: white;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
+<p style="margin-top: 10px; color: #dff;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
 
 <div class="cta-button">
 <a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer">
@@ -2035,7 +2029,7 @@ rel="noopener noreferrer"
     <div class="experience-header">
 
      <h2>
-        الخبرات والخدمات الطبية المتخصصة
+        الخبرات والخدمات الطبية
       </h2>
 
       <div class="subhead">
@@ -2066,7 +2060,7 @@ rel="noopener noreferrer"
         </div>
 
       </div>
-
+<hr> 
       <div class="exp-item">
 
         <div class="exp-date">
@@ -2087,7 +2081,7 @@ rel="noopener noreferrer"
         </div>
 
       </div>
-
+<hr> 
       <div class="exp-item">
 
         <div class="exp-date">
@@ -2121,19 +2115,22 @@ rel="noopener noreferrer"
 <hr>
 <!-- الموقع -->
 
-<section class="main-section"><h2 style="color:yellow">📍 موقع العيادة :</h2>
+<section class="main-section"><h2 style="color:#dfd">📍 موقع العيادة :</h2>
 
-<p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection">
+<p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection" style="background:var(--background-gradient-3">
 <div class="cta-button"> <a href="contact.html" style="color:var(--tr);       text-shadow: 0 0 0  var(--tertiary-color);
   " > <em> العنوان ←</em> </a> </div>
 <p style="margin-top: 12px;text-align:center"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
-<br> <iframe class="map"
+<iframe class="map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s"
-    allowfullscreen
+    allowfullscreen style="border:1px solid black"
     loading="lazy"
     title="خريطة موقع العيادة">
   </iframe>
-</div></div></section> <hr> 
+</div><a href="https://maps.app.goo.gl/oYYKSN6mJgohFFyi7" 
+   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:#fdf">
+   فتح في خرائط جوجل
+</a></div></section> <hr> 
 <div class="hero" style=" text-align: center; margin-top: 20px; color:white">
 <em><p>
 “إذا كنت تبحث عن أفضل دكتور أنف وأذن وحنجرة في اليمن أو استشاري حنجرة موثوق في تعز، فإن
