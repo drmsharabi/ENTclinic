@@ -69,74 +69,68 @@
     }
 
     /* ---------- root variables (الأخيرة أولاً) ---------- */
+  
+
     :root {
-      --background-r: linear-gradient(290deg, var(--tr), var(--tr), var(--light-green));
-      --background-b: linear-gradient(130deg, #2199E0 10%, var(--primary-light) 95%);
-      --background-g: linear-gradient(0deg, var(--light-green), var(--body-color), var(--light1-color) 20%);
-      --border-color: #88CEFF;
-      --primary: #001E8B;
-      --secondary: #021EA7;
-      --primary-light: #0072CA;
-      --primary-dark: #01056D;
-      --accent: #05305E;
-      --gray-bg: #DAE4FC;
-      --light-green: #770775;
-      --red-color: #c2005b;
-      --card-white: #FFF;
-      --text: #041F30;
-      --text-dark: #1E2B52;
-      --text-muted: #4A5884;
-      --border-light: #EAEFFF;
-      --shadow-bd: #0a32fae6;
-      --shadow-ld: #0000fa4d;
-      --shadow-rd: #fa1496e6;
-      --shadow-md: 0 20px 4px -12px rgba(93,108,245,.5);
-      --dhelal: 0 1px 1px var(--shadow-bd);
-      --shadow-sm: 0 10px 25px -5px #0000000d, 0 8px 10px -6px #00000005;
-      --tb: #D2D2FF;
-      --tr: #a64edcff;
-      --tg: #37d2be80;
-      --vlight-blue: #cce7ff;
-      --light-blue: #39f;
-      --primary-blue: #05c;
-      --dark-blue: #026;
-      --body-blue: #eef4ff;
-      --body-color: #FFFCEC;
-      --primary-color: #052F49;
-      --secondary-color: #01849F;
-      --accent-color: #005464;
-      --light-color: #D3F9E2;
-      --light1-color: #E8FEFF;
-      --dark-color: #032E3B;
-      --tertiary-color: #fffde7;
+      
       --text-color: #333;
-      --green-color: #00CFD8;
-      --link-color: #0080B0;
-      transition: transform .3s ease, opacity .3s ease;
-    }
+      --green-color: #00C7A2;
+    
 
-    /* ---------- body & background ---------- */
-    body {
-      background: linear-gradient(145deg, #eef2f7 0%, #d9e0e8 100%);
-      line-height: 1.6;
-      color: #1a2c3e;
-      margin: 0 !important;
-      padding: 0 0 35px 0 !important;
-      background-color: #e9f0f5;
-      padding: 20px;
-    }
+    
+      --red-color: #BC0052;
+      --primary-dark: #01056D;
+      --card-white: #D9E0E8;
+    ;
+     
+      --tr: #8E00CF;
+      
+  
+   
+          --secondary-color: #007A9F;
+      --accent-color: #01849F;
+            --primary-color: #005B7F;
+           
+            --background-gradient-2:linear-gradient(140deg, #00253E  50%,#003B56 95%);
+              --background-gradient-1: linear-gradient(30deg, #005476  20%,#00709E 65%);
+              --background-gradient-3:linear-gradient(110deg,#FED77A, var(--body-color),#FFFF8D );
+            
+             --shadow-bd: #0a32fae6;
+             --tertiary-color: #006AB5;
+             --red-color: #BC0052;
+               --light-color: #6CF8FF;
+      --light1-color: #DBFdFD;
+         --dark-color: #013358;
+         --body-color: #E9FFFD;
+          --link-color: #0353B0;
+            --border-y:#FEF8DD;
+         --background-d: linear-gradient(45deg, #03456F 20%, var(--primary-color) 70%);
+          --border-color: #FFE595;
+     }
 
-    @media (min-width: 750px) {
-      body {
-        padding: 0 0 103px 0 !important;
-      }
-    }
 
+
+body {
+  background: var(--background-d) ;
+  line-height: 1.7;
+  color: #1a2c3e;
+  margin: 0 !important;
+  padding: 0  !important;
+
+}
+
+@media (min-width: 750px) {
+  body {
+      margin: 0!important;
+    padding: 0  !important;
+  }
+}
     /* ---------- header ---------- */
-    header {
+
+   header {
       margin-bottom: 4px;
-      background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-      border-bottom: 3px solid var(--green-color);
+      background: var(--dark-color);
+      border-bottom: 7px solid var(--light-color);
       color: #fff;
       padding: 20px;
       display: flex;
@@ -145,10 +139,11 @@
       flex-wrap: wrap;
       gap: 18px;
       border-radius: 0 0 15px 15px;
-      box-shadow: 0 13px 6px #001f3366;
+      box-shadow: 0 4px 6px var(--dark-color);
+ 
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       header {
         border-radius: 0 0 55px 55px;
       }
@@ -158,39 +153,52 @@
       height: 55px;
       width: auto;
       border-radius: 50%;
-      border: 1px solid #A8FFEF;
+      border: 3px solid var(--light-color);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .header-logo img {
         height: 110px;
-        border: 2px solid #A8FFEF;
+        border: 6px solid var(--light-color);
       }
     }
-
+ @media (max-width: 480px) {
+.header-logo img {
+        height: 45px;
+      width: auto;
+        
+      }
+    }
     .header-text {
       display: flex;
       line-height: 2.2;
       flex-direction: column;
       align-items: flex-start;
+      
+      
     }
 
     .main-title {
       font-size: 13px;
       font-weight: 700;
-      color: var(--tertiary-color);
+      color: #ffa;
       white-space: nowrap;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .main-title {
         font-size: 29px;
       }
     }
-
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 11px;
+        
+      }
+    }
 .sub-title {
   font-size: 12px;
-  color: var(--light-color);
+  color: #dfd;
   white-space: nowrap;
 }
 
@@ -199,37 +207,316 @@
     font-size: 28px;
   }
 }
+ @media (max-width: 480px) {
+      .sub-title {
+        font-size: 10px;
+        
+      }
+    }
+    /* ---------- footer ---------- */
 
-    /* ---------- booking container ---------- */
-    .booking-container {
-      background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-      border: 1px solid #80E9FF;
-      border-right: 5px solid #ffc107;
-      box-shadow: 0 0 6px #035f6199;
-      border-radius: 38px 0 38px 0;
+footer {
+  border-top: 4px solid var(--tertiary-color);
+  background:var(--background-gradient-2);
+  color: #fff !important;
+
+  text-align: center;
+  border-bottom: 50px solid white;
+  padding: 10px 0 0 0;
+  font-size: 9px;
+  line-height: 1.7;
+             box-shadow: 0 -7px  0  var(--light-color);
+  border-radius: 20px 20px 0 0;
+  width: 100%; 
+}
+
+@media (min-width: 750px) {
+  footer {  box-shadow: 0 -17px  0  var(--light-color);
+   border-bottom: 80px solid white;
+
+     border-top: 12px solid var(--tertiary-color);border-radius: 40px 40px 0 0;
+
+  
+  }
+}
+
+.address-card {
+  max-width: 100%;
+background:var(--background-gradient-2);
+color: var(--border-y);
+  padding: 4px 10px ;
+   display: inline-block;
+  font-size: 11px;
+  line-height: 1.5;
+;
+  font-weight: 400;  border-bottom:  .8px solid var(--secondary-color);
+  border-radius:0 0 8px 8px;
+}
+
+@media (min-width: 750px) {
+  .address-card {
+    font-size: 22px ;
+    margin:20px auto 10px auto;
+ border-bottom:  1.3px solid var(--secondary-color);
+ 
+    padding: 10px 40px !important;
+    border-radius: 0 0 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-card {
+    font-size: 9px;;
+    padding: 4px 10px;
+    margin: 8px auto;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+.copyright-container {
+  background: var(--background-gradient-3);
+  padding: 2px 5px;
+  color: black;
+  font-weight: 400;
+  font-size: 7px;
+  margin: 10px auto 10px auto;
+  border-block:  1px outset var(--dark-color);
+}
+
+@media (min-width: 750px) {
+  .copyright-container {
+    font-size: 19px !important;
+   padding: 6px 10px;  border-block:  .4px outset var(--dark-color);
+  }
+}
+@media (max-width: 480px) {
+    .copyright-container {
+    font-size: 7px }
+}
+.working-hours{display:inline-block;padding:4px 10px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:9px 9px 0 0;text-align:center; background: var(--background-gradient-2);  color: #dfa;  
+  line-height: 1.5;
+;
+  font-weight: 400;  border-top:  .8px solid var(--secondary-color);
+  border-radius:8px 8px 0 0;max-width: 100%;
+ }
+
+@media (max-width: 480px) {
+  .working-hours {
+    font-size: 7px!important;
+    padding: 4px 1px;
+    margin: 8px auto;
+   
+    white-space: normal;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 750px) {
+  .working-hours {
+    font-size: 21px!important;
+    padding: 4px 10px;
+    white-space: normal;
+      line-height: 1.5;
+ border-block:  1px solid var(--secondary-color);
+ 
+    max-width: 90%;
+      padding: 10px 40px !important;
+    border-radius: 40px 40px 0 0;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 5px; 
+
+  margin: 5px auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0 0 0;
+  
+}
+.social-icon{
+      border: 0.5px solid  var(--secondary-color) !important;
+       background: var(--dark-color);
+         border-radius: 50%;
+          vertical-align: center;
+  width: 24px !important;
+   justify-content: center;
+  height: 24px !important;
+
+}
+.social-icon img {
+  width: 23px !important;
+
+  height: 23px !important;
+ 
+  display: block;
+  object-fit: cover;
+  justify-items: center;
+
+  padding: 3px;
+}
+
+@media (min-width: 750px) {
+    .social-icons {padding: 6px ;}
+  .social-icon {  background: var(--primary-color);
+margin-left: 21px!important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px dashed  var(--light-color);
+    padding: 6px ;
+    border-radius: 50% !important;
+   ;
+  }
+
+  .social-icon img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-icon img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.social-icon:hover {
+  background: #dfd;
+  transform: translateY(-5px);
+  border: 5px solid white;
+}
+
+    /* ---------- headings & text ---------- */
+     h1 {
+      background-color: #fff;
+      border: 2px solid #fff;
+      color: #C30056;
+      text-align: center;
+      padding: 0 15px;
+      box-shadow: 0 0 6px #001925b3;
+      border-radius: 15px;
+      font-size: 15px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: fit-content;
+    }
+
+    @media (min-width: 750px) {
+      h1 {
+        padding: 0 !important;
+        border: 7px solid #fff;
+        border-radius: 10px;
+        font-size: 47px;
+        margin: 20px auto;
+      }
+    }
+
+    h2 {
+      color: var(--border-color);
+      font-size: 16px;
+      padding: 5px 25px;
+      text-align: center;
+      background: transparent;
+     ;
+    
+      margin: 10px auto;
+      width: auto;
+    }
+
+    @media (min-width: 750px) {
+      h2 {
+        font-size: 28px!important;
+      }
+    }
+ h3 {
+       border-bottom: 1px dashed #dfd;
+      font-weight: 700;
+      margin: 3px 12px;
+      color: var(--border-color);
+      padding: 4px 0;
+      text-align: right;
+      display: inline-block;
+      font-size: 14px;
+      max-width: fit-content;
+    }
+@media (min-width: 750px) {
+  h3 {
+    font-size: 26px;
+    padding: 30px auto;
+    margin: 30px 10px -10px !important;
+    border-bottom: 2px dotted #dfd;
+    border-radius: 20px 20px 0 0;
+  }}
+  
+p {
+  margin: 10px 5px;
+  font-size: 13px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+ ul, li {
+    font-size: 14px ;
+    font-weight: 400!important;
+  }
+
+@media (min-width: 750px) {
+  p { margin: 20px 15px!important;
+    font-size: 22px !important;
+  }
+
+  li {
+    font-size: 24px !important;
+  }
+}
+
+ul {
+  padding-right: 20px;
+}
+
+@media (min-width: 750px) {
+  ul {
+    padding-right: 40px;
+    
+  }
+}
+
+      .booking-container {
+      background:var(--background-gradient-3);
+      border: 1px double var(--light-color);
+     
+    
+      border-radius: 8px 0 8px 0;
       padding: 20px 5px;
       margin: 20px 10px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-container {
-        max-width: 90%;
-        border-right: 9px solid #ffc107;
-        border-radius: 68px 10px;
+      
+        border: 3px solid black;
+        border-radius:10px;
         padding: 20px 10px;
         line-height: 1.8;
-        margin: 40px;
+        margin: 40px 30px;
       }
-    }
-
-    .booking-title {
-      color: #ff0;
+    } .booking-title {
+      color: var(--red-color);
       font-weight: 700;
       font-size: 13px;
       text-align: center;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-title {
         font-size: 24px;
       }
@@ -237,28 +524,29 @@
 
     .booking-subtitle {
       font-weight: 700;
-      color: #fff;
+      color:  var(--primary-dark);
       font-size: 11px;
       text-align: center;
-      margin-bottom: 15px;
+      margin: 15px 10px;
+      line-height: 2;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-subtitle {
         font-size: 22px;
       }
     }
 
     .booking-numbers {
-      color: #D6FFF6;
-      font-size: 10px;
+      color:  var(--tertiary-color);
+      font-size: 12px;
       font-weight: 700;
       text-align: center;
       margin-bottom: 18px;
       line-height: 1.6;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-numbers {
         font-size: 24px;
       }
@@ -271,7 +559,7 @@
       flex-wrap: wrap;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-buttons {
         gap: 91px;
       }
@@ -284,285 +572,47 @@
       max-width: fit-content;
       align-items: center;
       gap: 8px;
-      padding: 1px 16px;
+      padding: 0 16px;
       font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 2px 6px #215f61b3;
-      border-radius: 10px;
+      font-size: 12px;
+        border-radius: 10px;
       text-decoration: none;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       margin: 20px auto;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 750px) {
       .booking-button {
         font-size: 31px;
         padding: 4px 22px;
-        margin: 30px auto;
+        margin: 30px 60px;
         border-radius: 20px;
       }
     }
 
-    .booking-button.sms {
-      background-color: #f0fafa;
-      color: #000;
-      border: 2px solid #009688;
-  
-    }
+    .booking-button.sms,  .booking-button.whatsapp {
+       background: var(--tr);
+      color: white;   border-radius: 20px;
+      padding: 1px 6px;
+      border: 4px double white;
+            box-shadow: 1px 1px 5px  rgba(0,0,50,.5);
+      }
 
-    .booking-button.whatsapp {
-      background-color: #f0fafa;
-      color: #000;
-      border: 2px solid #009688;
-    
-    }
 
-    /* ---------- footer ---------- */
- footer {
-  border-top: 4px solid #fff;
-  background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
-  color: #fff !important;
+   
 
-  text-align: center;
-  margin-bottom: 20px !important;
-  padding: 10px 0;
-  font-size: 9px;
-  line-height: 1.7;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
-
-@media (min-width: 750px) {
-  footer {
-    border-top: 12px solid #fff;
-  
-  }
-}
-
-.address-card {
-  max-width: 90%;
-background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
-  padding: 2px 10px;
-  border-block: 0.5px solid #fff;
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  border-radius: 0 0 10px 10px;
-}
-
-@media (min-width: 750px) {
-  .address-card {
-    font-size: 28px !important;
-    margin: 10px auto;
-    padding: 10px 40px !important;
-    border-radius: 0 0 40px 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .address-card {
-    font-size: 10px;
-    padding: 6px 12px;
-    margin: 8px auto;
-    max-width: 95%;
-    white-space: normal;
-    word-break: break-word;
-  }
-}
-
-.copyright-container {
-  background: linear-gradient(90deg, transparent, #ffffff1a, transparent);
-  padding: 8px 15px;
-  font-weight: 500;
-  font-size: 9px;
-  margin-top: 10px;
-  border-top: 1px solid yellow;
-}
-
-@media (min-width: 750px) {
-  .copyright-container {
-    font-size: 19px !important;
-    margin-bottom: 11px; padding: 6px 10px;
-  }
-}
-
-.working-hours{display:inline-block;padding:6px 25px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:25px;text-align:center; background-color: #ff0;  color: var(--text-color);}
-
-@media (max-width: 480px) {
-  .working-hours {
-    font-size: 9px!important;
-    padding: 4px 10px;
-    white-space: normal;
-    max-width: 90%;
-  }
-}
-
-@media (min-width: 750px) {
-  .working-hours {
-    font-size: 19px!important;
-    padding: 4px 10px;
-    white-space: normal;
-    max-width: 90%;
-  }
-}
-
-.social-icons {
-  display: flex;
-  gap: 5px;
-  margin: 5px auto;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 0;
-  
-}
-
-.social-icon img {
-  width: 24px !important;
-  background: var(--primary-color);
-  height: 24px !important;
-  border-radius: 50%;
-  border: 0.5px solid var(--green-color) !important;
-  display: block;
-  object-fit: cover;
-
-  padding: 3px;
-}
-
-@media (min-width: 750px) {
-  .social-icon {
-    width: 80px !important;
-    height: 80px !important;
-    border: 1px solid var(--primary-blue);
-    padding: 6px !important;
-    border-radius: 50% !important;
-   ;
-  }
-
-  .social-icon img {
-    width: 48px !important;
-    height: 48px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .social-icon img {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.social-icon:hover {
-  background: yellow;
-  transform: translateY(-5px);
-  border: 5px solid white;
-}
-    /* ---------- headings & text ---------- */
-    h1 {
-      background: #fff;
-      color: var(--red-color);
-      text-align: center;
-      font-size: 14px;
-      margin: 16px auto;
-      padding: 4px 16px !important;
-      width: fit-content;
-      text-decoration: underline;
-    }
-
+ 
     @media (min-width: 750px) {
-      h1 {
-        font-size: 32px;
-      }
+     
+        .booking-button.sms,  .booking-button.whatsapp {
+     font-size: 20px;
+      padding: 1px 14px;
+      border: 7px double var(--body-color);
+ }
+
     }
 
-    h2 {
-      color: var(--red-color);
-      text-align: center;
-      padding: 8px 12px;
-      font-size: 14px;
-      width: 100%;
-      border-bottom: 1px solid var(--green);
-      margin: 10px auto 23px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
 
-    @media (min-width: 750px) {
-      h2 {
-        font-size: 24px;
-        padding: 8px 24px;
-      }
-    }
-
-    h3 {
-      font-weight: 700;
-      border-bottom: 1px dashed var(--shadow-bd);
-      margin: 3px 12px;
-      color: #9E03B8 !important;
-      padding: 4px 0;
-      text-align: right !important;
-      display: inline-block;
-      font-size: 14px !important;
-      max-width: fit-content;
-    }
-
-    @media (min-width: 750px) {
-      h3 {
-        font-size: 28px !important;
-        margin: 20px 49px 0 44px;
-        padding: 5px 20px;
-        border-bottom: 2px dotted #00f;
-      }
-    }
-
-    p {
-      font-size: 12px;
-      color: var(--text-dark);
-      font-weight: 600;
-      padding: 8px 4px;
-    }
-
-    @media (min-width: 768px) {
-      p {
-        font-size: 22px !important;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--primary-light);
-    }
-
-    ul, li {
-      list-style: none;
-    }
-
-    li {
-      font-size: 13px !important;
-      font-weight: 500;
-      margin-right: 10px !important;
-      padding: 5px 3px;
-      line-height: 1.8;
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-
-    @media (min-width: 750px) {
-      li {
-        font-size: 20px !important;
-        padding: 10px;
-        margin: 15px;
-        line-height: 1.8;
-        color: #333;
-      }
-    }
 
     img {
       display: block;
@@ -574,7 +624,7 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
     .main-h {
       margin: 0 20px;
       padding: 5px 25px 35px 25px;
-      background: #fff;
+      background: var(--background-gradient-3);
       box-shadow: var(--shadow-sm);
       align-content: center;
       justify-content: center;
@@ -582,7 +632,7 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 
     @media (min-width: 768px) {
       .main-h {
-        margin: 0 20px;
+        margin: 0 40px;
         padding: 25px;
         background-color: #F2FAFF;
         box-shadow: 0 0 6px #035f6199;
@@ -600,71 +650,120 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
     @media (max-width: 480px) {
       .main-image {
         margin: 30px auto 0 auto;
-      }
+      }}
+         .intro-text p {
+             text-align: center!important;
+
+         
     }
 
     .intro-text {
       border: 1px solid #15313A;
-     background: var(--primary-light);
+     background: var(--background-gradient-2);
       border-radius: 0 0 30px 30px;
       color: white;
       line-height: 1.7;
       padding: 15px;
       box-sizing: border-box;
-      text-align: center;
+      text-align: center!important;
     }
 
-    .main-section {
-      border-radius: 15px;
+   .main-section {
+      border-radius: 10px 10px 0 0 ;
       align-items: center;
       align-content: center;
-      padding: 30px 5px 40px;
-      margin: 25px 10px;
-   
-      box-shadow: 0 0 14px rgba(0,50,0,.1);
-      background-color: #fff;
-    }
-
-    @media (min-width: 768px) {
-      .main-section {
-        position: relative;
-        max-width: 99%;
-        margin: 45px 25px;
-        padding: 10px 5px;
-        font-size: 12px !important;
+      padding: 0 3px 20px 3px!important ;
+      margin: 0 auto 25px auto;
+   border: 1px solid var(--light-color);
+  
+      box-shadow: 0 0 2px  #07BCF7;
+     background:var(--background-gradient-2)     ;}
+   .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9; font-size: 12px ;
+       
+  }
+   .subsection p,.subsection li{ color:var(--text-color);   font-size: 12px ;
+  
+   }
+   p{color: inherit;}
+  
+   @media (min-width: 750px) {
+       .subsection p{
+           padding-right: 40px!important;
+       }
+      .main-section {border: 1px solid var(--light-color);
+        position: center;
+           border-radius:  2px;
+         align-items: center;
+      align-content: center;
+        max-width: 100%!important;
+        margin:  10px 10px 60px 10px;
+        padding: 30px 45px;
+        font-size: 22px !important;
       }
       .main-section li {
-        font-size: 24px !important;
-      }
-        .intro-text {
+        font-size: 20px !important;
+    margin-right:40px;  }
+        .intro-text {text-align: center!important;
+
             margin: 0 90px 20px 90px;}
     }
 
     .main-section a {
-      color: #00108E;
+      color: var(--border-color);
     }
 
-    .warning-box {
-      background: var(--light-color);
-      border: .5px solid #5783D8;
-      border-radius: 0 0 14px;
-      padding: 16px 8px;
-      box-shadow: 0 0 14px #0d47231a;
-      margin: 0 20px;
-      font-size: 12px;
-      background-color: #fffde7;
-      position: relative;
-    }
+.subsection {
+  padding: 15px 5px 10px 5px!important;
+  background-color: var(--body-color);
+ color: black;
+ text-align: right;
+ font-weight: 400;
+ border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  align-items: center;
+  font-weight: 600;
+  display: block;
 
-    @media (min-width: 768px) {
-      .warning-box {
-        border-radius: 0 0 50px 50px;
-        border: 1px solid #01556C;
-        padding: 15px;
-        max-width: 99%;
-        margin: 0 25px 15px;
-        position: relative;
-      }
+  white-space: wrap;
+  text-decoration: none;
+  max-width: fit-content;
+  margin:10px auto; 
+
+}
+
+@media (min-width: 750px) {
+  .subsection {
+  
+    font-size: 26px;
+    border-radius: 20;
+    padding: 30px 10px 5px 10px;
+    margin: 30px auto;
+  }
+}
+
+ .warning-box {
+  background: var(--background-gradient-2);
+  border: 0.5px solid #5783D8;
+  border-radius:10px;
+  padding: 6px 8px;
+  box-shadow: 0 0 14px #0d47231a;
+  margin: 0 5px;
+  font-size: 12px;
+  color: #ffa;
+  position: relative;
+}
+.danger-section p{
+ color: black!important;}
+@media (min-width: 750px) {
+  .warning-box {
+    border-radius:15px;
+    border: 1px solid #01556C;
+    padding: 15px;
+    max-width: 99%;
+    margin: 0 20px!important ;
+    position: relative;
+  }
+
       .warning-box a {
         font-size: 22px;
         color: #0084B5;
@@ -682,7 +781,7 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
 
     .certificate-link a {
       font-size: 12px !important;
-      color: var(--link-color) !important;
+      color: var(--border-color) !important;
       display: inline-block;
       font-weight: 600;
       margin: auto 3px;
@@ -695,65 +794,48 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
       }
     }
 
-    .badge-link {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      width: 100%;
-    }
-
-    .badge-link a {
-      display: inline-block;
-      white-space: nowrap;
-      max-width: 100%;
-      padding: 8px 16px;
+  
+        .cta-button a{
+    
+     color: #ffa;
+      padding: 3px 16px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
       text-decoration: none;
       cursor: pointer;
-      background: linear-gradient(135deg, var(--link-color), var(--dark-color));
-      color: #fff;
-      border: 1px solid #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px #0d476fcc;
-      transition: all .3s ease;
+      text-decoration: underline;
+      background: transparent;
+  ;
+           
+  
+      border-radius: 10px; background: var(--background-gradient-1);
+      border: .5px solid var(--light-color);letter-spacing: 2px;
+     
+     
+     
     }
 
-    .badge-link a:hover {
-      background-color: var(--text-color);
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 18px #0d476f26;
-    }
+  .cta-button {
+          display: flex;
+                border-radius: 10px;
+  justify-content: center;
+   background:transparent;
+  margin: 20px auto;
+  flex-wrap: inline-block;
+ 
+  width: fit-content;
+  color: var(--body-color);
+    
+  }
 
-    .badge-link a:active {
-      background-color: var(--dark-color);
-      color: #fff;
-      transform: scale(0.97);
-    }
-
-    .badge-link a:focus {
-      outline: 2px solid var(--link-color);
-      color: #fff;
-      outline-offset: 2px;
-    }
-
-    @media (min-width: 768px) {
-      .badge-link a {
+    @media (min-width: 750px) {
+      .cta-button a{
         font-size: 18px;
         padding: 10px 20px;
         border-radius: 14px;
       }
     }
-
-    @media (max-width: 480px) {
-      .badge-link a {
-        font-size: 13px;
-        padding: 6px 10px;
-      }
-    }
-
     .map {
       width: 90%;
       height: 300px;
@@ -763,22 +845,25 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
       display: block;
     }
 
-    hr {
-      margin: 15px 0;
-      padding: 0 10px;
-      height: 0 !important;
-      border: 0;
-      background: linear-gradient(130deg, var(--border-color), var(--tr), var(--red-color)) !important;
-      height: 5px;
-      border-radius: 0 10px 20px;
-      border: 1px solid #fff;
-    }
-
-    @media (min-width: 768px) {
-      hr {
-        margin-bottom: 25px;
-      }
-    }
+ hr {
+  margin: 15px 5px ;
+  padding: 0 1px;
+ 
+  background: linear-gradient(130deg, var(--tertiary-color), var(--light-color), var(--tr)) !important;
+ 
+ 
+  height: 1px;  
+  border:none;
+ 
+}
+@media (min-width: 750px) {
+ 
+  
+hr {
+ margin: 45px 25px !important;
+ 
+  height: 4px;
+}}
 
     /* ---------- bottom navigation ---------- */
     .bottom-nav {
@@ -1009,28 +1094,28 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
     </div>
   </header>
   <main>
-    <div class="main-h">
+    <div class="main-h"><br>
       <h1 style="text-align:center">قصتنـا</h1>
       <img src="images/endoscopy.jpeg" alt="مناضير الأنف والأذن والحنجرة" loading="lazy" height="555" width="369" class="main-image" style="margin-bottom:0" fetchpriority="high">
       <div class="intro-text">
-        <p style="gap:8px; width:fit-content; text-align:center; margin:5px auto; color:white">مرحباً بكم في عيادة</p>
-        <strong style="background:none; color:red; text-align:center; margin:5px 0;color:yellow"> الدكتور مختار الشرعبي </strong>
+        <p styl"color:white">مرحباً بكم في عيادة</p>
+        <h2 style="background:none; color:red; text-align:center; margin:5px 0;color:yellow"> الدكتور مختار الشرعبي </h2>
         <p style="color:white">الإستشارية للأنف والأذن والحنجرة والرأس والعنق</p>
       </div>
     </div>
-    <br>
-    <div class="main-section">   <p style="margin:5px; text-align:center; font-size:14px; line-height:1.9; color:var(--link-color)">
+    <hr>
+    <div class="main-section">   <p style="margin:5px; text-align:center; font-size:14px; line-height:1.9; color:var(--body-color)">
       في ظل التحديات الصحية المتزايدة، تبرز عيادة الدكتور مختار الشرعبي الاستشارية للأنف والأذن والحنجرة كمركز رائد للرعاية الطبية المتخصصة في محافظة تعز – اليمن. تأسست العيادة لتقديم خدمات متقدمة في علاج أمراض الأنف والأذن والحنجرة والرأس والعنق، معتمدة على خبرة طبية واسعة وتقنيات حديثة جعلتها وجهة مفضلة لمرضى تعز والمحافظات المجاورة مثل إب، الضالع، الحديدة، ولحج.
     </p>
-    </div><br>
+    </div><hr>
     <div class="main-section">
       <h2>رؤيتنا ورسالتنا</h2>
       <p>تقوم رؤية العيادة على أن تكون الوجهة الأولى والأكثر موثوقية لكل من يبحث عن خدمات متخصصة في أمراض الأنف والأذن والحنجرة والرأس والعنق. وترتكز رسالتها على تقديم رعاية صحية تقوم على الدقة العلمية والمصداقية والاحترافية، مع مراعاة احتياجات المرضى الصحية والإنسانية في آن واحد.</p>
-    </div>
+    </div>  <hr>
     <div class="main-section">
       <h2>إشراف طبي بخبرة عالية</h2>
       <p>يشرف على العيادة <strong>الدكتور مختار عبده الشرعبي</strong>، أحد أبرز استشاريي جراحة الأنف والأذن والحنجرة في اليمن. يتمتع بخبرة سريرية وجراحية تمتد لأكثر من عشر سنوات، وهو حاصل على <strong>البورد العربي</strong> من المجلس العربي للاختصاصات الصحية وعضو في الأكاديمية الأمريكية لطب الأنف والأذن والحنجرة. تلقى تدريبًا متقدمًا في جراحات المناظير الدقيقة في جامعة عين شمس بمصر، ما أكسبه خبرة نوعية في إدارة الحالات المعقدة والجراحات الدقيقة.</p>
-    </div>
+    </div>  <hr>
     <div class="main-section">
       <h2>تقنيات حديثة ورعاية متطورة</h2>
       <p>يحرص الدكتور مختار عبده الشرعبي على تقديم رعاية طبية متكاملة وتوفير <a href="services.html" class="certificate-link"><strong>كافة الخدمات</strong></a> الطبية في مجال الأنف والأذن والحنجرة باستخدام أحدث الأجهزة والمناظير التشخيصية والجراحية لضمان تشخيص دقيق وخطط علاجية فعّالة، وتوفير عناء السفر للمرضى الذين كانوا يضطرون للسفر خارج المحافظة للبحث عنها.</p>
@@ -1039,30 +1124,30 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
         <li>📊 أجهزة رقمية حديثة لتقييم السمع وفق المعايير الألمانية.</li>
         <li>⚕️ تجهيزات متقدمة لإجراء <a href="gallery.html" class="certificate-link"><strong>الجراحات النوعية</strong></a> مثل جراحة الجيوب الأنفية بالمنظار، ترقيع طبلة الأذن، وتصحيح انحراف الحاجز الأنفي وغيرها من العمليات النوعية بأحدث التقنيات.</li>
       </ul>
-    </div>
+    </div>  <hr>
     <div class="main-section">
       <h2>التزام إنساني ومصداقية عالية</h2>
       <p>لا تقتصر رسالة العيادة على تقديم العلاج فحسب، بل تشمل جانبًا إنسانيًا مهمًا، حيث يتم التعامل مع المرضى بمصداقية وشفافية تامة في شرح تفاصيل العلاج والتكاليف دون أي رسوم خفية. كما تحرص على تقديم الاستشارات الطبية بأسلوب مبسط وواضح يساعد المرضى على اتخاذ قرارات صحية مستنيرة. وتولي العيادة اهتمامًا خاصًا بالحالات غير القادرة، من خلال تقديم خصومات ودعم خاص مراعاةً للظروف المعيشية الصعبة.</p>
-    </div>
-    <div class="main-section">
-      <h2>وجهة موثوقة لعلاج أمراض الأنف والأذن والحنجرة</h2>
-      <p>بفضل الدمج بين الخبرة الطبية والتقنيات الحديثة والرؤية الإنسانية، أصبحت عيادة الدكتور مختار الشرعبي الخيار المفضل للمرضى الباحثين عن رعاية طبية موثوقة ومتخصصة. ويصفها الكثيرون بأنها الوجهة المثالية لعلاج أمراض ومشاكل الأنف والأذن والحنجرة في محافظة تعز وما حولها.</p>
-    </div>
-    <div class="warning-box" style="border-radius:1rem; background:white">
-      <h2>📍 موقع العيادة :</h2>
-      <p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p>
-      <h3><strong>العنوان</strong> ←</h3>
-      <p style="margin-top:12px; text-align:center"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
-      <br>
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s" allowfullscreen loading="lazy" title="خريطة موقع العيادة"></iframe>
-    </div>
-    <div class="warning-box" style="text-align:center; margin-top:20px;">
-      <em>
-        “إذا كنت تبحث عن أفضل دكتور أنف وأذن وحنجرة في اليمن أو استشاري حنجرة موثوق في تعز، فإن
-        <strong style="color:#d4177b;">الدكتور مختار الشرعبي</strong> هو خيارك الأمثل”
-      </em>
-    </div>
-    <hr>
+    </div>  <hr>
+
+<section class="main-section"><h2 style="color:var(--border-color)">📍 موقع العيادة :</h2>
+
+<p style="color:var(--border-y)">تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection" style="background:#00709E">
+<div class="cta-button"> <a href="contact.html" style="color:var(--border-color); background:var(--background-gradient-2);      text-shadow: 0 0 0  var(--tertiary-color);
+  " > <em> العنوان ←</em> </a> </div>
+<p style="margin-top: 12px;text-align:center;color:white"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
+<iframe class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s"
+    allowfullscreen style="border:1px solid black"
+    loading="lazy"
+    title="خريطة موقع العيادة">
+  </iframe>  <hr>
+</div><a href="https://maps.app.goo.gl/oYYKSN6mJgohFFyi7" 
+   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:var(--tertiary-color);background:var(--background-gradient-3); padding:2px 5px">
+   فتح في خرائط جوجل
+</a></div></section> <hr> 
+
+    <section class="main-section">  
     <div class="booking-container">
       <div class="booking-title">📞 للحجز في عيادة دكتور مختار الشرعبي</div>
       <div class="booking-subtitle">أرسل الإسم برسالة على الأرقام</div>
@@ -1071,12 +1156,13 @@ background: linear-gradient(35deg, var(--primary-color), var(--accent-color));
        
 <a href="sms:730433592?body=أريد حجز موعد" class="booking-button sms" aria-label="مراسله عبر  رسالة نصية ">📩 رسالة نصية</a>
 <a href="https://wa.me/967730433592?text=أريد%20حجز%20موعد" class="booking-button whatsapp" target="_blank" rel="noopener noreferrer"  aria-label="مراسلة مراسله عبر الواتساب ">💬 واتساب</a></div>
-    </div>
+    </div></section>
     <hr>
-    <div class="badge-link">
-      <a href="index.html"><em>← عودة للصفحة الرئيسية</em></a>
+  <a href="index.html"
+   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:var(--tertiary-color);background:var(--background-gradient-3); padding:2px 5px" >
+      <em>← عودة للصفحة الرئيسية</em></a>
     </div>
-    <hr>
+    <br>
   </main>
   <footer>
       <div class="address-card">
