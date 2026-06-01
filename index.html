@@ -7,7 +7,7 @@
     <title>| استشاري أنف أذن حنجرة ممتاز في تعز| د. مختار الشرعبي</title>
     <meta
       name="description"
-      content="عيادة د. مختار الشرعبي للأنف والأذن والحنجرة في تعز. خدمة متكاملة بتقنيات ومناظير حديثة لعلاج أمراض الأنف والأذن والحنجرة بخبرة وكفاءة عالية في محافظة تعز."
+      content="عيادة د. مختار الشرعبي للأنف والأذن والحنجرة في تعز. خدمة متكاملة بأحدث التقنيات  والمناظير التشخيصية والجراحية، لعلاج أمراض الأنف والأذن والحنجرة بخبرة وكفاءة عالية في محافظة تعز."
     />
 
     
@@ -23,7 +23,7 @@
       property="og:description"
       content="خبرة واسعة في مناظير الأنف والأذن والحنجرة وجراحاتها الدقيقة باستخدام أحدث التقنيات."
     />
-    <meta property="og:url" content="Https://drmsharabi.com/" />
+    <meta property="og:url" content="https://drmsharabi.com/" />
     <meta property="og:image" content="Https://drmsharabi.com/images/clinic-logo.webp" />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:alt" content="صورة شعار عيادة د. مختار الشرعبي"
@@ -162,9 +162,9 @@
       --accent-color: #01849F;
             --primary-color: #005B7F;
            
-            --background-gradient-2:linear-gradient(180deg, #003152  50%,#03456F 95%);
-              --background-gradient-2radient-1: linear-gradient(160deg, #005476  20%,#057EA5 65%);
-              --background-gradient-3:linear-gradient(110deg,#FCFFA5, var(--body-color),#FFFF8D );
+            --background-gradient-2:linear-gradient(140deg, #00253E  50%,#003B56 95%);
+              --background-gradient-1: linear-gradient(30deg, #005476  20%,#00709E 65%);
+              --background-gradient-3:linear-gradient(110deg,#FED77A, var(--body-color),#FFFF8D );
             
              --shadow-bd: #0a32fae6;
              --tertiary-color: #006AB5;
@@ -173,10 +173,10 @@
       --light1-color: #DBFdFD;
          --dark-color: #013358;
          --body-color: #E9FFFD;
-         --border-color: #FFDE7A;
           --link-color: #0353B0;
-            --border-y:#F8FFE2;
+            --border-y:#FEF8DD;
          --background-d: linear-gradient(45deg, #03456F 20%, var(--primary-color) 70%);
+          --border-color: #FFE595;
      }
 
 
@@ -365,7 +365,7 @@ body {
       flex-wrap: wrap;
       gap: 18px;
       border-radius: 0 0 15px 15px;
-      box-shadow: 0 13px 6px var(--dark-color);
+      box-shadow: 0 4px 6px var(--dark-color);
  
     }
 
@@ -441,9 +441,9 @@ body {
     }
     /* ---------- headings & text (موحدة) ---------- */
     h1 {
-      background: var(--background-gradient-3);
-      border: .5px solid var(--dark-color);
-      color: var(--red-color);
+      background: var(--background-gradient-2);
+      border-bottom: 1px solid var(--light-color);
+      color: white;
       
    
       text-align: center;
@@ -458,8 +458,8 @@ body {
 
     @media (min-width: 750px) {
       h1 {
-        padding: 0 20px !important;
-        border: 7px solid #fff;
+        padding: 7px 30px !important;
+        border-bottom: 3px solid var(--light-color);
         border-radius: 10px;
         font-size: 27px;
         margin: 20px auto;
@@ -487,7 +487,7 @@ body {
        border-bottom: 1px dashed #dfd;
       font-weight: 700;
       margin: 3px 12px;
-      color: #ffa;
+      color: var(--border-color);
       padding: 4px 0;
       text-align: right;
       display: inline-block;
@@ -636,11 +636,11 @@ ul {
     }
 
     .booking-button.sms,  .booking-button.whatsapp {
-       background: var(--tertiary-color);
-      color: white;
+       background: var(--tr);
+      color: white;   border-radius: 20px;
       padding: 1px 6px;
       border: 4px double white;
-            box-shadow: 2px 0 3px 1px var(--card-white);
+            box-shadow: 1px 1px 5px  rgba(0,0,50,.5);
       }
 
 
@@ -660,19 +660,20 @@ ul {
     /* ---------- CTA button (موحد) ---------- */
     .cta-button a{
     
-     
+     color: #ffa;
       padding: 3px 16px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
       text-decoration: none;
       cursor: pointer;
       text-decoration: underline;
       background: transparent;
-  color:#ffc;
-            text-shadow: 0 0 5px  var(--tertiary-color);
+  ;
+           
   
-      border-radius: 10px;
+      border-radius: 10px; background: var(--background-gradient-1);
+      border: .5px solid var(--light-color);letter-spacing: 2px;
      
      
      
@@ -687,7 +688,8 @@ ul {
   flex-wrap: inline-block;
  
   width: fit-content;
-  color: var(--border-y);
+  color: var(--body-color);
+    
   }
 
     @media (min-width: 750px) {
@@ -727,13 +729,13 @@ footer {
 .address-card {
   max-width: 100%;
 background:var(--background-gradient-2);
-color: #dfd;
+color: var(--border-y);
   padding: 4px 10px ;
    display: inline-block;
   font-size: 11px;
   line-height: 1.5;
 ;
-  font-weight: 400;  border-block:  .8px solid var(--secondary-color);
+  font-weight: 400;  border-bottom:  .8px solid var(--secondary-color);
   border-radius:0 0 8px 8px;
 }
 
@@ -741,7 +743,7 @@ color: #dfd;
   .address-card {
     font-size: 22px ;
     margin:20px auto 10px auto;
- border-block:  1.3px solid var(--secondary-color);
+ border-bottom:  1.3px solid var(--secondary-color);
  
     padding: 10px 40px !important;
     border-radius: 0 0 20px 15px;
@@ -779,10 +781,10 @@ color: #dfd;
     .copyright-container {
     font-size: 7px }
 }
-.working-hours{display:inline-block;padding:4px 10px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:9px 9px 0 0;text-align:center; background: var(--background-gradient-2);  color: #dfd;  border-block:  .1px outset var(--light-color); 
+.working-hours{display:inline-block;padding:4px 10px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:9px 9px 0 0;text-align:center; background: var(--background-gradient-2);  color: #dfa;  
   line-height: 1.5;
 ;
-  font-weight: 400;  border-block:  .8px solid var(--secondary-color);
+  font-weight: 400;  border-top:  .8px solid var(--secondary-color);
   border-radius:8px 8px 0 0;max-width: 100%;
  }
 
@@ -823,7 +825,7 @@ color: #dfd;
   
 }
 .social-icon{
-      border: 0.5px ridge  var(--secondary-color) !important;
+      border: 0.5px solid  var(--secondary-color) !important;
        background: var(--dark-color);
          border-radius: 50%;
           vertical-align: center;
@@ -833,9 +835,9 @@ color: #dfd;
 
 }
 .social-icon img {
-  width: 22px !important;
+  width: 23px !important;
 
-  height: 22px !important;
+  height: 23px !important;
  
   display: block;
   object-fit: cover;
@@ -883,7 +885,7 @@ margin-left: 21px!important;
 .whatsapp-section {
   text-align: center;
   flex-wrap: wrap;
-  display: flex;background: var(--background-gradient-2radient-1)!important;
+  display: flex;background: var(--background-gradient-2)!important;
   flex-direction: column;
   align-items: center;padding: 20px;
 }
@@ -964,14 +966,14 @@ margin-left: 21px!important;
 }
 
 .warning-box {
-  background-color: var(--background-gradient-2);
+  background: var(--background-gradient-2);
   border: 0.5px solid #5783D8;
   border-radius:10px;
   padding: 6px 8px;
   box-shadow: 0 0 14px #0d47231a;
   margin: 0 5px;
   font-size: 12px;
-  color: black;
+  color: #ffa;
   position: relative;
 }
 .danger-section p{
@@ -1007,21 +1009,21 @@ hr {
   height: 4px;
 }}
 .imp-section {
-  background-color: #00709E;
+  background: var(--background-gradient-2);
   padding: 3px 2px;
   margin: 15px 3px;
   text-align: center;
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 3px 8px #0000001a;
+  color: var(--border-color)!important;
+  border-radius: 5px;
+ 
   position: right;
-  border-right: 4px solid red;
+  border: .5px solid var(--accent-color);
 }
 
 @media (min-width: 750px) {
   .imp-section {
-    border-radius: 40px;
-    border-right: 7px solid red;
+    border-radius: 10px;
+   border: 1px solid var(--accent-color);
     margin: 10px 10px;
     padding: 30px;
   }
@@ -1052,14 +1054,14 @@ hr {
     }
 
     .main-section {
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0 ;
       align-items: center;
       align-content: center;
       padding: 0 3px 20px 3px!important ;
       margin: 0 auto 25px auto;
    border: 1px solid var(--light-color);
   
-      box-shadow: 0 0 8px  #07BCF7;
+      box-shadow: 0 0 2px  #07BCF7;
      background:var(--background-gradient-2)     ;}
    .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9; font-size: 12px ;
        
@@ -1070,19 +1072,22 @@ hr {
    p{color: inherit;}
   
    @media (min-width: 750px) {
-      
+       .subsection p{
+           padding-right: 40px!important;
+       }
       .main-section {border: 1px solid var(--light-color);
         position: center;
+           border-radius:  20px;
          align-items: center;
       align-content: center;
         max-width: 100%!important;
         margin:  10px auto;
-        padding: 30px 35px;
+        padding: 30px 45px;
         font-size: 22px !important;
       }
       .main-section li {
-        font-size: 24px !important;
-      }
+        font-size: 20px !important;
+    margin-right:40px;  }
         .intro-text {
             margin: 0 90px 20px 90px;}
     }
@@ -1093,18 +1098,18 @@ hr {
 
   
 .danger-section {
-  background-color: #FFF2EF;
+  margin:20px 5px;background:var(--background-gradient-3);
    box-shadow: 0 0 11px 1px rgba(0,0,0, .1);
-  border: 1px solid red;
+  border: 2px solid var(--dark-color);
   border-radius: 12px;
   padding: 15px 5px;
-  margin: 10px 0;
+
   text-align: center;
   font-size: 12px;
 }
 .danger-section:before{content:"⛔️";position:relative;top:-10px;right:10%;background-color:#fff;color:var(--text-muted);width:30px!important;height:30px !important;margin-top:-20px;margin-bottom:-20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px!important;border:1px solid var(--red-color)}
 @media (min-width: 750px) {
-  .danger-section {border:2px solid var(--red-color);
+  .danger-section {border:3px solid var(--red-color);
     border-radius: 20px;
     margin: 90px 20px!important;
     padding: 30px;
@@ -1138,7 +1143,7 @@ hr {
  color: black;
  text-align: right;
  font-weight: 400;
- border: 1px solid var(--card-white);
+ border: 1px solid var(--accent-color);
   border-radius: 5px;
   align-items: center;
   font-weight: 600;
@@ -1167,7 +1172,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: relative;
-  background: var(--background-gradient-2radient-1);
+  background: var(--background-gradient-2);
   padding: 2px 0!important;
   margin: 40px 2px;
   border-radius: 8px;
@@ -1301,7 +1306,7 @@ hr {
   .profile-text{
      flex:0 0 50%;
      padding:2px!important;
-     background:#fff;
+     background:var(--body-color);
      border-radius:4px 40px 40px 4px;
      border-right:1px solid var(--border-color);
      border-left:3px solid var(--tertiary-color)!important;
@@ -1312,7 +1317,7 @@ hr {
       
     
 }
-  .profile-text h2{font-size:28px;margin:3px align-items;color:var(--red-color)!important;background:#fff;border:none;padding:0}
+  .profile-text h2{font-size:28px!important;margin:3px align-items;color:var(--red-color)!important;background:translateY;border:none;padding:0}
   .profile-text p{color:#000;padding-right:2px;font-size:22px!important;font-weight:500;vertical-align:middle
       
   }
@@ -1441,15 +1446,15 @@ hr {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem 2.5rem;
-  border-block: 4px solid var(--tertiary-color)!important;
-  border-radius: 0 ;
-  margin: 10px 5px !important;border-right: 4px solid var(--border-color)!important;border-left: 4px solid var(--border-color)!important;
+  padding: 5px 2px;
+  border: 2px solid var(--dark-color);
+  border-radius: 20px  20px 0 0;
+  margin: 3px 0 0 0 !important;
 }
 
 @media (min-width: 750px) {
   .experience-header {
-    padding: 1.5rem 2rem; margin: 0 10px!important ; border-block: 5px solid black!important;
+    padding: 20px ; margin: 10px 5px 30px 5px!important ; border: 4px solid var(--accent-color)!important;
   }
 }
 
@@ -1493,7 +1498,7 @@ hr {
 .experience-header h2 i {
   color: var(--light-color);
   font-size: 2rem;
-  background: #fffff01f;
+  background: #333;
   padding: 0.5rem;
   border-radius: 1rem;
 }
@@ -1631,7 +1636,7 @@ hr {
   font-size:13px;
 ;  padding: 2px 0 ;
   font-weight: 700;
-  color:#ffa;
+  color:var(--border-color);
   margin-bottom: 14px;
   display: wrap;
   align-items: center;
@@ -1681,10 +1686,10 @@ hr {
   color: #fff;
   padding: 3px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
   border-radius: 10px;
-  border: 1px solid var(--accent-color)!important;
+  border: 2.5px solid var(--accent-color)!important;
   width: 98%!important;
   line-height: 1.65;
-  background: var(--background-gradient-2);
+  background: var(--background-gradient-1);
   margin: 5px 3px;
   
   /* ترسانة الحماية الأمنية لمنع خروج النصوص نهائياً */
@@ -1797,14 +1802,14 @@ hr {
 }
 
 .highlight{color:var(--primary-dark);font-size:13px}
-.hero{       background-color: var(--background-gradient-2)!important;
+.hero{       background: var(--background-gradient-2)!important;
   border: 0.5px solid #5783D8;
   border-radius:10px;
   padding: 6px 8px;
   box-shadow: 0 0 14px #0d47231a;
   margin: 0 5px;
   font-size: 12px;
-  color: #aff;
+  color: var(--border-color);
   position: relative;}
 .hero:before{content:"🎯";position:relative;top:-17px;right:10%;background-color:white;color:var(--text-muted);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border:2px outset var(--light-color);padding:3px}
 
@@ -1841,6 +1846,7 @@ hr {
 </header>
 <main>
  <br>
+      <h1 >نبذة عن د. مختار الشرعبي</h1><br>
 <div class="search-box">
 <form class="search-form" action="/search.html" method="get">
 <input type="text" name="q" class="search-input" placeholder="ابحث في الموقع...">
@@ -1852,15 +1858,14 @@ hr {
 </form>
 </div>
 <br>
-
-<p style="margin-top: 10px; color: #dff;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
+<div class="imp-section">
+<p style="margin-top: 10px; color: #fff;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
 
 <div class="cta-button">
 <a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer">
 <em>drmokhtarent.org</em>
 </a>
-</div>
-      <h1 >نبذة عن د. مختار الشرعبي</h1>
+</div></div>
         <section class="profile-section">
 
     <div class="profile-image">
@@ -1902,7 +1907,7 @@ hr {
  </div>
   </section>
 
-
+<section class="main-section" >
 <div class="experience-header">
 <h2>
     
@@ -1913,7 +1918,7 @@ hr {
 
 للأنف والأذن والحنجرة
 والرأس والعنق </div>
-  </div>  <section class="main-section" >
+  </div>  
    
     <p style="line-height:2.3 ">
       مرحباً بكم في صفحة عيادة الدكتور مختار الشرعبي للاستشارات المتخصصة
@@ -1927,11 +1932,11 @@ hr {
           أمراض الأنف والأذن والحنجرة لدى الأطفال والبالغين،
           مع توفير خدمات المناظير التشخيصية والعلاجية الحديثة،
           ومتابعة اضطرابات السمع والاتزان والشخير وحساسية الأنف والتهابات الجيوب الأنفية.
-        </p> </div></div> </section><hr><br>
+        </p> </div></div> </section><hr><br><section class="main-section">  
       <div class="experience-header">
 <h2>
     خدمات عيادة افضل دكتور انف واذن وحنجرة في تعز </h2>
-     </div><section class="main-section">  
+     </div>
 
    
      
@@ -1995,7 +2000,7 @@ hr {
       </div>
 
   <hr> 
-      <div class="danger-section" style="margin:20px 5px">
+      <div class="danger-section" >
         <p>
           استمرار أعراض الأذن أو الأنف أو الحنجرة لفترات طويلة
           دون تقييم طبي قد يؤدي إلى مضاعفات ومشاكل مزمنة،
@@ -2026,7 +2031,7 @@ rel="noopener noreferrer"
 <hr> 
 
 
-    <div class="experience-header">
+    <section class="main-section">  <div class="experience-header">
 
      <h2>
         الخبرات والخدمات الطبية
@@ -2037,7 +2042,7 @@ rel="noopener noreferrer"
       </div>
 
     </div>
- <section class="main-section"> 
+
     <div class="experience-list">
 
       <div class="exp-item">
@@ -2115,12 +2120,12 @@ rel="noopener noreferrer"
 <hr>
 <!-- الموقع -->
 
-<section class="main-section"><h2 style="color:#dfd">📍 موقع العيادة :</h2>
+<section class="main-section"><h2 style="color:var(--border-color)">📍 موقع العيادة :</h2>
 
-<p>تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection" style="background:var(--background-gradient-3">
-<div class="cta-button"> <a href="contact.html" style="color:var(--tr);       text-shadow: 0 0 0  var(--tertiary-color);
+<p style="color:var(--border-y)">تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection" style="background:#00709E">
+<div class="cta-button"> <a href="contact.html" style="color:var(--border-color); background:var(--background-gradient-2);      text-shadow: 0 0 0  var(--tertiary-color);
   " > <em> العنوان ←</em> </a> </div>
-<p style="margin-top: 12px;text-align:center"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
+<p style="margin-top: 12px;text-align:center;color:white"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
 <iframe class="map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s"
     allowfullscreen style="border:1px solid black"
@@ -2128,7 +2133,7 @@ rel="noopener noreferrer"
     title="خريطة موقع العيادة">
   </iframe>
 </div><a href="https://maps.app.goo.gl/oYYKSN6mJgohFFyi7" 
-   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:#fdf">
+   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:var(--tertiary-color);background:var(--background-gradient-3); padding:2px 5px">
    فتح في خرائط جوجل
 </a></div></section> <hr> 
 <div class="hero" style=" text-align: center; margin-top: 20px; color:white">
@@ -2139,7 +2144,7 @@ rel="noopener noreferrer"
 </div>
 <hr>
 
-  
+      <section class="main-section">  
  <div class="booking-container" style="margin-bottom:20px">
     <div class="booking-title">
       الحجز والاستفسار
@@ -2157,9 +2162,10 @@ rel="noopener noreferrer"
 <a href="sms:730433592?body=أريد حجز موعد" class="booking-button sms" aria-label="مراسله عبر  رسالة نصية ">📩 رسالة نصية</a>
 <a href="https://wa.me/967730433592?text=أريد%20حجز%20موعد" class="booking-button whatsapp" target="_blank" rel="noopener noreferrer"  aria-label="مراسلة مراسله عبر الواتساب ">💬 واتساب</a>
 </div>
-</div></div>
+</div></div></section>
 <br><br>
-</main>    <footer>
+</main>   
+<footer>
       <div class="address-card" >
         <span>ركن مفرق ماوية، مبنى مختبرات دار الصحة</span>
         ،
