@@ -52,9 +52,16 @@
     }
 
     /* ---------- fonts ---------- */
-  @font-face{
+   
+@font-face{
     font-family:'Cairo';
-    src:url('Font/Cairo-Bold.ttf') format('truetype');
+    src:url('font/Cairo-Regular.woff2') format('truetype');
+    font-weight:400;
+    font-display:swap;
+}
+@font-face{
+    font-family:'Cairo';
+    src:url('Font/Cairo-Bold.woff2') format('truetype');
     font-weight:700;
     font-display:swap;
     }
@@ -62,6 +69,8 @@
     h1, h2, h3, h4, h5, h6, p, a, span, div, nav, header, footer, button, input, textarea, li {
       font-family: "Cairo", sans-serif !important;
     }
+
+
     /* ---------- root variables (موحدة من الصفحات السابقة) ---------- */
     :root {
       
@@ -75,7 +84,7 @@
       --card-white: #D9E0E8;
     ;
       --shadow-bd: #0a32fae6;
-            --tr: #8E00CF;
+          --tr: #8E00CF;
       
   
     }
@@ -1199,4 +1208,4 @@ rel="noopener noreferrer" >
   </script>
   
 </body>
-</html>>
+</html>
