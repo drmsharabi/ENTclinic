@@ -872,204 +872,188 @@ hr {
  
   height: 4px;
 }}
+/* --- الأنماط الأساسية للشريط (الهاتف أولاً) --- */
+.bottom-nav {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+   box-shadow: 0 0 2px 1px rgba(159, 205, 135, 1);
+   
+ 
+  z-index: 1000;
+  direction: rtl;
+  border: 1px solid  white;
+  padding: 4px 1px 4px 4px;
+  box-sizing: border-box;
+  
+  
+   
+      background: rgba(255, 250, 255, .3);
+  backdrop-filter: blur(8);
+ 
+      gap: 5px;
+}
 
-    /* ---------- bottom navigation ---------- */
-    .bottom-nav {
-      position: fixed;
-      bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      background: rgb(254 235 255 / 0.55);
-      backdrop-filter: blur(1px);
-      border-radius: 60px;
-      box-shadow: 0 0 2px var(--shadow-bd);
-      min-height: 22px;
-      z-index: 1000;
-      direction: rtl;
-      border: 1px solid #fff;
-      padding: 2px 7px;
-      max-width: none;
-      min-width: 100%;
-    }
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  gap: 8px;
+}
 
-    @media (min-width: 750px) {
-      .bottom-nav {
-        left: 0;
-        right: 0;
-        transform: translateX(1%);
-        min-width: 100%;
-        padding: 4px 9px;
-        border: 6px double var(--card-white);
-        box-shadow: 0 0 5px var(--shadow-bd);
-        max-width: none;
-      }
-    }
+.nav-links-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* منع الـ Flexbox من دفع الصندوق خارج الحدود */
+  flex-wrap: nowrap;
+  overflow-x: auto; /* ميزة أمان: إذا زاد حجم العنصر لا يخرج بل يظهر شريط تمرير مخفي */
+  scrollbar-width: none; 
+}
+.nav-links-wrapper::-webkit-scrollbar {
+  display: none;
+}
 
-    @media (min-width: 1024px) {
-      .bottom-nav {
-        max-width: 95%;
-      }
-    }
+.nav-link {padding: 1px 8px;   background:  rgba(6, 105, 135, 0.8);
 
-    @media (max-width: 480px) {
-      .bottom-nav {
-        left: 0 !important;
-        right: 0;
-        transform: none;
-        min-height: 22px;
-        max-width: none;
-        padding: 1px 10px;
-        min-width: 100%;
-      }
-    }
+      margin:1px  5px;
+      border-radius: 30% ;
+          font-weight: bold;
+   color: white;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 400;
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      position: relative;
-      width: auto;
-      min-height: 22px;
-    }
+   box-shadow: 0 2px 8px  rgba(59, 55, 35, 1);
+   
+  white-space: nowrap;
+   border-block: 1.5px solid white; 
+  
+    flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
+}
 
-    .nav-links-wrapper {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      align-items: center;
-      flex: 1;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
+.nav-link.active, .nav-link:hover {
+   
+      font-weight: bold;
+     border: 1px solid var(--red-color);
+     background: var(--border-y)!important; box-shadow: 0 0 0 1px  rgba(249, 255, 235, 1);
+      color: black;
 
-    .nav-links-wrapper::-webkit-scrollbar {
-      display: none;
-    }
+}
 
-    .more-btn, .nav-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      line-height: 1;
-      margin: 2px;
-      box-sizing: border-box;
-      vertical-align: middle;
-    }
+.more-btn {
+  background: var(--card-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  color:black;
+  border-radius: 5px;
+  box-shadow: 0 0 2px blue;
+  font-weight: bold;
+  border: 1px solid var(--light1-color);
+  padding: 2px ;
 
-    .nav-link {
-      background: var(--light1-color);
-      color: var(--primary-dark);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 2px 14px;
-      border-radius: 40px;
-      white-space: nowrap;
-      gap: 4px;
-      border: .5px solid var(--accent-color);
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;  max-height: 24px;
 
-    @media (min-width: 750px) {
-      .nav-link {
-        font-size: 28px !important;
-        padding: 9px 11px;
-        height: 60px;
-        border: 2px solid var(--accent-color);
-        margin-left: 23px;
-      }
-    }
+}
 
-    @media (max-width: 480px) {
-      .nav-link {
-        font-size: 7px !important;
-        padding: 2px 10px !important;
-        max-height: 22px;
-      }
-    }
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 0;
+  min-width: 160px;
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  direction: rtl;
+ 
+}
 
-    .nav-link.active, .nav-link:hover {
-      background-color: var(--red-color) !important;
-      color: white;
-      box-shadow: 0 0 3px var(--shadow-bd);
-      border: 1px solid white;
-    }
+.dropdown-menu a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.dropdown-menu a:hover {
+  background: var(--red-color);
+  color: var(--light1-color);
+}
+.dropdown-menu.show {
+  display: flex;
+}
 
-    .more-btn {
-      background: #fff;
-      border: 1px solid #0000001a;
-      font-size: 24px;
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--accent);
-      padding: 0 12px;
-      border-radius: 40px;
-      min-width: 54px;
-    }
+/* --- الشاشات المتوسطة والكبيرة (Tablets & Desktops) --- */
+@media (min-width: 750px) {
+  .bottom-nav {
+    left: 0%;
+  right: 0;
+    right: auto;
+    transform: translateX(0%);
+    width: 100%;
+    max-width: 990px; 
+    bottom: 15px;
+     box-shadow: 0 0 2px 2px rgba(159, 255, 135, 1);
+   
+ 
+     padding: 5px 1px 5px 14px!important;    border: 2px solid  white;
+   box-sizing: border-box;
+  
+  }
 
-    @media (min-width: 750px) {
-      .more-btn {
-        min-width: 38px;
-        font-size: 48px;
-        padding: 9px 12px !important;
-        height: 60px;
-      }
-    }
+  .nav-link {  border-block: 2px solid white;
+  
+    margin: 0 10px ;       /* تم تصفير المارجن والاعتماد على الـ gap البرمجي */
+    padding: 5px 14px!important;
+      padding: 0 10px;
+        
+     
+     font-size: 20px;
+     
+       padding: 5px 15px!important;
+  }
 
-    @media (max-width: 480px) {
-      .more-btn {
-        max-height: 22px;
-        min-width: 14px;
-        font-size: 14px !important;
-        padding: 2px 5px !important;
-      }
-    }
+  .more-btn {
+    font-size: 2.9rem;
+    padding: 5px ;
+    max-height: 60px;
+    border: 1px solid var(--tertiary-color);
 
-    .more-btn:hover {
-      background: var(--primary-light);
-      color: #fff;
-    }
+    
+  }
 
-    .dropdown-menu {
-      position: absolute;
-      bottom: 60px;
-      left: 0;
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px #0003;
-      padding: 8px 0;
-      min-width: 180px;
-      z-index: 2000;
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      border: 1px solid var(--border-light);
-      direction: rtl;
-    }
+  .dropdown-menu {
+    bottom: 120%;
+    min-width: 180px;
+  }
+  
+  .dropdown-menu a {
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+}
+  
+ 
+    @media (max-width: 750px) {
+ 
+     .more-btn {
+         max-height: 15px;max-height:24px}}
 
-    .dropdown-menu a {
-      padding: 10px 20px;
-      text-decoration: none;
-      color: var(--primary-dark);
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    @media (min-width: 750px) {
-      .dropdown-menu a {
-        font-size: 25px;
-      }
-    }
-
-    .dropdown-menu a:hover {
-      background: var(--gray-bg);
-      color: var(--primary);
-    }
-
-    .dropdown-menu.show {
-      display: flex;
-    }
 
     /* ---------- misc ---------- */
     ::selection {
