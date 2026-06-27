@@ -122,24 +122,20 @@
 }
 </script>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
     /* ---------- fonts ---------- */
    
 @font-face{
     font-family:'Cairo';
     src:url('Font/Cairo-Regular.woff2') format('truetype');
-    font-weight:400;
+    font-weight:500;
     font-display:swap;
 }
 @font-face{
     font-family:'Cairo';
     src:url('Font/Cairo-Bold.woff2') format('truetype');
-    font-weight:700;
+    font-weight:400;
     font-display:swap;
     }
     body,
@@ -148,338 +144,113 @@
     }
 
 
-  :root {
-      
-      --text-color: #333;
-      --green-color: #00C7A2;
-    
-
-    
-      --red-color: #BC0052;
-      --primary-dark: #01056D;
-      --card-white: #D9E0E8;
-    ;
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 70px 0 5px 0!important;
+      direction: rtl;
+      text-align: right;
+      background:var(--body-color);
+    }
+     @media (min-width: 650px) {
+         body{
+              padding: 110px 0 35px 0!important;
+         }
+         }
+    :root{--primary:#003347;
+        --border-light:#1F7D9F;
+        --primary-light:#004763;
+        --primary-dark:#002030;
+        --border-color:#004D7A;
+        --accent:#026881;
+       --secondary:#014779;
+       --light-color:#00F2FF;
+       --red-color:#B30062;
+       --body-color:#00111E;
      
-      --tr: #8E00CF;
-      
-  
-   
-          --secondary-color: #007A9F;
-      --accent-color: #01849F;
-            --primary-color: #005B7F;
-           
-            --background-gradient-2:linear-gradient(140deg, #00253E  50%,#003B56 95%);
-              --background-gradient-1: linear-gradient(30deg, #005476  20%,#00709E 65%);
-              --background-gradient-3:linear-gradient(110deg,#FED77A, var(--body-color),#FFFF8D );
-            
-             --shadow-bd: #0a32fae6;
-             --tertiary-color: #006AB5;
-             --red-color: #BC0052;
-               --light-color: #6CF8FF;
-      --light1-color: #DBFdFD;
-         --dark-color: #013358;
-         --body-color: #E9FFFD;
-          --link-color: #0353B0;
-            --border-y:#FEF8DD;
-         --background-d: linear-gradient(45deg, #03456F 20%, var(--primary-color) 70%);
-          --border-color: #FFE595;
-     }
-
-
-
-  
-body {
-  background: var(--background-d) ;
-  line-height: 1.7;
-  color: #1a2c3e;
-  margin: 0 !important;
-  padding: 0  !important;
-
-}
-
-@media (min-width: 750px) {
-  body {
-      margin: 0!important;
-    padding: 0  !important;
-  }
-}
-/* --- الأنماط الأساسية للشريط (الهاتف أولاً) --- */
-.bottom-nav {
-  position: fixed;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  width: 100%;
-   box-shadow: 0 0 2px 1px rgba(159, 205, 135, 1);
-   
- 
-  z-index: 1000;
-  direction: rtl;
-  border: 1px solid  white;
-  padding: 4px 1px 4px 4px;
-  box-sizing: border-box;
-  
-  
-   
-      background: rgba(255, 250, 255, .3);
-  backdrop-filter: blur(8);
- 
-      gap: 5px;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  position: relative;
-  width: 100%;
-  gap: 8px;
-}
-
-.nav-links-wrapper {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  flex: 1;
-  min-width: 0; /* منع الـ Flexbox من دفع الصندوق خارج الحدود */
-  flex-wrap: nowrap;
-  overflow-x: auto; /* ميزة أمان: إذا زاد حجم العنصر لا يخرج بل يظهر شريط تمرير مخفي */
-  scrollbar-width: none; 
-}
-.nav-links-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.nav-link {padding: 1px 8px;   background:  rgba(6, 105, 135, 0.8);
-
-      margin:1px  5px;
-      border-radius: 30% ;
-          font-weight: bold;
-   color: white;
-  text-decoration: none;
-  font-size: 10px;
-  font-weight: 400;
-
-   box-shadow: 0 2px 8px  rgba(59, 55, 35, 1);
-   
-  white-space: nowrap;
-   border-block: 1.5px solid white; 
-  
-    flex-shrink: 0; /* تمنع المتصفح من ضغط أو تشويه حجم الزر */
-}
-
-.nav-link.active, .nav-link:hover {
-   
-      font-weight: bold;
-     border: 1px solid var(--red-color);
-     background: var(--border-y)!important; box-shadow: 0 0 0 1px  rgba(249, 255, 235, 1);
-      color: black;
-
-}
-
-.more-btn {
-  background: var(--card-white);
-  font-size: 1.2rem;
-  cursor: pointer;
-  color:black;
-  border-radius: 5px;
-  box-shadow: 0 0 2px blue;
-  font-weight: bold;
-  border: 1px solid var(--light1-color);
-  padding: 2px ;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  flex-shrink: 0;  max-height: 24px;
-
-}
-
-.dropdown-menu {
-  position: absolute;
-  bottom: 100%;
-  left: 15px;
-  background: white;
-  border-radius: 6px;
-  padding: 6px 0;
-  min-width: 160px;
-  z-index: 2000;
-  display: none;
-  flex-direction: column;
-  gap: 2px;
-  direction: rtl;
- 
-}
-
-.dropdown-menu a {
-  padding: 8px 16px;
-  text-decoration: none;
-  color: var(--tertiary-color);
-  font-weight: 400;
-  white-space: nowrap;
-  font-size: 14px;
-}
-.dropdown-menu a:hover {
-  background: var(--red-color);
-  color: var(--light1-color);
-}
-.dropdown-menu.show {
-  display: flex;
-}
-
-/* --- الشاشات المتوسطة والكبيرة (Tablets & Desktops) --- */
-@media (min-width: 750px) {
-  .bottom-nav {
-    left: 0%;
-  right: 0;
-    right: auto;
-    transform: translateX(0%);
-    width: 100%;
-    max-width: 990px; 
-    bottom: 15px;
-     box-shadow: 0 0 2px 2px rgba(159, 255, 135, 1);
-   
- 
-     padding: 5px 1px 5px 14px!important;    border: 2px solid  white;
-   box-sizing: border-box;
-  
-  }
-
-  .nav-link {  border-block: 2px solid white;
-  
-    margin: 0 10px ;       /* تم تصفير المارجن والاعتماد على الـ gap البرمجي */
-    padding: 5px 14px!important;
-      padding: 0 10px;
+        --link-color:#f9C1FF;
+        --text-yl:#FFFF8D;   
+        --text-color:#f9ffFF;
+         --text-gr:#bFf7FF;
         
-     
-     font-size: 20px;
-     
-       padding: 5px 15px!important;
-  }
-
-  .more-btn {
-    font-size: 2.9rem;
-    padding: 5px ;
-    max-height: 60px;
-    border: 1px solid var(--tertiary-color);
-
-    
-  }
-
-  .dropdown-menu {
-    bottom: 120%;
-    min-width: 180px;
-  }
-  
-  .dropdown-menu a {
-    font-size: 25px;
-    padding: 10px 20px;
-  }
+           --shadow-pr:0 0 5px rgba(110,172, 162, 0.5);
+        --shadow-li:0 0 3px rgba(0,255, 242, 0.7);
+         --shadow-b:rgba(221,207, 255, 0.7);
+         
+ --background-gradient-2:radial-gradient(circle  at center, var(--secondary) 5%,#000D17 95%);
+              --background-gradient-1:  linear-gradient( 180deg,var(--secondary)95%,var(--text-color)0%,var(--accent));
+            
+              --background-gradient-3:linear-gradient(90deg,#FFFF8D 18% ,var(--light-color)0%,var(--secondary) 2%);
+              --background-gradient-li:linear-gradient(90deg,var(--text-gr),#fff,var(--text-color)93%);
+            
+ }
+ *,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
   
- 
-    @media (max-width: 750px) {
- 
-     .more-btn {
-         max-height: 15px;max-height:24px}}
-
-   header {
-      margin-bottom: 4px;
-      background: var(--dark-color);
-      border-bottom: 7px solid var(--light-color);
-      color: #fff;
-      padding: 20px;
+  
+    .header-logo {position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    border-bottom: 2px solid var(--border-light);
+      background: var(--background-gradient-3);
+      box-shadow: 0 3px 0   var(--body-color);
+    
+      padding: 5px 10px 7px 0;
       display: flex;
-      align-items: center;
+    
       justify-content: center;
       flex-wrap: wrap;
-      gap: 18px;
-      border-radius: 0 0 15px 15px;
-      box-shadow: 0 4px 6px var(--dark-color);
- 
-    }
-
-    @media (min-width: 750px) {
-      header {
-        border-radius: 0 0 55px 55px;
-      }
+      gap: 15px; align-items:center;
     }
 
     .header-logo img {
-      height: 55px;
-      width: auto;
+      height: 30px;position: absolute;right: 5px;
       border-radius: 50%;
-      border: 3px solid var(--light-color);
-    }
+      width: auto; border:2.5px double #5BF7FF; }
 
-    @media (min-width: 750px) {
-      .header-logo img {
-        height: 110px;
-        border: 6px solid var(--light-color);
-      }
-    }
- @media (max-width: 480px) {
-.header-logo img {
-        height: 45px;
-      width: auto;
-        
-      }
-    }
     .header-text {
-      display: flex;
-      line-height: 2.2;
-      flex-direction: column;
-      align-items: flex-start;
-      
-      
+      display: flex;gap: 4px;
+      flex-direction: column;vertical-align: center;
+      align-items: center;
     }
 
     .main-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #ffa;
+      font-size: 9px;
+      font-weight: 400;
+      color: var(--text-yl);
       white-space: nowrap;
     }
 
-    @media (min-width: 750px) {
-      .main-title {
-        font-size: 29px;
-      }
+    .sub-title {
+      font-size: 9px;
+       color: var(--text-gr);
+      white-space: nowrap;font-weight: 500!important;
     }
-    @media (max-width: 480px) {
-      .main-title {
-        font-size: 11px;
-        
-      }
-    }
-.sub-title {
-  font-size: 12px;
-  color: #dfd;
-  white-space: nowrap;
-}
 
-@media (min-width: 750px) {
-  .sub-title {
-    font-size: 28px;
-  }
-}
- @media (max-width: 480px) {
+    @media (min-width: 650px) {
+           .header-logo {  border-bottom: 4px solid var(--text-color);  box-shadow: 0 5px 0 var(--red-color);  padding: 10px 20px 15px 0;}
+      .main-title {
+        font-size: 22px !important;
+      }
       .sub-title {
-        font-size: 10px;
-        
+        font-size: 21px !important;
+      }
+      .header-logo img {right: 50px;
+        height: 70% !important;border: 4.5px double #5BF7FF;
       }
     }
-    /* ---------- headings & text (موحدة) ---------- */
-    h1 {
-      background: var(--background-gradient-2);
+  h1 {
+      background: var(--background-gradient-1);
       border-bottom: 1px solid var(--light-color);
       color: white;
       
    
       text-align: center;
-      padding: 2px 15px;
+      padding: 2px 15px 5px 15px;
      
       border-radius: 5px;
       font-size: 13px;
@@ -488,7 +259,7 @@ body {
       max-width: fit-content;
     }
 
-    @media (min-width: 750px) {
+    @media (min-width: 650px) {
       h1 {
         padding: 7px 30px !important;
         border-bottom: 3px solid var(--light-color);
@@ -497,374 +268,352 @@ body {
         margin: 20px auto;
       }
     }
-
-    h2 {
-      color: var(--red-color);
-      font-size: 16px;
-      padding: 5px 25px;
-      text-align: center;
-      background: transparent;
-     ;
+   
+    h2 {text-align: center;
+      color: var(--text-yl);
+      font-size: 14px; margin: 25px 5px 3px 5px ; font-weight: 400; background: var(--border-color);padding:5px;
+     border-bottom:  1.5px solid black;
+  border-radius: 2px ; box-shadow:  0 2px 3px  var(--primary-dark)}
     
-      margin: 10px auto;
-      width: auto;
+h3{font-weight:700;text-decoration-thickness:.5px; text-decoration :underline; text-underline-position:under; margin:3px 12px;color:#D7C9FF;padding:4px 0;text-align:center;display:inline-block;font-size:13px;max-width:fit-content}
+    ul {
+      padding-right: 20px;
+      margin-top: 10px;
     }
 
-    @media (min-width: 750px) {
-      h2 {
-        font-size: 28px!important;
-      }
+    ul li { font-weight: 500;
+   color: var(--text-color);font-size: 12px;
+
+      margin-bottom: 5px;
     }
- h3 {
-       border-bottom: 1px dashed #dfd;
-      font-weight: bold;
-      margin: 3px 12px;
-      color: var(--border-color);
-      padding: 4px 0;
-      text-align: right;
-      display: inline-block;
-      font-size: 14px;
-      max-width: fit-content;
+     ul {
+      padding-right: 20px;
+      margin-top: 10px;
     }
-@media (min-width: 750px) {
-  h3 {
-    font-size: 26px;
-    padding: 30px auto;
-    margin: 30px 10px -10px !important;
-    border-bottom: 2px dotted #dfd;
-    border-radius: 20px 20px 0 0;
-  }}
-  
-p {
-  margin: 10px 5px;
-  font-size: 13px;
-  line-height: 1.8;
-  font-weight: 700;
+    h1,h2,h3,p,strong{
+     font-weight: 400; }
+     p{
+         color: var(--text-color);font-size: 12px;
+
+    padding:  8px;line-height: 2.4
+
+
+     }
+
+ 
+a{
+     font-weight: bold;color: var(--text-gr);font-size: 12px; font-size: inherit;
+
+ }
+ strong{
+     color:var(--text-gr);
+     font-size: inherit;font-size: 12.5px;font-weight: 400;
+ }
+ @media (min-width: 650px) {
+ h1{font-size:32px;padding:12px 24px}
+h2{font-size:24px!important;margin:15px 20px ;padding:5px 20px}
+h3{font-size:1.4rem;margin:24px 20px}
+li{font-size:22px!important;padding:10px 25px;margin-right: 15px;line-height:1.8}
+
+a{
+    font-size: 21px!important;font-weight: bold;
 }
- ul, li {
-    font-size: 14px ;
-    font-weight: 400!important;
-  }
-
-@media (min-width: 750px) {
-  p { margin: 20px 15px!important;
-    font-size: 22px !important;
-  }
-
-  li {
-    font-size: 24px !important;
-  }
+html p{
+    ;padding:  15px;line-height: 2.4
 }
-
-ul {
-  padding-right: 20px;
-}
-
-@media (min-width: 750px) {
-  ul {
-    padding-right: 40px;
-    
-  }
-}
-
-      .booking-container {
-      background:var(--background-gradient-3);
-      border: 1px double var(--light-color);
+p{font-size:24px!important;}
+  main,p,li,a,html,strong {
+      font-size: 112%!important
      
-    
-      border-radius: 8px 0 8px 0;
-      padding: 20px 5px;
-      margin: 20px 10px;
-    }
+  }}
 
-    @media (min-width: 750px) {
-      .booking-container {
-      
-        border: 3px solid black;
-        border-radius:10px;
-        padding: 20px 10px;
-        line-height: 1.8;
-        margin: 40px 30px;
-      }
-    } .booking-title {
-      color: var(--red-color);
-      font-weight: 700;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (min-width: 750px) {
-      .booking-title {
-        font-size: 24px;
-      }
-    }
-
-    .booking-subtitle {
-      font-weight: 700;
-      color:  var(--primary-dark);
-      font-size: 11px;
-      text-align: center;
-      margin: 15px 10px;
-      line-height: 2;
-    }
-
-    @media (min-width: 750px) {
-      .booking-subtitle {
-        font-size: 22px;
-      }
-    }
-
-    .booking-numbers {
-      color:  var(--tertiary-color);
-      font-size: 12px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-
-    @media (min-width: 750px) {
-      .booking-numbers {
-        font-size: 24px;
-      }
-    }
-
-    .booking-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    @media (min-width: 750px) {
-      .booking-buttons {
-        gap: 91px;
-      }
-    }
-
-    .booking-button {
-      white-space: nowrap;
+  
+   
+          hr{margin:30px 5px;border:0;height:2px;border-radius:0 10px 20px;background:linear-gradient(130deg,transparent,var(--secondary),var(--link-color),var(--border-light),transparent)} 
+              @media (min-width: 650px){hr{margin:60px 15px;border:0;height:4px}
+       }
+          
+          .container img {
+     width: auto;height: 70%;
+      border-radius: 12px;
+      margin-bottom: 20px;
       display: block;
-      text-align: center;
-      max-width: fit-content;
-      align-items: center;
-      gap: 8px;
-      padding: 0 16px;
-      font-weight: 700;
-      font-size: 12px;
-        border-radius: 10px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin: 20px auto;
+      margin-left: auto;
+      margin-right: auto;
+      
     }
-
-    @media (min-width: 750px) {
-      .booking-button {
-        font-size: 31px;
-        padding: 4px 22px;
-        margin: 30px 60px;
-        border-radius: 20px;
+       @media (min-width: 650px) {
+    .container img{
+         height: auto;width: 50%;
+     }
       }
+       
+.main-section{
+    border: .5px solid var(--accent);box-shadow:  var(--shadow-b);
+    border-block: 2.5px solid black;
+  
+    font-size: 112%!important;
+      padding: 3px 4px 10px 3px;
+    border-radius: 0  ;
+      margin: 5px 5px 10px 5px!important;
+      background: var(--background-gradient-2);
+     font-size: 12px;font-weight: 700;
     }
+.main-section a{ border-bottom: .5px solid var(--link-color);text-decoration: none;
+    color: var(--link-color);margin: 20px 2px 0  8px!important;font-weight: inherit;font-size: inherit!important
+}
+     @media (min-width: 650px) {
+         .main-section{margin:50px 10px!important;padding:10px 30px!important}
 
-    .booking-button.sms,  .booking-button.whatsapp {
-       background: var(--tr);
-      color: white;   border-radius: 20px;
-      padding: 1px 6px;
-      border: 4px double white;
-            box-shadow: 1px 1px 5px  rgba(0,0,50,.5);
-      }
+     }
+         
 
 
+
+
+
+  
+/* ===== حاوية العناصر ===== */
+.nav-container {position: absolute;left: 4px;top:4px;
+    display: flex;
+   flex-direction: column;;
+  align-items: center;
+  justify-content:center; /* المحتوى يبدأ من اليسار */
+  gap: 4px;               /* **لا توجد مسافة بين العناصر** */
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* ===== زر الرئيسية ===== */
+.nav-link {;color:#003E5F;font-size:9px;padding:0 2px;gap:4px;text-decoration: underline; font-style: italic; bold!important;
+text-underline-position: under;text-decoration-thickness: .7px;text-decoration-color: #003E5F;border-bottom: 1px dashed #003E5F;;line-height: 1.4;
+}
+
+/* إزالة الحدود للزر الأخير (زر المزيد) */
+.more-btn {
+  background:var(--text-color);font-size:19px!important;cursor:pointer;color:#003E5F;padding:  0  !important;border-radius:10%;height: 23px;display: flex;align-items: center;line-height: 1.3;border: 1px dashed #003E5F;box-shadow: var(--shadow-pr);
    
 
- 
-    @media (min-width: 750px) {
-     
-        .booking-button.sms,  .booking-button.whatsapp {
+
+
+}
+
+.nav-link:hover,
+.more-btn:hover {
+  background: #f0f0f0;
+}
+.nav-link.active:hover {
+  background: #1da85a;
+}
+
+/* ===== القائمة المنسدلة (تظهر فوق الشريط) ===== */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 48px;         /* فوق الشريط مباشرة */
+  left: 10px;              /* تبدأ من نفس الجهة اليسرى */
+ background: rgba(235, 250, 245, 1);
+  border: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
+  padding: 1px 0;
+  min-width: 70px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.10);
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 3px 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+ @media (min-width: 650px) {
+     header{padding: 10px 30px 10px 5px;}
+     .nav-container{
+         top:9px;
+         left: 20px;
+     }
+ ..nav-link{
      font-size: 20px;
-      padding: 1px 14px;
-      border: 7px double var(--body-color);
  }
+ .more-btn{height: 40px;padding: 0 5px;
+      font-size: 40px!important;
+ }
+}
+   
+ .booking-float {
+   
+position: fixed;
+bottom: 9px ;
+left: -8px;
 
-    }
-
-    /* ---------- CTA button (موحد) ---------- */
-    .cta-button a{
-    
-     color: #ffa;
-      padding: 3px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      text-decoration: underline;
-      background: transparent;
-  ;
-           
-  
-      border-radius: 10px; background: var(--background-gradient-1);
-      border: .5px solid var(--light-color);letter-spacing: 2px;
-     
-     
-     
-    }
-
-  .cta-button {
-          display: flex;
-                border-radius: 10px;
-  justify-content: center;
-   background:transparent;
-  margin: 20px auto;
-  flex-wrap: inline-block;
+ z-index: 1002;;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+      background:#014779;
+  object-fit: contain !important;
+  color: #fff ;
+  padding:0 7px 2px 13px!important;
+  margin: 0 !important;
+  border-radius: 0 15px 0 0;
+  text-decoration: none;
+  font-size: 10px ;
+  font-weight: 700;
  
-  width: fit-content;
-  color: var(--body-color);
-    
+ border: .9px solid #00b0cf!important;
+   border-bottom: 1px solid #00b0cf!important;
+ box-shadow:  0 0 0 3px rgba(5, 57, 5, 0.9);
+}
+
+/* ===== صورة الأيقونة داخل الزر ===== */
+   .booking-float img { border-radius: 0 10px  z-index: 1000;box-shadow: 0 -1px 3px 1px rgba(5, 7, 0, 0.9);
+  width: 25px; position: absolute;
+       bottom:20px
+     ;
+padding: 1px 2px 1 4px!important;
+  left:5px;
+  height: 25px;
+  object-fit: contain;border-radius: 50% 0 50% 0;
+  margin: -1px !important;border: .5px solid var(--text-gr); 
+     rotate(-5deg);border-bottom: 1px solid #00b0cf!important;background:#028534; animation: whatswave 5s ease-out 5!important;animation-delay: 2s;
+  
+}
+ @media (min-width: 650px) {
+     .hand-icon {
+  display:none!important}
+ .booking-float img {
+       height: 62px;width:auto;bottom:45px;left:-10px;padding:5px 5px 5px 10px!important;border: 1.5px solid #00fFff;}
+       .booking-float{
+           bottom: 30px;border-radius: 0 30px 0 0;
+           left: 0;font-size: 30px!important;padding:0 10px!important;border: 2px solid #00fFff
+       }
+ }
+   .hand-icon {
+     position: absolute;
+       bottom:13px;
+       rotate: 210deg;
+  left: 12px;
+    font-size: 19px;
+   display: inline-block;
+text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
+            animation: handWave 5s ease-in-out 5;
+            transform-origin: right;
+ }
+  @keyframes whatswave{
+      0%,100% {opacity: 1; box-shadow: 2px -1px 0   rgba(225, 247, 15, 0.5);
   }
+  10%{
+      
+     opacity: .2;  box-shadow: -13px 3px 0 24px rgba(127, 241, 12, 0);
+  }
+       35% {opacity: 1;  box-shadow: -8px 3px 0  rgba(127, 241, 12, 0);
+  }
+  }90% {opacity: 0;  box-shadow: -8px 3px 0  rgba(127, 241, 12, 0);
+  }
+ @keyframes handWave {
 
-    @media (min-width: 750px) {
-      .cta-button a{
-        font-size: 18px;
-        padding: 10px 20px;
-        border-radius: 14px;
-      }
-    }
+   0%,
+   100% {opacity: 1;
+     transform: scale(1) rotate(-15deg) translateY(-10px);
+   }
 
+   10% {
+     transform: scale(1.1) rotate(0deg) translateY(10px); opacity: 1;
+   }
 
+   85% {
+     transform: scale(.9) rotate(0deg) translateY(15px);
+     opacity: 0;
+   }
+
+   95% {
+     transform: scale(1.1) rotate(.5deg);translateY(35px);
+     opacity: 1
+   }
+ }
+     footer {
+      background: var(--background-gradient-1)!important;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      line-height: 1.7;,margin-bottom: 0;
+    }  
+   .address-container{ position: fixed; bottom:10px; right:0;font-size: 8.5px; font-weight: bold;background:var(--background-gradient-li);padding:1px 3px 1px 15px;font-weight:400!important;color:var(--primary-dark);font-size:7px;border-block:1.5px solid var(--body-color);box-shadow: 0 1px 0    #00b0cf}
+   .address-card{position: relative;
+       ;animation: horzontal 14s ease-in-out 3;animation-delay: 4s;
+   }
+   
+@keyframes horzontal {  0%,100%{scale:1;transform: translatex(-118%);}
+96%{scale:1;transform: translatex(110%);}97%{opacity:1;scale:1;transform: translatex(125%);}
+98%{opacity:0;scale:1;transform: translatex(120%);}99%{opacity:0 ;scale:1;transform: translatex(-110%);}
+ 99.5%{opacity:0 ;scale:1;transform: translatex(-110%);}
+}
+ @media (min-width: 650px) {
+    .address-container{scale: 1.2;
+       right: 8%!important;bottom: 33px;border-block:2.5px solid var(--body-color);box-shadow: 0 2px 0    #00b0cf
+    } .address-card{
+         ;font-size: 19px;
+     }
+ }
+ 
 footer {
-  border-top: 4px solid var(--tertiary-color);
+  border-top: 4px solid var(--body-color);
   background:var(--background-gradient-2);
   color: #fff !important;
 
   text-align: center;
-  border-bottom: 50px solid white;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 0!important;
   font-size: 9px;
   line-height: 1.7;
              box-shadow: 0 -7px  0  var(--light-color);
   border-radius: 20px 20px 0 0;
-  width: 100%; 
+  width: 100%;  margin: 40px 0 20px 0!important;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 650px) {
   footer {  box-shadow: 0 -17px  0  var(--light-color);
-   border-bottom: 100px solid white;
-
-     border-top: 12px solid var(--tertiary-color);border-radius: 40px 40px 0 0;
+    padding: 20px 0 20px 0!important;
+  margin: 40px 0!important;
+     border-top: 12px solid var(--body-color);border-radius: 40px 40px 0 0;
 
   
   }
 }
-
-.address-card {
-  max-width: 100%;
-background:var(--background-gradient-2);
-color: var(--border-y);
-  padding: 4px 10px ;
-   display: inline-block;
-  font-size: 11px;
-  line-height: 1.5;
-;
-  font-weight: 400;  border-bottom:  .8px solid var(--secondary-color);
-  border-radius:0 0 8px 8px;
-}
-
-@media (min-width: 750px) {
-  .address-card {
-    font-size: 22px ;
-    margin:20px auto 10px auto;
- border-bottom:  1.3px solid var(--secondary-color);
- 
-    padding: 10px 40px !important;
-    border-radius: 0 0 20px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .address-card {
-    font-size: 9px;;
-    padding: 4px 10px;
-    margin: 8px auto;
-    max-width: 100%;
-    white-space: normal;
-    word-break: break-word;
-  }
-}
-
-.copyright-container {
-  background: var(--background-gradient-3);
-  padding: 2px 5px;
-  color: black;
-  font-weight: 400;
-  font-size: 7px;
-  margin: 10px auto 10px auto;
-  border-block:  1px outset var(--dark-color);
-}
-
-@media (min-width: 750px) {
-  .copyright-container {
-    font-size: 19px !important;
-   padding: 6px 10px;  border-block:  .4px outset var(--dark-color);
-  }
-}
-@media (max-width: 480px) {
-    .copyright-container {
-    font-size: 7px }
-}
-.working-hours{display:inline-block;padding:4px 10px!important;font-size:12px;font-weight:600;margin:10px auto;border-radius:9px 9px 0 0;text-align:center; background: var(--background-gradient-2);  color: #dfa;  
-  line-height: 1.5;
-;
-  font-weight: 400;  border-top:  .8px solid var(--secondary-color);
-  border-radius:8px 8px 0 0;max-width: 100%;
- }
-
-@media (max-width: 480px) {
-  .working-hours {
-    font-size: 7px!important;
-    padding: 4px 1px;
-    margin: 8px auto;
    
-    white-space: normal;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 750px) {
-  .working-hours {
-    font-size: 21px!important;
-    padding: 4px 10px;
-    white-space: normal;
-      line-height: 1.5;
- border-block:  1px solid var(--secondary-color);
- 
-    max-width: 90%;
-      padding: 10px 40px !important;
-    border-radius: 40px 40px 0 0;
-  }
-}
-
 .social-icons {
   display: flex;
-  gap: 5px; 
+  gap: 3px; 
 
-  margin: 5px auto;
+  margin: 10px 0;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 5px 0 0 0;
+  padding: 0;
   
 }
 .social-icon{
-      border: 0.5px solid  var(--secondary-color) !important;
-       background: var(--dark-color);
+     border: .5px dashed  var(--border-light);
+      
          border-radius: 50%;
-          vertical-align: center;
-  width: 24px !important;
-   justify-content: center;
-  height: 24px !important;
-
+         
 }
 .social-icon img {
   width: 23px !important;
@@ -878,13 +627,10 @@ color: var(--border-y);
   padding: 3px;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 650px) {
     .social-icons {padding: 6px ;}
-  .social-icon {  background: var(--primary-color);
-margin-left: 21px!important;
-    width: 50px !important;
-    height: 50px !important;
-    border: 1px dashed  var(--light-color);
+  .social-icon { 
+    border: 1px dashed  var(--border-light);
     padding: 6px ;
     border-radius: 50% !important;
    ;
@@ -907,893 +653,105 @@ margin-left: 21px!important;
     height: 22px;
   }
 }
-
-.social-icon:hover {
-  background: #dfd;
-  transform: translateY(-5px);
-  border: 5px solid white;
-}
-
-.whatsapp-section {
-  text-align: center;
-  flex-wrap: wrap;
-  display: flex;background: var(--background-gradient-2)!important;
-  flex-direction: column;
-  align-items: center;padding: 20px;
-}
-
-.whatsapp-icon {
-  background-color: #F4FCFF;
-  width: 50px;
-  height: 50px;
-   object-fit: contain;
-
-}
-
-@media (min-width: 750px) {
-    .whatsapp-section {padding: 30px;
-}
-  .whatsapp-icon {
-    width: 83px;
-    height: 83px;
-  }
-}
-
-
-
-.whatsapp-link {
-  text-align: center;
-  margin: 10px 0;
-    padding: 2px 12px ;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-     border-radius: 10px;
-    border: 2px double white;
-   background: var(--red-color);
-}
-
-.whatsapp-link a {
-  background: var(--red-color);
-  color: #fff;
-  padding: 3px 12px ;
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 1.6;
-}
-
-@media (min-width: 750px) {
-  .whatsapp-link a {
-    margin-top: 20px;
-    font-size: 25px!important;
-    border-radius: 16px;
-    padding: 3px 18px;
-  }
-    .whatsapp-link  {
-    margin-top: 20px;
-    font-size: 25px;
-    border-radius: 16px;
-    padding: 3px 18px;
-  }
-}
-
-
-
-.contact-title {
-  white-space: nowrap;
-  text-align: center;
-  color: #C00060;
-  font-size: 15px;
-  margin-bottom: 18px;
-  font-weight: 400;
-}
-
-@media (min-width: 750px) {
-  .contact-title {
-    font-size: 44px !important;
-  }
-}
-
-.warning-box {
-  background: var(--background-gradient-2);
-  border: 0.5px solid #5783D8;
-  border-radius:10px;
-  padding: 6px 8px;
-  box-shadow: 0 0 14px #0d47231a;
-  margin: 0 5px;
-  font-size: 12px;
-  color: #ffa;
-  position: relative;
-}
-.danger-section p{
- color: black!important;}
-@media (min-width: 750px) {
-  .warning-box {
-    border-radius:15px;
-    border: 1px solid #01556C;
-    padding: 15px;
-    max-width: 99%;
-    margin: 0 20px!important ;
-    position: relative;
-  }
-}
-
-hr {
-  margin: 15px 5px ;
-  padding: 0 1px;
- 
-  background: linear-gradient(130deg, var(--tertiary-color), var(--light-color), var(--tr)) !important;
- 
- 
-  height: 1px;  
-  border:none;
- 
-}
-@media (min-width: 750px) {
- 
+   .booking-container {
+      background:var(--background-gradient-li);
+      border: 1px double var(--light-color);
   
-hr {
- margin: 45px 25px !important;
- 
-  height: 4px;
-}}
-.imp-section {
-  background: var(--background-gradient-2);
-  padding: 3px 2px;
-  margin: 15px 3px;
-  text-align: center;
-  color: var(--border-color)!important;
-  border-radius: 5px;
- 
-  position: right;
-  border: .5px solid var(--accent-color);
-}
+      border-radius: 8px 0 8px 0;
+      padding: 20px 5px;
+      margin: 20px 10px;
+    }
 
-@media (min-width: 750px) {
-  .imp-section {
-    border-radius: 10px;
-   border: 1px solid var(--accent-color);
-    margin: 10px 10px;
-    padding: 30px;
-  }
-  
-hr {
-  margin: 35px 0;
-  height: 5px;
-}}
-    @media (max-width: 480px) {
-      .main-image {
-        margin: 30px auto 0 auto;
+    @media (min-width:650px) {
+      .booking-container {
+      
+        border: 3px solid black;
+        border-radius:10px;
+        padding: 20px 10px;
+        line-height: 1.8;
+        font-size: 112%!important;
+        margin: 40px 30px;
+      }
+    } .booking-title {
+      color: var(--red-color);
+      font-weight: 400;
+      font-size: 13px;   text-align: center;
+    }
+
+    @media (min-width: 650px) {
+      .booking-title {
+        font-size: 24px!important;
       }
     }
 
-    .intro-text {
-      border: 1px solid #15313A;
-     background: transparent;
-      border-radius: 10px ;
-      color: #dfd;
-      line-height: 2.1;
-      padding: 15px;
-       text-shadow: 0 0 5px  var(--tertiary-color);
-  
-      margin:15px  5px;
-        font-weight: 400;
-      box-sizing: border-box;
-      text-align: center;  border: 0.5px solid #5783D8;
+    .booking-subtitle {
+ font-weight: 400!important;     color:  var(--primary);
+      font-size: 11px;
+      text-align: center;
+      margin: 15px 10px;
+      line-height: 2;   
+    
     }
 
-    .main-section {
-      border-radius: 10px 10px 0 0 ;
-      align-items: center;
-      align-content: center;
-      padding: 0 3px 20px 3px!important ;
-      margin: 0 auto 25px auto;
-   border: 1px solid var(--light-color);
-  
-      box-shadow: 0 0 2px  #07BCF7;
-     background:var(--background-gradient-2)     ;}
-   .main-section p,.main-section li{ color:white;padding: 10px 5px;line-height: 1.9; font-size: 12px ;
-       
-  }
-   .subsection p,.subsection li{ color:var(--text-color);   font-size: 12px ;
-  
-   }
-   p{color: inherit;}
-  
-   @media (min-width: 750px) {
-       .subsection p{
-           padding-right: 40px!important;
-       }
-      .main-section {border: 1px solid var(--light-color);
-        position: center;
-           border-radius:  20px;
-         align-items: center;
-      align-content: center;
-        max-width: 100%!important;
-        margin:  10px auto;
-        padding: 30px 45px;
-        font-size: 22px !important;
+    @media (min-width: 650px) {
+      .booking-subtitle {
+        font-size: 22px!important;
       }
-      .main-section li {
-        font-size: 20px !important;
-    margin-right:40px;  }
-        .intro-text {
-            margin: 0 90px 20px 90px;}
     }
 
-    .main-section a {
-      color: #00108E;
+    .booking-numbers {  color:  green;
+ 
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 8px;
+      line-height: 1.6;
     }
 
-  
-.danger-section {
-  margin:20px 5px;background:var(--background-gradient-3);
-   box-shadow: 0 0 11px 1px rgba(0,0,0, .1);
-  border: 2px solid var(--dark-color);
-  border-radius: 12px;
-  padding: 15px 5px;
+    @media (min-width: 650px) {
+      .booking-numbers {
+        font-size: 24px;
+      }
+    }
 
-  text-align: center;
-  font-size: 12px;
-}
-.danger-section:before{content:"⛔️";position:relative;top:-10px;right:10%;background-color:#fff;color:var(--text-muted);width:30px!important;height:30px !important;margin-top:-20px;margin-bottom:-20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px!important;border:1px solid var(--red-color)}
-@media (min-width: 750px) {
-  .danger-section {border:3px solid var(--red-color);
-    border-radius: 20px;
-    margin: 90px 20px!important;
-    padding: 30px;
-  }
-  .danger-section:before{width:60px!important;height:60px!important;font-size:35px!important;top:-30px
+    .booking-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 650px) {
+      .booking-buttons {
+        gap: 91px;
+      }
+    }
+
+   
+
+   
+    .booking-button.sms,  .booking-button.whatsapp {
+        font-size: 12px!important;
+       background:#006A5F;
+      color: white;   border-radius: 20px;
+      padding: 1px 6px;
+      border: 1px solid var(--light-color);
+            box-shadow: 1px 1px 15px  rgba(0,0,50,.5);
+      }
+
+
+   
+
+ 
+    @media (min-width: 650px) {
+     
+        .booking-button.sms,  .booking-button.whatsapp {
+     font-size: 24px!important;
+      padding: 1px 14px;
+      border: 2px solid var(--light-color);
  }
-}
 
-
-
-
-.main-section a, .warning-box a {
-  color: #00108E;
-}
-
-.warning-box a {
-  font-size: 12px;
-}
-
-@media (min-width: 750px) {
-  .warning-box a {
-    font-size: 22px;
-    color: #0084B5;
-    font-weight: 500;
-  }
-}
-
-.subsection {
-  padding: 15px 5px 10px 5px!important;
-  background-color: var(--body-color);
- color: black;
- text-align: right;
- font-weight: 400;
- border: 1px solid var(--accent-color);
-  border-radius: 5px;
-  align-items: center;
-  font-weight: 600;
-  display: block;
-
-  white-space: wrap;
-  text-decoration: none;
-  max-width: fit-content;
-  margin:10px auto; 
-
-}
-
-@media (min-width: 750px) {
-  .subsection {
-  
-    font-size: 26px;
-    border-radius: 20;
-    padding: 30px 10px 5px 10px;
-    margin: 30px auto;
-  }
-}
-
-.profile-section {
-  border: 1px solid ;
-
-  display: flex;
-  flex-direction: column;
-  align-items: relative;
-  background: var(--background-gradient-2);
-  padding: 2px 0!important;
-  margin: 40px 2px;
-  border-radius: 8px;
-  overflow: hidden; }
-
-
-.profile-image img {
-  width: 100%; 
-  max-width: 100%;
-  height: auto;
-  border-bottom: 1px solid #0D88AF;
-   display: block;
- ; overflow: hidden;object-fit: fit-content;box-sizing: border-box;  border-radius: 0 0 15px 0!important;
-  margin:   0!important; border: 0!important;  border: 1px solid var(--light-color)!important;
-}
-.profile-image {background: transparent;  object-fit:stretch;background: var(--dark-color);
-  border-radius: 0 0 15px 0!important;
-    overflow: visible;
-    padding: 0!important;
-    margin:  10px 1px 0 10px;
-  
-    
-    
-}
-
-.profile-text {
-    
-  border: 2px solid var(--light-color);
-  max-width: 100%;
-  background-color: #E4FAFF;
-  border-radius: 0 0 30px 5px;
-  margin: 0 10px 10px 5px;
-  color: #000;
-  text-align: right;
-  line-height: 1.9;
-  width: 90%;
-  padding: 12px 2px 10px 2px!important;
-  box-sizing: border-box;
-
-}
-
- .profile-text p{
-     font-size: 12px!important;font-weight:400}
-
-
-.profile-text h2 {
-  font-size: 13px!important;
-  margin-bottom: 10px;
-  padding: 2px;
-  padding-top: 5px;
-}
-/* =========================
-   Desktop / Tablet Layout
-========================= */
-@media (min-width: 750px) {
-
-  .profile-section{
-    display:flex;
-    flex-direction:row;
-    align-items:center; /* يجعل العمودين بنفس الارتفاع */
-    justify-content:space-between;
-
-    width:100%;
-    max-width:1000px;
-
-    margin:10px auto;
-    padding:8px;
-    gap:0;
-
-  
-    border-radius:12px;
-    border:4px double var(--link-color);
-
-    overflow:hidden;
-    display:flex;
-    flex-direction:row;
-    align-items:stretch!important;
-    justify-content:center;
-    gap:0;
-    max-width:1000px;
-    margin:50px auto;
-    padding:5px 2px; 
-    background:var(--border-y)!:
-    border:5px double var(--card-white);
-    border-radius:10px;
-    box-sizing:border-box;
     }
-
-
-  /* نصف الصفحة للصورة */
-  .profile-image{
-  
-    flex:1 1 40%;
-    max-width:100%;
-    display:flex;
- 
-    justify-content:center;
-   vertical-align:middle;
-    padding:0;
-    margin: 10px 3px 10px 10px!important;
-    background:var(--primary-color);
-      margin-left: 0!important;
-    overflow:hidden;
-    box-shadow:0 0 4px rgba(0,50,0,.25);%;padding:5px;
-    border-radius:55px 0 10px 35px;box-sizing:border-box
-  }
-
-  /* الصورة تملأ العمود بالكامل */
-  .profile-image img{
-    width:100%;
-    vertical-align:middle;
-    height:100%;
-   border-radius:45px 0 0  25px!important;
-   
-  
-  
- 
-    margin:0;
-    padding:0;
- 
-    display:block;
-  border:2px solid white;
-    border-radius:0;
-   
-    background:none;
-    
-    
-  }
-
-  /* نصف الصفحة للنص */
-  .profile-text{
-     flex:0 0 50%;
-     padding:2px!important;
-     background:var(--body-color);
-     border-radius:4px 40px 40px 4px;
-     border-right:1px solid var(--border-color);
-     border-left:3px solid var(--tertiary-color)!important;
-     border-top:5px solid var(--primary-color);
-     border-bottom:5px solid var(--primary-color);
-     line-height:1.8;box-sizing:border-box;
-      margin: 10px -5px 10px 8px!important;     
-      
-    
-}
-  .profile-text h2{font-size:28px!important;margin:3px align-items;color:var(--red-color)!important;background:translateY;border:none;padding:0}
-  .profile-text p{color:#000;padding-right:2px;font-size:22px!important;font-weight:500;vertical-align:middle
-      
-  }
-
-}
-@media (max-width: 767px) {
-    
-    .profile-text h2{font-size:18px
- !important}.profile-text p{color:#000;padding-right:2px;font-size:16px!important}
-
-}
-.main-image {
-  width: 70% !important;
-  max-width: 600px;
-  height: auto !important;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 0 6px #035f6199;
-  border-radius: 12px;
-}
-
-
-.certificate-link  {
-    color: var(--link-color);
-  font-size: 12px !important;
-  color:blue!important;
-  display: inline-block;
-  font-weight: 700;
-   margin: 10px 25px;
-}
-
-@media (min-width: 750px) {
-  .certificate-link  {
-    font-size: 22px !important;
-    margin-bottom: 22px; color: var(--link-color)
-  }
-  
-}
-
-.search-box {
-  max-width: 300px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-@media (min-width: 750px) {
-  .search-box {
-    max-width: 340px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.search-form {
-  display: flex;
-  border: 1px solid #00796b;
-  border-radius: 50px;
-  overflow: hidden;
-  background: #fff;
-  height: 30px;  padding: 0 5px 0 -15px
-}
-
-@media (min-width: 750px) {
-  .search-form {
-    height: 44px;
-  }
-}
-
-.search-input {
-  flex: 1;
-  padding:8px;
-  border: none;
-  font-size: 0.7rem;
-  outline: none;
-  height: 80%;
-}
-
-@media (min-width: 750px) {
-  
-  .search-input {
-    font-size: .8rem;padding: 3px 40px;
-  }
-}
-
-.search-button {
-  background: #01439B;
-  border: none;
-  width: 34px;
-    padding: 0 5px
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-
-@media (min-width: 750px) {
-  .search-button {
-    width: 80px;
-    
-  }
-}
-
-.search-button svg {
-  width: 18px;
-  height: 18px;
-  display: block;
-}
-@media (min-width: 750px) {.search-button svg {
-  width: 38px;
-  height: 38px;
-  display: block;
-}
-}
-.search-button:hover {
-  background: #00796b;
-}
-
-  
-
-.experience-header {
-  background: var(--background-gradient-3);
-  
- 
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 5px 2px;
-  border: 2px solid var(--dark-color);
-  border-radius: 20px  20px 0 0;
-  margin: 3px 0 0 0 !important;
-}
-
-@media (min-width: 750px) {
-  .experience-header {
-    padding: 20px ; margin: 10px 5px 30px 5px!important ; border: 4px solid var(--accent-color)!important;
-  }
-}
-
-@media (max-width: 750px) {
-  .experience-header {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    text-align: center;
-    padding: 1.2rem;
-  }
-}
-
-.experience-header h2 {
-  color: var(--red-color);
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -0.3px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin: 0;
-  line-height: 1.3;
-  white-space: nowrap;
-}
-
-
-@media (min-width: 750px) {
-  .experience-header h2 {
-    white-space: normal;
-    justify-content: center;
-    font-size: 1.9rem;
-  }
-}
-@media (max-width: 767px) {
-  .experience-header h2 {
-    font-size: 1.1rem;
-      white-space: normal;
-  }
-}
-
-.experience-header h2 i {
-  color: var(--light-color);
-  font-size: 2rem;
-  background: #333;
-  padding: 0.5rem;
-  border-radius: 1rem;
-}
-
-.subhead {
-  color:black;
-  font-size:10px;
-  margin: 0;
-  font-weight: 700;
-  text-align: right;
-  padding-left: 12px;
-}
-@media (min-width: 750px) {
-  .subhead  {
-    font-size: 20px;
-      
-  }
-}
-
-@media (max-width: 750px) {
-  .subhead {
-  
-    border-right: 3px solid var(--tertiary-color);
-    padding: 0;
-    padding-right: 10px;
-
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 480px) {
-     .subhead {
-         font-size: 0.8rem;
-     }
-}
-
-.experience-list {
-  padding: 0 5px;
-  background-color: var(--background-gradient-2);
- 
-  margin: 0 auto 10px auto;
-  box-shadow: 0 0 1px var(--light-color);
-  border-top: 0;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 750px) {
-  .experience-list {
-    padding: 5px 9px;
-    border-left: 13px solid var(--border-color);
-    margin-top: 0;
-    border: 4px solid var(--border-light);
-  }
-}
-
-@media (max-width: 750px) {
-  .experience-list {
-    padding: 10px 3px;
-  }
-}
-
-.exp-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap:10px;
-  margin: 0!important;
-  padding: 21px 1px 0 1px;
-  background-color: transparent;
- 
-  height: auto;
-
-    width: 100%;  flex-wrap: wrap; 
-}
-
-@media (max-width: 750px) {
-  .exp-item {
-    flex-direction: column;
-    gap: 0.8rem;
-  
-    padding-bottom: 1.2rem;
-  }
-}
-
-.exp-date {
-      border: 1px dashed white!important;
-  flex: 0 0 180px;
-  background: var(--tertiary-color);
-  border-radius: 2rem;
-  padding: 1px3px;
-  text-align: center;
-  align-self: flex-start;
- font-size: 12px;
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  
-}
-
-@media (max-width: 750px) {
-  .exp-date {
-    flex: none;
-    width: fit-content;
-    font-size: 90%;
-    padding: 2px 9px;
-    margin-top: 0; margin-left: 10px;
-  }
-}
-
-@media (min-width: 750px) {
-  .exp-date {
-  
-   ;
-    padding-right: 3px 8px;
-    text-align: center;
-    font-size: 112%;
-     font-size:24px!important;
-    padding: 3px 10px!important;
-    border: 4px  outset var(--primary-light); margin: 5px 20px 20px 20px;
-   
-  }
-}
-
-.exp-content {
-  flex: 1;
-  min-width: 200px;
-  
-}
-
-.exp-title {
-
-  
-  font-size:13px;
-;  padding: 2px 0 ;
-  font-weight: 700;
-  color:var(--border-color);
-  margin-bottom: 14px;
-  display: wrap;
-  align-items: center;
-  overflow: hidden;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-
-
-  overflow-wrap: anywhere; 
- 
-    box-sizing: border-box;
-  width: fit-content;
-  max-width:fit-content;
-
-}
-
-@media (max-width: 748px) {
-  .exp-title {
-    font-size: 12px;
-  }
-  .exp-content {
-     width: 100%;
-    min-width: 0;
-}}
-
-@media (max-width: 480px) {
-  .exp-title {
-    font-size: 1rem;
-  }
-}
-
-
-@media (min-width: 750px) {
-  .exp-title {
-       
-      margin-right: 20px;
-     overflow-wrap: break-word;
-  word-break: break-word;
-  display: block;
-  max-width: fit-content;
-  font-size:28px;  
-  
-  }
-}.exp-description {
-    font-size: 0.8rem
-  font-weight: 400;
-  color: #fff;
-  padding: 3px 6px; /* زيادة الحشو الداخلي لمنع التصاق النص بالحواف */
-  border-radius: 10px;
-  border: 2.5px solid var(--accent-color)!important;
-  width: 98%!important;
-  line-height: 1.65;
-  background: var(--background-gradient-1);
-  margin: 5px 3px;
-  
-  /* ترسانة الحماية الأمنية لمنع خروج النصوص نهائياً */
-  display: block;             /* إجبار العنصر على التصرف ككتلة مستقرة */
-  height: auto !important;    /* إلغاء أي ارتفاع ثابت قد يفرضه عنصر أب */
-  min-height: min-content;    /* جعل الارتفاع مرن بالحد الأدنى للمحتوى */
-  word-break: normal;         /* الحفاظ على الكلمات العربية سليمة والكسر عند المسافات */
-
-      box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  display: block;
-}
-
-/* لضمان السيطرة الكاملة في حال وجود أي وسم p بالخطأ */
-.exp-description p {
-  margin: 0;
-  color: #ffd;
-  padding: 0;font-weight: 400;
-  font-size: inherit;
-  line-height: inherit;
-  display: inline;
-  
-}
-
-@media (max-width: 750px) {
-  .exp-description {
-      
-    border: 4px solid var(--card-white);
-    margin :3px auto;
-    font-size: 0.8rem;       /* وحدة مرنة متوافقة تماماً مع تكبير خط نظام التشغيل */
-    padding: 32px!important;
-    overflow: hidden;  
-    
-  }
-}
-
-@media (max-width: 480px) {
-  .exp-description {
-      font-size: 0.8rem; /* حجم مثالي ومقاوم للتشوه على الشاشات الصغيرة جداً */
-    margin: 8px 3px;
-  }
-}
-
-@media (min-width: 750px) {
-    
-  .exp-description {
-    margin: 20px auto;
-    font-size:20px;
-    width: 100%; overflow: hidden;  
-    max-width: 100%;  border-radius: 20px;   border: 4px solid var(--card-white);   padding: 12px 22px!important;
-  }
-}
-
-
-
-
-
-
-/* --- تعديلات الميديا وعرض الشاشات لضمان التوافق التام --- */
-
-
-
-
-
-::selection {
-  background: #eab30840;
-  color: #0f2b3d;
-}
 .map {
   width: 100%;
   height: 300px;
@@ -1803,186 +761,103 @@ hr {
   display: block;
 }
 .map{width:100%;aspect-ratio:16/9;border-radius:16px;border:none;margin:16px 0;display:block}
-@media (min-width: 750px) {
+@media (min-width: 650px) {
     
 .map { width: 80%;
     margin: 5px auto;
    aspect-ratio:11/5;margin:60px 18px 30px!important;border-radius:16px;width:90%
 }}
-@media (max-width: 748px) {
-  main {
-    font-size: 100%;
-  }
-}
 
-@media (max-width: 480px) {
-  main {
-    font-size: 90%;
-  }
-}
-
-
-@media (min-width: 750px) {
- main {
-    font-size: 112%!important;
-  }
-}
- p {
-  
-  font-size: inherit;
-  line-height: inherit;
-  
-}
-
-.highlight{color:var(--primary-dark);font-size:13px}
-.hero{       background: var(--background-gradient-2)!important;
-  border: 0.5px solid #5783D8;
-  border-radius:10px;
-  padding: 6px 8px;
-  box-shadow: 0 0 14px #0d47231a;
-  margin: 0 5px;
-  font-size: 12px;
-  color: var(--border-color);
-  position: relative;}
-.hero:before{content:"🎯";position:relative;top:-17px;right:10%;background-color:white;color:var(--text-muted);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border:2px outset var(--light-color);padding:3px}
-
-@media (min-width: 750px) {
- .hero{font-size:27px!important;border-radius:18px 18px 0 0;padding:26px;margin: 40px 15px 70px 15px ;border:1px double  var(--light-color); 
-
- }
- .hero:before{width:60px!important;height:60px!important;font-size:45px!important;top:-47px;}
- 
-}
-@media (min-width: 750px) {
- body,maain{
-           margin: 0!important;
-           padding: 0!important;
-       }}
-</style>
-
-</head>
-<body>
-
+  </style>
+ </head>
+  <body> 
+       <a href="https://wa.me/967730433592?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" 
+   target="_blank"
+   rel="noopener noreferrer" 
+   class="booking-float">
+    <img
+ src="images/social/whatsapp1.png"
+height="17px"
+width="17"
+ loading="lazy"
+ decoding="async"
+ alt="واتساب رسالة"
+/>حجز موعد
+  <!-- أيقونة اليد المتحركة -->
+<span class="hand-icon">👆</span> </a>
 <header class="header-logo">
-     <img
-  src="images/clinic-logo.webp"
-  alt="شعار العيادة"
-  width="128"
-  height="128"
-  fetchpriority="high"
-  decoding="async"
-/>
- <div class="header-text">
-<div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
-<div class="sub-title">للأنف والأذن والحنجرة والرأس والعنق</div>
-</div>
-</header>
+  <img src="images/clinic-logo.png" alt="شعار العيادة">
+  <div class="header-text">
+    <div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
+    <div class="sub-title"> للأنف والأذن والحنجرة والرأس والعنق</div>
+  </div>
+       <div  id="responsiveNav">
+   <div class="nav-container">
+        <button class="more-btn" id="moreBtn">☰</button>
+    
+    <!-- زر الرئيسية ثابت -->
+    <a href="index.html" class="nav-link active">الرئيسية</a>
+   
+
+    <!-- ال
+    قائمة المنسدلة -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="https://drmokhtarent.org/about" > عن_العيادة</a>
+  
+    
+      <a href="https://drmokhtarent.org/blog"> المدونة</a>
+      <a href="https://drmokhtarent.org/gallery">معرض_الصور</a>
+     
+      <a href="https://drmokhtarent.org/contact"> تواصل_معنا</a>
+      <a href="https://drmokhtarent.org/testimonials">⭐ التقييمات</a>
+      <a href="https://drmokhtarent.org/q&a.html">❓️ أسئلة_شائعة</a>
+    </div>
+  </div></div>
+    </header>
 <main>
  <br>
       <h1 >نبذة عن د. مختار الشرعبي</h1><br>
-<div class="search-box">
-<form class="search-form" action="/search.html" method="get">
-<input type="text" name="q" class="search-input" placeholder="ابحث في الموقع...">
-<button type="submit" class="search-button" aria-label="بحث">
-<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-0.59 4.23-1.57L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z" fill="white"/>
-</svg>
-</button>
-</form>
-</div>
-<br>
-<div class="imp-section">
-<p style="margin-top: 10px; color: #fff;text-align:center"><strong>الموقع الالكتروني الرسمي للعيادة:</strong></p>
 
-<div class="cta-button">
-<a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer">
+
+<p style="text-align:center">الموقع الالكتروني الرسمي للعيادة</p>
+<br>
+<div class="booking-buttons">
+<a href="https://drmokhtarent.org/" target="_blank" rel="noopener noreferrer" class="booking-button sms" style="
+  letter-spacing: 2.5px;
+
+">
 <em>drmokhtarent.org</em>
 </a>
-</div></div>
-        <section class="profile-section">
-
-    <div class="profile-image">
-
-
-    <img 
-  src="images/dr.profile1.webp"
-  srcset="images/dr.profile1-400.webp 400w,
-          images/dr.profile1-800.webp 800w,
-          images/dr.profile1.webp 1200w"
-  sizes="(max-width: 600px) 400px,
-         (max-width: 1000px) 800px,
-         1200px"
-  loading="eager"
-  fetchpriority="high"
-  width="664"
-  height="665"
-  alt="دكتور مختار الشرعبي"
-  decoding="async"
-  style="max-width: 100%; height: auto;   border-radius:10% 10% 10% 0; padding:10px">
-
-</div>
-  <div class="profile-text">
-
-<h2 style="color: #a1005a">د. مختار عبده خالد الشرعبي</h2>
-<p style="color: black">
-• استشاري الأنف والأذن والحنجرة
-<br />
-• دكتوراة في أمراض وجراحة ومناظير الأنف والأذن والحنجرة (بورد عربي)
-<br />
-• عضو الأكاديمية الإمريكية لجراحة الأنف والأذن والحنجرة
-<br />
-• عضو الجمعية اليمنية للأنف والأذن والحنجرة
-<br />
-• خبرة أكثر من 10 سنوات في علاج أمراض وجراحات الأنف والأذن والحنجرة
-</p>
-
-    </div>
+</div></div><br><hr>
+<div class="container">
+  <img src="images/dr-profile.jpeg" alt="صورة الدكتور مختار الشرعبي"> </div>
+<hr> 
+  <h2>من هو الدكتور مختار الشرعبي؟</h2><div class="main-section" >
+  <p>
+    استشاري متخصص في طب وجراحة ومناظير الأنف والأذن والحنجرة والرأس والعنق في ركن مفرق ماوية، محافظة تعز – اليمن. </p> </div><div class="hero" style="background:var(--background-gradient-1);margin:10px 9px;text-align:center" >
+    <p style=";color:var(--text-yl);font-size:101%"> يصنف  الدكتور مختار الشرعبي أفضل دكتور أنف وأذن وحنجرة في محافظة تعز وأحد أبرز  الأطباء المتميزين على مستوى اليمن </p> <br></div><hr><div class="main-section" > <p>
+    يقدم رعاية طبية متخصصة تستند إلى خبرة علمية وعملية تمتد لعشر سنوات، مع استخدام أحدث الأجهزة والمناظير الجراحية.
+حيث يعتمد في تقديم خدماته الدمج بين الخبرة الطبية والتقنيات الحديثة للوصول إلى تشخيص دقيق وخطة علاج مناسبة لكل مريض.
+  </p>
  </div>
-  </section>
-
-<section class="main-section" >
-<div class="experience-header">
-<h2>
-    
-      عيادة الدكتور مختار الشرعبي     </h2>
-  
-<div class="subhead">
-<i class="fas fa-stethoscope"></i>
-
-للأنف والأذن والحنجرة
-والرأس والعنق </div>
-  </div>  
-   
-    <p style="line-height:2.3 ">
-      مرحباً بكم في صفحة عيادة الدكتور مختار الشرعبي للاستشارات المتخصصة
-      في أمراض وجراحة الأنف والأذن والحنجرة والمناظير التشخيصية والجراحية،
-      حيث نحرص على تقديم رعاية طبية دقيقة وحديثة وفق أحدث المعايير الطبية،
-      مع التركيز على التشخيص الصحيح والمتابعة المستمرة لكل حالة.
-    </p>  </div><hr>
-
+ <hr> <div class="main-section" >
   <p>
           تمثل عيادة الدكتور مختار الشرعبي مركزاً طبياً متخصصاً في تشخيص وعلاج
           أمراض الأنف والأذن والحنجرة لدى الأطفال والبالغين،
           مع توفير خدمات المناظير التشخيصية والعلاجية الحديثة،
           ومتابعة اضطرابات السمع والاتزان والشخير وحساسية الأنف والتهابات الجيوب الأنفية.
-        </p> </div></div> </section><hr><br><section class="main-section">  
-      <div class="experience-header">
-<h2>
-    خدمات عيادة افضل دكتور انف واذن وحنجرة في تعز </h2>
-     </div>
-
-   
-     
-
-      
-
-      <p>
+        </p> </div><hr>
+        <h2>
+    خدمات عيادة افضل دكتور انف واذن وحنجرة في تعز </h2> <hr>
+    <div class="main-section" >
+  
+           <p>
         تقدم العيادة مجموعة واسعة من الخدمات الطبية والاستشارية المتخصصة،
         وتشمل الفحص السريري الدقيق باستخدام الأجهزة الحديثة،
         وتقييم مشاكل السمع والنطق واضطرابات التنفس أثناء النوم،
         إضافة إلى متابعة الحالات المزمنة والمعقدة المتعلقة بالأنف والأذن والحنجرة.
-      </p>
-
+      </p> </div> <hr>
+   <div  class="main-section"> 
       <ul>
         <li>تشخيص وعلاج التهابات الأذن الحادة والمزمنة.</li>
         <li>متابعة ضعف السمع وطنين الأذن واضطرابات الاتزان.</li>
@@ -1993,13 +868,13 @@ hr {
         <li>متابعة مشاكل السمع والتأخر اللغوي عند الأطفال.</li>
       </ul>
 
-     <hr>
+     </div>
 
-    
+ <hr> <div class="main-section">
    <h3>المناظير التشخيصية والجراحية</h3>
-     
-     
-     
+
+
+
 
       <p>
         توفر العيادة خدمات المناظير الحديثة للأنف والحنجرة،
@@ -2009,415 +884,142 @@ hr {
         وأسباب انسداد الأنف أو صعوبة التنفس والبلع.
       </p>
 
-    </div>     <hr> 
-     <h3>الاهتمام براحة المريض</h3>
-  
+    </div> 
+   <div class="booking-buttons "
+    ><a href="https://youtube.com/@ENTsharabi" target="_blank" aria-label="قناة اليوتيوب" class="booking-button sms" style="background:var(--red-color)">🎥 شاهد عملياتنا على YouTube</a>
+  </div> <hr> 
+      <div  class="main-section">   <h3>الاهتمام براحة المريض</h3>
+
       <p>
         تحرص العيادة على توفير بيئة طبية منظمة ومريحة،
         مع الاهتمام بالتواصل الواضح مع المرضى وشرح تفاصيل الحالة والخطة العلاجية،
         لضمان أفضل تجربة علاجية ممكنة.
       </p>
-</div>   </div> </section> <hr> 
-<div class="hero" >
-        <p   >
-          تعتمد العيادة على الدمج بين الخبرة الطبية والتقنيات الحديثة
-          للوصول إلى تشخيص دقيق وخطة علاج مناسبة لكل مريض.
-        </p>
+ </div> </section> <hr> 
+
+      
       </div>
-      <hr><div ></div><div class="warning-box" style="margin:20px 5px; ">
-        <p style="color:white">
-          يساعد التشخيص المبكر باستخدام المناظير الطبية الحديثة
-          في اكتشاف العديد من الحالات المرضية بدقة،
-          مما يساهم في تحسين نتائج العلاج وتقليل المضاعفات.
-        </p>
-      </div>
-
-  <hr> 
-      <div class="danger-section" >
-        <p>
-          استمرار أعراض الأذن أو الأنف أو الحنجرة لفترات طويلة
-          دون تقييم طبي قد يؤدي إلى مضاعفات ومشاكل مزمنة،
-          لذلك يُنصح بعدم تأخير الفحص الطبي المتخصص.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-      <hr><div class="whatsapp-section" >
-        <a href="https://youtube.com/@entsharabi" target="_blank" rel="noopener noreferrer external" 
-          aria-label="قناتنا على اليوتيوب">
-          <img style="margin-bottom: 20px" src="images/social/youtube.jpeg" alt="يوتيوب" class="whatsapp-icon" />
-        </a>
-        <a
-          href="https://youtube.com/@entsharabi"
-          aria-label="قناتنا على اليوتيوب"
-         class="whatsapp-link"           
-target="_blank"
-rel="noopener noreferrer" 
-          
-        >
-          شاهد نماذج عملياتنا
-        </a>
-      </div>
-<hr> 
-
-
-    <section class="main-section">  <div class="experience-header">
-
-     <h2>
-        الخبرات والخدمات الطبية
-      </h2>
-
-      <div class="subhead">
-        خدمات تشخيصية وعلاجية متقدمة في أمراض الأنف والأذن والحنجرة
-      </div>
-
-    </div>
-
-    <div class="experience-list">
-
-      <div class="exp-item">
-
-        <div class="exp-date">
-          ENT
-        </div>
-
-        <div class="exp-content">
-
-          <div class="exp-title">
-            تشخيص أمراض الأنف والأذن والحنجرة
-          </div>
-
-          <div class="exp-description">
-            إجراء تقييم شامل للحالات المرضية المتعلقة بالأذن والأنف والحنجرة
-            باستخدام الفحص السريري والمناظير والأجهزة الحديثة.
-          </div>
-
-        </div>
-
-      </div>
-<hr> 
-      <div class="exp-item">
-
-        <div class="exp-date">
-          ENDOSCOPY
-        </div>
-
-        <div class="exp-content">
-
-          <div class="exp-title">
-            خدمات المناظير التشخيصية
-          </div>
-
-          <div class="exp-description">
-            استخدام المناظير الطبية الحديثة لفحص الأنف والبلعوم والحنجرة
-            وتقييم الحالات المزمنة والمعقدة بدقة عالية.
-          </div>
-
-        </div>
-
-      </div>
-<hr> 
-      <div class="exp-item">
-
-        <div class="exp-date">
-          AUDIOLOGY
-        </div>
-
-        <div class="exp-content">
-
-          <div class="exp-title">
-            تقييم السمع واضطرابات الاتزان
-          </div>
-
-          <div class="exp-description">
-            متابعة مشاكل ضعف السمع وطنين الأذن والدوخة واضطرابات الاتزان
-            مع تقييم الحالات لدى الأطفال والبالغين.
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+  <h2 >المؤهلات والخبرة:</h2> 
+  <div class="main-section" >
+ 
+  <p>
+      
+🔸️ استشاري أمراض وجراحة ومناظير الأنف والأذن والحنجرة والرأس والعنق. 
+<br />
+🔸️ دكتوراة <strong>
+[  الزمالة العربية - سوريا ] </strong>
+في أمراض وجراحة ومناظير الأنف والأذن والحنجرة (بورد عربي
+)<a "certificate-link"
+href="images/B-cert..jpg" target="_blank" aria-label="اطلع على صورة شهادة البورد العربي">
+<i class="fas fa-hand-holding-heart"></i>  <em> شهادة البورد العربي
+</em> </a>
+<br />
+🔸️ 
+دورات متقدمة في الجراحة التنظيرية للأنف والأذن والحنجرة وقاع الجمجمة في جامعة عين شمس.
+<br />
+🔸️ عضو الأكاديمية الإمريكية لجراحة الأنف والأذن والحنجرة.
+<a "certificate-link"
+href="images/A-cert..jpg" target="_blank" aria-label="اطلع على صورة شهادة العضوية">
+<i class="fas fa-hand-holding-heart"></i>  <em> شهادة العضوية الأكاديمية
+</em> </a>
+<br />
+🔸️ عضو الجمعية اليمنية للأنف والأذن والحنجرة
+<br />
+🔸️ خبرة أكثر من 10 سنوات في علاج أمراض وجراحات الأنف والأذن والحنجرة
+</p>
 
  
+ </div><hr>  
 
+  <h2>ما يهدف إليه</h2>
+  <div class="main-section">
+  <p>
+    تقديم خدمة طبية متكاملة تقوم على الثقة والدقة والرعاية الإنسانية وبتكاليف <strong>تراعي الظروف المعيشية</strong>  لذوي الدخل المحدود. 
+    الرقي بمستوى الخدمات الصحية في محافظة تعز والمحافظات المجاورة وجعل العيادة الخيار الأنسب لكل من يبحث عن أفضل دكتور استشاري متخصص في اليمن.
+  </p>
+</div>  <hr>  <br>  
+ <section class="main-section"><h2 >📍 موقع العيادة :</h2>
 
+<p >تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p></section><div class="main-section" style="background:#00709E">
 
-
-<hr>
-<!-- الموقع -->
-
-<section class="main-section"><h2 style="color:var(--border-color)">📍 موقع العيادة :</h2>
-
-<p style="color:var(--border-y)">تتميز العيادة بموقع جغرافي وسطي مناسب لكل المواطنين سواء في القرى أو المدينة أو المحافظات المجاورة.</p><div class="subsection" style="background:#00709E">
-<div class="cta-button"> <a href="contact.html" style="color:var(--border-color); background:var(--background-gradient-2);      text-shadow: 0 0 0  var(--tertiary-color);
-  " > <em> العنوان ←</em> </a> </div>
-<p style="margin-top: 12px;text-align:center;color:white"><strong>محافظة تعز</strong>، الحوبان، <strong>ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
+<p style="margin-top: 12px;text-align:center;color:var(--text-yl"><strong style="color:white">محافظة تعز</strong>، الحوبان، <strong style="color:white">ركن مفرق ماوية</strong>، الشارع العام – مبنى مختبرات دار الصحة – اليمن</p>
 <iframe class="map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0578537030046!2d44.130336899999996!3d13.654244699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c5d5620fdc9a3%3A0xae9f16641ba6a5c9!2z2LnZitin2K_YqSDYry4g2YXYrtiq2KfYsSDYp9mE2LTYsdi52KjZiiDYo9mG2YEg2KPYsNmGINit2YbYrNix2Kk!5e0!3m2!1sar!2s!4v1777663166399!5m2!1sar!2s"
     allowfullscreen style="border:1px solid black"
     loading="lazy"
     title="خريطة موقع العيادة">
-  </iframe>
-</div><a href="https://maps.app.goo.gl/oYYKSN6mJgohFFyi7" 
-   class="cta-button" target="_blank" rel="noopener noreferrer external" style="color:var(--tertiary-color);background:var(--background-gradient-3); padding:2px 5px">
-   فتح في خرائط جوجل
-</a></div></section> <hr> 
-<div class="hero" style=" text-align: center; margin-top: 20px; color:white">
-<em><p>
-“إذا كنت تبحث عن أفضل دكتور أنف وأذن وحنجرة في اليمن أو استشاري حنجرة موثوق في تعز، فإن
-<strong style="color:var(--light-color) ;">الدكتور مختار الشرعبي</strong> هو خيارك الأمثل”
-</em></p>
-</div>
-<hr>
+  </iframe>  
+</div></div></section> <hr> 
 
-      <section class="main-section">  
- <div class="booking-container" style="margin-bottom:20px">
-    <div class="booking-title">
-      الحجز والاستفسار
-    </div>
-
-    <div class="booking-subtitle">
-      يمكنكم التواصل مع العيادة للحجز والاستفسارات غير الطبية 
-      أو متابعة المواعيد والخدمات الطبية المتوفرة عبر الرسائل النصية أو عبر الواتس على الأرقام : .
-    </div> 
-<div class="booking-numbers">📱 730433592 &nbsp;&nbsp;|&nbsp;&nbsp; 777421224</div>
-<hr>
-  <div class="booking-subtitle">
-أو عبر النقر على على زر التواصل المباشر 👇 
-<div class="booking-buttons">
+    <section class="main-section">  
+    <div class="booking-container">
+      <div class="booking-title">📞 للحجز في عيادة دكتور مختار الشرعبي</div>
+      <div class="booking-subtitle">أرسل الإسم برسالة على الأرقام</div>
+      <div class="booking-numbers">📱 730433592 &nbsp;&nbsp;|&nbsp;&nbsp; 777421224</div>
+      <div class="booking-buttons">
+       
 <a href="sms:730433592?body=أريد حجز موعد" class="booking-button sms" aria-label="مراسله عبر  رسالة نصية ">📩 رسالة نصية</a>
-<a href="https://wa.me/967730433592?text=أريد%20حجز%20موعد" class="booking-button whatsapp" target="_blank" rel="noopener noreferrer"  aria-label="مراسلة مراسله عبر الواتساب ">💬 واتساب</a>
-</div>
-</div></div></section>
-<br><br>
-</main>   
+<a href="https://wa.me/967730433592?text=أريد%20حجز%20موعد" class="booking-button whatsapp" target="_blank" rel="noopener noreferrer"  aria-label="مراسلة مراسله عبر الواتساب ">💬 واتساب</a></div>
+    </div></section>
+    <hr> 
+</div> <div class="address-container">
+        <div class="address-card">ركن مفرق ماوية، مبنى مختبرات دار الصحة، تعز، 
+     
+        اليمن</div>
+      </div>
 <footer>
-      <div class="address-card" >
-        <span>ركن مفرق ماوية، مبنى مختبرات دار الصحة</span>
-        ،
-        <span>تعز</span>
-        ،
-        <span>اليمن</span>
-      </div>
-      <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100082372405434" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/facebook.webp" height="60" width="60" alt="فيسبوك" />
-        </a>
-        <a href="https://wa.me/967730433592" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/whatsapp1.webp" alt="واتساب" />
-        </a>
-        <a href="https://youtube.com/@ENTsharabi" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/youtube.webp" alt="يوتيوب" />
-        </a>
-        <a href="https://www.instagram.com/dr.mokhtar_alsharabi" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/instagram.webp" alt="انستغرام" />
-        </a>
-        <a href="https://x.com/Dr_Alsharaabi" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/x.webp" alt="تويتر" />
-        </a>
-        <a href="https://www.tiktok.com/@dr_mokhtar_sharabi" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/tiktok.webp" alt="تيك توك" />
-        </a>
-        <a href="mailto:drmokhtarnajy@gmail.com" class="social-icon" 
-target="_blank"
-rel="noopener noreferrer" >
-          <img src="images/social/gmail.webp" alt="بريد إلكتروني" />
-        </a>
-      </div>
-      <div class="working-hours">⏰ مواعيد العمل: السبت - الخميس: 10:00 صباحاً - 1:00 ظهراً</div>
-      <div class="copyright-container">© 2026 جميع الحقوق محفوظة - عيادة الدكتور/ مختار الشرعبي -- </div>
-    </footer>
-  <nav class="bottom-nav" id="responsiveNav">
-    <div class="nav-container">
-      <div class="nav-links-wrapper" id="navLinksWrapper"></div>
- 
-    <button class="more-btn" id="moreBtn" style="display: none">  
-      <span>☰<span>
-    </button>  
-    
-    <!-- القائمة المنسدلة -->
-    <div class="dropdown-menu" id="dropdownMenu"></div>
+
+    <div class="main-title" style="font-size:70%">⏰ مواعيد العمل: السبت - الخميس: 10:00 صباحاً - 1:00 ظهراً</div>
+  <div class="social-icons">   
+  <a href="https://www.facebook.com/profile.php?id=100082372405434" target="_blank"  class="social-icon" >
+        
+      <img src="images/social/facebook.webp" alt="فيسبوك" width"20" height="20" />
+    </a>
+    <a href="https://wa.me/967730433592" target="_blank" class="social-icon" >
+      <img src="images/social/whatsapp1.webp" alt="واتساب"  width="20" height="20" />
+    </a>
+
+    <a href="https://youtube.com/@ENTsharabi" target="_blank"  class="social-icon" >
+      <img src="images/social/youtube.webp" alt="يوتيوب"  width="20" height="20" />
+    </a>
+
+    <a href="https://www.instagram.com/dr.mokhtar_alsharabi" target="_blank"  class="social-icon" >
+      <img src="images/social/instagram.webp" alt="انستغرام"  width="20" height="20" />
+    </a>
+
+    <a href="https://x.com/Dr_Alsharaabi" target="_blank"  class="social-icon" >
+      <img src="images/social/x.webp" alt="تويتر (إكس)"   width="20" height="20" />
+    </a>
+
+    <a href="https://www.tiktok.com/@dr_mokhtar_sharabi" target="_blank"  class="social-icon" >
+      <img src="images/social/tiktok.webp" alt="تيك توك"
+       width="20" height="20" />
+    </a>
+    <a href="mailto:drm9khtarnajy@gmail.com" target="_blank"  class="social-icon" >
+      <img src="images/social/gmail.webp" alt="بريد إلكتروني"  width="20" height="20" />
+    </a>
   </div>
-</nav>
 
-    </div>
-  </nav>
-  <script>
- const allNavItems = [  
-  { text: "الرئيسية", link: "index.html", active: true },  
-  { text: "عن_العيادة", link: "about.html" },  
-  { text: "تواصل_معنا", link: "contact.html" },  
-  { text: "مقالات_طبية", link: "https://drmokhtarent.org/blog" },  
-  { text: "معرض_الصور", link: "https://drmokhtarent.org/gallery.html" },  
-  { text: "⭐ التقييمات", link: "https://drmokhtarent.org/testimonials.html" },  
-  { text: "أسئلة_شائعة", link: "https://drmokhtarent.org/q&a.html" },  
-];  
+      <div class="sub-title" style="font-size:70%">© 2026 جميع الحقوق محفوظة - عيادة الدكتور/ مختار الشرعبي -- </div><br>
+</footer>
+ <script>
+ 
+const moreBtn = document.getElementById('moreBtn');
+const dropdown = document.getElementById('dropdownMenu');
 
-const wrapper = document.getElementById("navLinksWrapper");  
-const moreBtn = document.getElementById("moreBtn");  
-const dropdown = document.getElementById("dropdownMenu");  
+moreBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  dropdown.classList.toggle('show');
+});
 
-function handleNavClick(e, url) {  
-  e.preventDefault();  
-  if (url.startsWith("http")) window.open(url, "_blank");  
-  else window.location.href = url;  
-}  
-
-function adjustNavbar() {  
-  if (!wrapper || !moreBtn) return;  
-  
-  // إخفاء الزر مؤقتاً لعمل الحسابات بدقة
-  moreBtn.style.display = "none";  
-  
-  // قياس المساحة الإجمالية للحاوية الأب للتحكم بالحدود
-  const container = wrapper.parentElement;
-  if (!container) return;
-  let availableWidth = container.clientWidth;  
-
-  // إنشاء حاوية وهمية لقياس الأحجام الحقيقية للأزرار في نفس اللحظة
-  const tempWrapper = document.createElement("div");  
-  tempWrapper.style.position = "absolute";  
-  tempWrapper.style.visibility = "hidden";  
-  tempWrapper.style.display = "flex";  
-  // جلب الفجوة الديناميكية (gap) المحددة في الـ CSS لشاشة المستخدم الحالية
-  const currentGap = window.innerWidth >= 750 ? 6 : 6; 
-  tempWrapper.style.gap = currentGap + "px";  
-  tempWrapper.style.whiteSpace = "nowrap";  
-  
-  // إجبار الحاوية الوهمية على أخذ خصائص الشاشة الحالية
-  if(window.innerWidth >= 750) {
-      tempWrapper.style.fontSize = "20px";
-  } else {
-      tempWrapper.style.fontSize = "10px";
+document.addEventListener('click', function(e) {
+  if (!moreBtn.contains(e.target) && !dropdown.contains(e.target)) {
+    dropdown.classList.remove('show');
   }
-  
-  document.body.appendChild(tempWrapper);  
+});
+</script>
 
-  const tempLinks = [];  
-  allNavItems.forEach((item) => {  
-    const link = document.createElement("a");  
-    link.className = "nav-link";  
-    link.innerText = item.text;  
-    tempWrapper.appendChild(link);  
-    tempLinks.push(link);  
-  });  
-  
-  // حساب العرض الفعلي لكل عنصر شاملاً البكسلات الدقيقة
-  const widths = tempLinks.map(link => link.getBoundingClientRect().width);  
-  document.body.removeChild(tempWrapper);  
 
-  // قياس العرض التقريبي لزر المزيد
-  const moreBtnWidth = 55;  
-  let visible = [], hidden = [];  
-  
-  // حساب المساحة الإجمالية المطلوبة لجميع العناصر مع الفجوات بينها
-  let totalRequiredWidth = widths.reduce((sum, w) => sum + w + currentGap, -currentGap);  
-
-  if (totalRequiredWidth <= availableWidth) {  
-    // المساحة كافية جداً لظهور كل الأزرار
-    visible = [...allNavItems];  
-    moreBtn.style.display = "none";  
-  } else {  
-    // المساحة ضيقة، يجب توزيع العناصر بين الظاهر والمنسدل
-    let spaceForLinks = availableWidth - moreBtnWidth - 15;  
-    let accumulated = 0;  
-    
-    for (let i = 0; i < allNavItems.length; i++) {  
-      const linkWidth = widths[i];  
-      const nextGap = visible.length > 0 ? currentGap : 0;
-      
-      if (accumulated + linkWidth + nextGap <= spaceForLinks) {  
-        visible.push(allNavItems[i]);  
-        accumulated += linkWidth + nextGap;  
-      } else {  
-        hidden.push(allNavItems[i]);  
-      }  
-    }  
-    
-    // تأمين ظهور عنصر واحد على الأقل دائماً
-    if (visible.length === 0 && allNavItems.length > 0) {  
-      visible.push(allNavItems[0]);  
-      hidden = allNavItems.slice(1);  
-    }  
-    moreBtn.style.display = "inline-flex";  
-  }  
-
-  // حقن العناصر المرئية في الحاوية الرئيسية
-  wrapper.innerHTML = "";  
-  visible.forEach((item) => {  
-    const a = document.createElement("a");  
-    a.className = "nav-link";  
-    if (item.active) a.classList.add("active");  
-    a.innerText = item.text;  
-    a.href = item.link;  
-    a.addEventListener("click", (e) => handleNavClick(e, item.link));  
-    wrapper.appendChild(a);  
-  });  
-
-  // حقن العناصر المخفية في القائمة المنسدلة لزر المزيد
-  dropdown.innerHTML = "";  
-  hidden.forEach((item) => {  
-    const a = document.createElement("a");  
-    a.innerText = item.text;  
-    a.href = item.link;  
-    a.addEventListener("click", (e) => {  
-      e.preventDefault();  
-      handleNavClick(e, item.link);  
-      dropdown.classList.remove("show");  
-    });  
-    dropdown.appendChild(a);  
-  });  
-  
-  if (hidden.length === 0) moreBtn.style.display = "none";  
-}  
-
-// معالجة فتح وإغلاق القائمة عند الضغط على زر المزيد وتبديل الأسهم
-moreBtn.addEventListener("click", (e) => {  
-  e.stopPropagation();  
-  dropdown.classList.toggle("show");  
-    
-  const arrowSpan = moreBtn.querySelector("span");  
-  if (dropdown.classList.contains("show")) {  
-    arrowSpan.innerText = "▲"; 
-  } else {  
-    arrowSpan.innerText = "▼"; 
-  }  
-});  
-
-// إغلاق القائمة تلقائياً عند الضغط في أي مكان خارجها
-document.addEventListener("click", (event) => {  
-  if (!moreBtn.contains(event.target) && !dropdown.contains(event.target)) {  
-    dropdown.classList.remove("show");  
-    const arrowSpan = moreBtn.querySelector("span");  
-    if (arrowSpan) arrowSpan.innerText = "▼";  
-  }  
-});  
-
-// الاستماع لتغيير حجم الشاشة وإعادة الحساب فوراً بالبكسل
-window.addEventListener("resize", adjustNavbar);  
-// تشغيل الحسابات لأول مرة عند تحميل الصفحة
-adjustNavbar();
-
-  </script>
-  
-</body>
-</html>
+ 
+  </body>
+  </html>
