@@ -332,21 +332,7 @@ p{font-size:24px!important;}
           hr{margin:30px 5px;border:0;height:2px;border-radius:0 10px 20px;background:linear-gradient(130deg,transparent,var(--secondary),var(--link-color),var(--border-light),transparent)} 
               @media (min-width: 650px){hr{margin:60px 15px;border:0;height:4px}
        }
-          
-          .container img {
-     width: auto;height: 70%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      
-    }
-       @media (min-width: 650px) {
-    .container img{
-         height: auto;width: 50%;
-     }
-      }
+     
        
 .main-section{
     border: .5px solid var(--accent);box-shadow:  var(--shadow-b);
@@ -767,7 +753,10 @@ footer {
     margin: 5px auto;
    aspect-ratio:11/5;margin:60px 18px 30px!important;border-radius:16px;width:90%
 }}
-
+     .main-image{width:90%!important;max-width:700px;height:auto;display:block;margin:30px auto;border:3px double var(--border-light);box-shadow:0 0 6px rgba(3,95,97,0.6);border-radius:15px}
+    @media(min-width:650px){
+               .main-image{max-width:80%!important;margin:30px auto!important;border-radius:22px}
+              }
   </style>
  </head>
   <body> 
@@ -830,7 +819,12 @@ width="17"
 </a>
 </div></div><br><hr>
 <div class="container">
-  <img src="images/dr-profile.jpeg" alt="صورة الدكتور مختار الشرعبي"> </div>
+  <img src="images/dr.profile.webp" alt="صورة الدكتور مختار الشرعبي" class="main-image"   loading="eager"
+  fetchpriority="auto"
+  width="705"
+  height="785"
+  alt="دكتور مختار الشرعبي"
+  decoding="async"> </div>
 <hr> 
   <h2>من هو الدكتور مختار الشرعبي؟</h2><div class="main-section" >
   <p>
