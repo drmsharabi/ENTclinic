@@ -444,7 +444,7 @@ text-underline-position: under;text-decoration-thickness: .7px;text-decoration-c
  .booking-float {
       
 position: fixed;
-bottom: 9px ;
+bottom: 4px ;
 left: -8px;
 
 
@@ -457,24 +457,24 @@ left: -8px;
   color: #fff ;
   padding:0 7px 2px 13px!important;
   margin: 0 !important;
-  border-radius: 0 15px 0 0;
+  border-radius: 0 10px 0 0;
   text-decoration: none;
   font-size: 10px ;
   font-weight: 700;
  
  border: .9px solid #00b0cf!important;
    border-bottom: 1px solid #00b0cf!important;
- box-shadow:  0 0 0 1px rgba(5, 57, 5, 0.9);  animation: whatswave 5s ease-in-out 5;
+ box-shadow:  0 0 0 1px rgba(5, 57, 5, 0.9);  
 }
 
 /* ===== صورة الأيقونة داخل الزر ===== */
-   .booking-float img { border-radius: 0 10px  z-index: 1000;box-shadow: 0 -1px 3px 1px rgba(5, 7, 0, 0.9);
+   .booking-float img { border-radius: 0 10px ; z-index: 1000;box-shadow: 0 1px 3px 1px rgba(5, 7, 0, 0.9);
   width: 25px; position: absolute;
-       bottom:20px
+       bottom:18px
      ;
-padding: 1px 2px 1 4px!important;
-  left:5px;
-  height: 25px;
+padding: 0 2px 0 4px!important;
+  left:4px;
+  height: 24px;
   object-fit: contain;border-radius: 50% 0 50% 0;
   margin: -1px !important;border: .5px solid var(--text-gr); 
      rotate(-5deg);border-bottom: 1px solid #00b0cf!important;background:#028534; animation: whatswave 5s ease-out 5!important;animation-delay: 2s;;
@@ -487,15 +487,18 @@ padding: 1px 2px 1 4px!important;
  .booking-float img {
        height: 62px;width:auto;bottom:45px;left:-8px;padding:5px 5px 5px 10px!important;border: 1.5px solid #00fFff;}
        .booking-float{
-           bottom: 30px;border-radius: 0 30px 0 0;
-           left: -3px;font-size: 30px!important;padding:0 13px!important;border: 2px solid #00fFff
+ box-shadow:  2px 0 0 3px rgba(5, 57, 5, 0.9); 
+           bottom: 15px;border-radius: 0 25px 0 0;
+           left: -3px;font-size: 30px!important;padding:0 13px!important;border: 2px solid #00b0cf!important
        }
  }
    .hand-icon {
      position: absolute;
        bottom:8px;
        rotate: 210deg;
-  left: 28px;
+  left: 32px;
+   
+  opacity: .8;
     font-size: 19px;
    display: inline-block;
 text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
@@ -542,10 +545,10 @@ text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
       font-size: 12px;
       line-height: 1.7;,margin-bottom: 0;
     }  
-   .address-container{ position: fixed; bottom:9px; right:0% ;left;8%;font-size: 8.5px; font-weight: bold;background:var(--background-gradient-li);
-                      padding:1px 3px 1px 15px!important 
-    ;width:100%;max-width:none;font-weight:400!important;color:var(--primary-dark);font-size:7px;border-block:1.5px solid var(--body-color);box-shadow: 0 1px 0    #00f0ff}
-   .address-card{flex-wrap:nowrap;position: relative;;width:100%;max-width:none;
+   .address-container{ position: fixed; bottom:4px; right:0% ;left;8%;font-size: 8.5px; font-weight: bold;background:var(--background-gradient-li);
+                      padding:0 3px 0 15px!important 
+    ;width:100%;max-width:none;font-weight:400!important;color:var(--primary-dark);font-size:2px;border-block:1.5px solid var(--border-color);box-shadow: 0 .7px 0    #00f0ff}
+   .address-card{flex-wrap:nowrap;position: relative;;width:100%;max-width:none;color: var(--secondary);
        ;font-size:8.5px;animation: horzontal 14s ease-in-out 3;animation-delay: 4s;
    }
    
@@ -556,7 +559,7 @@ text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
 }
  @media (min-width: 650px) {
     .address-container{scale: 1.2;padding: 3px 3px 1px 2px;width:100%;max-width:none;
-      left:8px;right: 10%!important;bottom: 33px;border-block:2.5px solid var(--body-color);box-shadow: 0 2px 0    #00b0cf
+      left:8px;right: 10%!important;bottom: 20px;border-block:2.5px solid var(--body-color);box-shadow: 0 3px 0    #00b0cf
     } .address-card{
          ;font-size: 19px; padding-right:8px 
      }
