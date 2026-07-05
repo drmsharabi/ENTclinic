@@ -55,6 +55,7 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3T40746BTL"></script>
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -158,6 +159,11 @@
               padding: 110px 0 35px 0!important;
          }
          }
+         
+ body{
+      overflow-x: hidden!important;
+    margin: 0!important;
+ }
     :root{--primary:#003347;
         --border-light:#1F7D9F;
         --primary-light:#004763;
@@ -181,7 +187,7 @@
  --background-gradient-2:radial-gradient(circle  at center, var(--secondary) 5%,#000D17 95%);
               --background-gradient-1:  linear-gradient( 180deg,var(--secondary)95%,var(--text-color)0%,var(--accent));
             
-              --background-gradient-3:linear-gradient(270deg,#FFFF8D 16% ,var(--light-color)0%,var(--secondary) 2%);
+              --background-gradient-3:linear-gradient(90deg,var(--secondary) 1% ,var(--primary-dark)0%,var(--secondary) 0%);
               --background-gradient-li:linear-gradient(90deg,var(--text-gr),#fff,var(--text-color)93%);
             
  }
@@ -196,60 +202,70 @@
     top:0;
     left: 0;
     right:0;
-    border-bottom: 2px solid var(--body-color); box-shadow: 0  0 3px rgba(255,255,255,1)!important; 
+    border-bottom:0 outset var(--light-color); ;box-shadow: 0  1px 4px rgba(0,155,222,1)!important; 
       background: var(--background-gradient-3);
-      box-shadow: 0 3px 0   var(--body-color);
+       z-index: 9999;
     
-      padding: 3px 0;
+      padding: 0;
       display: flex;
-    
+    height: 38px;
+    margin-top: -2px!important;
       align-content: center;
       flex-wrap: wrap;
       gap: 10px; align-items:center;
-       justify-content: flex-start; 
+       justify-content:center; 
     }
 
-    .header-logo img {
-      height: 30px;
-      border-radius: 50%;
-      width: auto; border:2.5px double #5BF7FF; }
-
-    .header-text { padding: 0 14px 0 0;
+     .header-logo img{position: absolute;top:1px;right: -1px; 
+               
+                
+align-items:center;margin: 0;
+justify-content:center;
+ border-radius: 0;border: 1.5px outset var(--light-color);
+padding:0;  ;height:38px!important;width: auto!important;box-shadow: 2px 0  0 3px #059DCE;box-shadow:-2.5px 1px  2px  rgba(0,21,75,1);border-radius:0 0 0 7%!important;
+ 
+}
+    .header-text { padding: 0 6px 0 0;
       display: flex;gap: 0px;
       flex-direction: column;vertical-align: center;
-      align-items: center;
+      align-items: center;gap: 0;
     }
 
     .main-title {
-      font-size: 9px;
+      font-size: 8px;
       font-weight: 400;
       color: var(--text-yl);
       white-space: nowrap;
     }
 
     .sub-title {
-      font-size: 9px;
+      font-size: 8px;line-height: 1.5;
        color: var(--text-gr);
       white-space: nowrap;font-weight: 500!important;
     }
  
     @media (min-width: 650px) {
-           .header-logo {  border-bottom: 4px solid var(--body-color);  box-shadow: 0 0 19px rgba(255,250,255,.6);  padding: 10px 20px 15px 0;gap:40px}
+        header{padding: 10px 30px 10px 5px;height:111px!important}
+ 
+           .header-logo {  border-bottom: 4px outset var(--light-color);  box-shadow: 0 0 9px rgba(255,250,255,.6);  padding:  0;gap:40px}
+           .header-text{
+               gap:10px;
+           }
       .main-title {
         font-size: 22px !important;
       }
       .sub-title {
         font-size: 22px !important;
       }
-      .header-logo img {right: 50px;
-        height: 70px !important;border: 4.5px double #5BF7FF;
+      .header-logo img {right: -1pxpx;
+        height: 100% !important;border: 1.5px inset #5BF7FF;
       }
          .header-text { padding: 0 32px 0 32px;margin-right:30px}
     }
   h1 {
-      background: var(--background-gradient-1);
+     
       border-bottom: 1px solid var(--light-color);
-      color: white;
+      color: var(--text-yl);
       
    
       text-align: center;
@@ -341,18 +357,18 @@ p{font-size:24px!important;}
 .main-section{
     border: .5px solid var(--accent);box-shadow:  var(--shadow-b);border-top: 3px solid black;
   
-    font-size: 112%!important;
+
       padding: 3px 4px 10px 3px;
     border-radius: 0  ;
       margin: 2px 5px 10px 5px!important;
       background: var(--background-gradient-2);
-     font-size: 12px;font-weight: 700;
+     font-size: 12px;font-weight: bold;
     }
 .main-section a{ border-bottom: .5px solid var(--link-color);text-decoration: none;font-style: italic;
     color: var(--link-color);margin: 20px 2px 0  8px!important;font-weight: inherit;font-size: inherit!important
 }
      @media (min-width: 650px) {
-         .main-section{margin:2px 10px 50px 10px!important;!important;padding:10px 30px!important;  border: 1.5px solid var(--accent);box-shadow:  var(--shadow-b);border-block: .4px solid var(--accent);}
+         .main-section{margin:2px 10px 50px 10px!important;padding:10px 30px!important;  border: 1.5px solid var(--accent);box-shadow:  var(--shadow-b);border-block: .4px solid var(--accent);}
 
      }
          
@@ -364,17 +380,17 @@ p{font-size:24px!important;}
   
 /* ===== حاوية العناصر ===== */
 .nav-container {
-    display: flex;
-   flex-direction: column;;
-  align-items: center; border-radius: 8%!important;background:var(--secondary);border-block: 1px  solid var(--light-color);
-  gap: 1px;  justify-content: center; box-shadow:0 0 5px  rgba(0 ,20 ,0,.5)
+    display: flex;position: absolute;
+  right: 85%;left: 0;top: 1px; z-index: 9999;;margin-top: -1px;
+  align-items: center; border-radius: 8% 0!important;background:transparent;border-right: 1px  ridge var(--border-light);
+  gap: 1px;  justify-content: center; box-shadow:0 0 5px  rgba(0 ,20 ,0,.1);height: 38px!important;box-shadow:2.5px 1px  2px  rgba(0,21,75,.1)
   
 }
 
 
 /* إزالة الحدود للزر الأخير (زر المزيد) */
-.more-btn {position: relative;right: 0;
-  background:var(--secondary);font-size:19px;cursor:pointer;color:var(--text-color);padding:  3px  3px!important;border-radius:5px;height: 23px;display: flex;align-items: center;line-height: 1.3;border: 0;
+.more-btn {position: absolute;left: 4px;
+  background:white;border:1px inset #5BF7FF;box-shadow:-2.5px 3px  2px  rgba(12,81,95,.5);font-size:19px;-webkit-text-stroke:.3px white ;cursor:pointer;color:var(--s);padding:  0  !important;border-radius:2px;height: 21px;display: flex;align-items: center;line-height: 1.3;
    
 
 
@@ -394,7 +410,7 @@ p{font-size:24px!important;}
   display: none;
   position: absolute;
   top: 48px;         /* فوق الشريط مباشرة */
-  right: 10px;              /* تبدأ من نفس الجهة اليسرى */
+  left: 10px;              /* تبدأ من نفس الجهة اليسرى */
  background: var(--background-gradient-li);
   border: 1px solid #ddd;
   border-radius:2px;
@@ -426,12 +442,11 @@ p{font-size:24px!important;}
   background: #f5f5f5;
 }
  @media (min-width: 650px) {
-     header{padding: 10px 30px 10px 5px;}
-     .nav-container{height: 60px!important;width: 60px;
-        height: auto;margin-right: -30px;
+         .nav-container{height: 100%!important;width: 60px;
+        left: 10px;  right: 90%;left: 0;top: 1px;
      }
  
-  .more-btn{font-size: 50px!important;padding: 0 15px;}}
+  .more-btn{font-size: 50px!important;height:50px;position:absolute;left:14px!important;padding: 0 15px;}}
  .booking-float {
       
 position: fixed;
@@ -443,7 +458,7 @@ left: -8px;
   gap: 6px;
     background:#014779;
   object-fit: contain !important;
-  color: var(--text-gr) ;
+  color: var(--text-color) ;
   padding:0 7px 2px 13px!important;
   margin: 0 !important;
   border-radius: 0 10px 0 0;
@@ -528,22 +543,39 @@ text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
      opacity: 1
    }
  }
+
+
+   
      footer {
+         
+  border-top: 4px solid var(--body-color);
       background: var(--background-gradient-1)!important;
       color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      line-height: 1.7;,margin-bottom: 0;
+      text-align: center;padding: 10px 0 0 0!important;
+     font-size: 8px;
+      line-height: 1.7;
+       box-shadow: 0 -7px  0  var(--light-color);
+  border-radius: 20px 20px 0 0;
+  width: 100%;object-fit: cover;  margin: 40px 0 20px 0!important;
     }  
+    
+@media (min-width: 650px) {
+  footer {  box-shadow: 0 -17px  0  var(--light-color);
+    padding: 20px 0 20px 0!important;
+  margin: 40px 0!important;
+     border-top: 12px solid var(--body-color);border-radius: 40px 40px 0 0;
+
+  
+  }
+}
    .address-container{ position: fixed; bottom:4px; right:0% ;left;8%;font-size: 8.5px; font-weight: bold;background:var(--background-gradient-li);
                       padding:0 3px 0 15px!important 
-    ;width:100%;max-width:none;font-weight:400!important;color:var(--primary-dark);font-size:2px;border-block:1.5px solid var(--border-color);box-shadow: 0 .7px 0    #00f0ff}
-   .address-card{flex-wrap:nowrap;position: relative;;width:100%;max-width:none;color: var(--secondary);
-       ;font-size:8.5px;animation: horzontal 14s ease-in-out 3;animation-delay: 4s;
+    ;width:100%;font-weight:400!important;color:var(--primary-dark);font-size:2px;border-block:1.5px solid var(--border-color);box-shadow: 0 .3px 0   1px #00d9ff;  }
+   .address-card{flex-wrap:nowrap;position: relative;;width:100%;max-width:none;color: var(--primary);
+       ;font-size:8.5px;animation: horzontal1 14s ease-in-out 3;animation-delay: 4s;
    }
    
-@keyframes horzontal {  0%,100%{scale:1;transform: translatex(-118%);}
+@keyframes horzontal1 {  0%,100%{scale:1;transform: translatex(-118%);}
 96%{scale:1;transform: translatex(110%);}97%{opacity:1;scale:1;transform: translatex(125%);}
 98%{opacity:0;scale:1;transform: translatex(120%);}99%{opacity:0 ;scale:1;transform: translatex(-110%);}
  99.5%{opacity:0 ;scale:1;transform: translatex(-110%);}
@@ -556,30 +588,63 @@ text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
      }
  }
  
-footer {
-  border-top: 4px solid var(--body-color);
-  background:var(--background-gradient-2);
-  color: #fff !important;
-
-  text-align: center;
-  padding: 10px 0 0 0!important;
-  font-size: 9px;
-  line-height: 1.7;
-             box-shadow: 0 -7px  0  var(--light-color);
-  border-radius: 20px 20px 0 0;
-  width: 100%;  margin: 40px 0 20px 0!important;
+[class*="Carousel__CarouselArrowControlContainer-sc"]:first-child {
+margin-right: -10px !important;scale:1.1;
 }
 
-@media (min-width: 650px) {
-  footer {  box-shadow: 0 -17px  0  var(--light-color);
-    padding: 20px 0 20px 0!important;
-  margin: 40px 0!important;
-     border-top: 12px solid var(--body-color);border-radius: 40px 40px 0 0;
-
-  
-  }
+[class*="Carousel__CarouselArrowControlContainer-sc"]:last-child {
+margin-left: -10px !important;   animation: horzontal 4s ease-in-out infinite;transform-origin: center;transform: translateY(-16px);border-radius:20%}
+.es-carousel-arrow-control-icon svg path,
+.es-carousel-arrow-control-icon svg {
+  stroke-width: 2px;
+  stroke: blue;  
+ 
 }
-   
+
+     .elfsight-app-906a74ff-8ce8-484c-8cbd-c2892abc43a6{
+         width:100%;
+        padding: 20px 2px;
+     }
+     @media (min-width:650px){  
+      .elfsight-app-906a74ff-8ce8-484c-8cbd-c2892abc43a6{
+         width:96%;
+        padding: 160px 5px;
+     }
+         
+[class*="Carousel__CarouselArrowControlContainer-sc"]:last-child,
+[class*="Carousel__CarouselArrowControlContainer-sc"]:first-child  {
+    scale: 1.4;
+}
+     }
+     
+@media (min-width:650px){   
+    
+[class*="Main__Container-sc"] {
+scale:1.5!important;padding: 20px 120px;
+}
+    
+
+}
+     
+@keyframes horzontal {  0%,100%{transform:translatey(-18px)  translatex(1%);}
+
+90%{;transform:translatey(-18px)  translatex(0);box-shadow: 0 0  0 rgba(127, 241, 12, 0);}
+94%{transform:translatey(-18px)  translatex(18%);    box-shadow: 0 0 0 rgba(225, 247, 15, 0.6);}
+ 98.5%{transform:translatey(-18px)  translatex(-50%);   box-shadow: 23px 0 0 19px rgba(227, 241, 112, 0)}
+}    
+
+[class*="Main__Container-sc"]{
+overflow: visible;font-size: 20px!important;overflow: visible;justify-content:center!important;padding:10px}
+
+@media (min-width:650px){   
+    
+[class*="Main__Container-sc"] {
+scale:1.5!important;padding: 20px 120px;
+}
+    
+
+}
+     
 .social-icons {
   display: flex;
   gap: 3px; 
@@ -714,10 +779,10 @@ footer {
    
     .booking-button.sms,  .booking-button.whatsapp {
         font-size: 12px!important;
-       background:#006A5F;
-      color: white;   border-radius: 10px;text-decoration: underline; text-underline-position: under;text-decoration-thickness: .7px;    padding: 1px 6px;font-style: italic;
-      border: 1px solid var(--light-color);
-            box-shadow: 1px 1px 15px  rgba(0,0,50,.5);
+       background:linear-gradient(0deg, var(--secondary) 15%,#0Bd2f2 89%) ;
+      color:white;   border-radius: 10px;text-decoration: underline; text-underline-position: under;text-decoration-thickness: .7px;    padding: 1px 16px 4px 15px;font-style: italic;
+      border: 1px solid var(--body-color);
+            box-shadow: .5px 1px 0   var(--light-color);
       }
 
 
@@ -752,6 +817,7 @@ footer {
     @media(min-width:650px){
                .main-image{max-width:80%!important;margin:30px auto!important;border-radius:22px;border:5px double var(--border-light);}
               }
+           
             
   </style>
  </head>
@@ -770,7 +836,24 @@ width="17"
 />حجز موعد
   <!-- أيقونة اليد المتحركة -->
 <span class="hand-icon">👆</span> </a>
-<header class="header-logo">  <div  id="responsiveNav"> </div>
+<header class="header-logo">  
+ 
+    
+<img 
+  src="images/logo11.jpg"
+  alt="شعار العيادة"
+  width="85"
+  height="85"
+  fetchpriority="high"
+  decoding="async"
+/>
+   
+   
+  <div class="header-text">
+    <div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
+    <div class="sub-title"> للأنف والأذن والحنجرة والرأس والعنق</div> </div>
+
+
    <div class="nav-container">
         <button class="more-btn" id="moreBtn">☰</button>
   
@@ -789,19 +872,12 @@ width="17"
       <a href="https://drmokhtarent.org/q&a.html">❓️ أسئلة_شائعة</a>
     </div> </div>
  
-  <div class="header-text">
-    <div class="main-title">عيادة د. مختار الشرعبي الإستشارية</div>
-    <div class="sub-title"> للأنف والأذن والحنجرة والرأس والعنق</div> </div>
-    <img src="images/clinic-logo.png" alt="شعار العيادة"> 
-  </div>
+
+   
      
-  </div></div>
+ 
     </header>
 <main>
- <br>
-      <h1 >نبذة عن د. مختار الشرعبي</h1>
-
-<hr>
 <p style="text-align:center" style="font-size:50%">الموقع الالكتروني الرسمي للعيادة</p>
 
 <div class="booking-buttons">
@@ -812,6 +888,10 @@ width="17"
 <em>drmokhtarent.org</em>
 </a>
 </div></div><hr>
+ <br>
+      <h1 >نبذة عن د. مختار الشرعبي</h1>
+
+
 <div class="container">
   <img src="images/dr.profile.webp" alt="صورة الدكتور مختار الشرعبي" class="main-image"   loading="eager"
   fetchpriority="auto"
@@ -925,14 +1005,24 @@ href="images/A-cert..jpg" target="_blank" aria-label="اطلع على صورة �
     تقديم خدمة طبية متكاملة تقوم على الثقة والدقة والرعاية الإنسانية وبتكاليف <strong>تراعي الظروف المعيشية</strong>  لذوي الدخل المحدود. 
     الرقي بمستوى الخدمات الصحية في محافظة تعز والمحافظات المجاورة وجعل العيادة الخيار الأنسب لكل من يبحث عن أفضل دكتور استشاري متخصص في اليمن.
   </p>
-</div>  <hr>  <br>      <h2 >
+</div>  <hr>  <h2 >تقييمات المرضى للدكتور مختار الشرعبي</h2><br><strong class="author" style="font-size:70%">أفضل إستشاري أنف وأذن وحنجرة في محافظة تعز</strong><br><hr>
+        <div class="highlight-box" ><p>نرحب بجميع مرضانا وزوارنا الكرام ويسعدنا الإطلاع على  ٱراءكم وانطباعاتكم.. .
+</p></div>
+<hr><br> <br> <div  class="main-section"  style=" justify-content: center; margin-bottom: 20px;padding:2px"> <p class="author" 
+  style="color:white;border:0" >
+      في انتضار التحميل ...
+  </p>  <br>    <div class="elfsight-app-5fd1dcb8-4c15-4aa1-bf91-026fb9c3e246" data-elfsight-app-lazy></div></div>
+                           <br><hr>  <br>      <h2 >
         
   آراء وتقييمات المرضى على جوجل</h2>       
  
-  
-  <div style="display: flex; justify-content: center; margin-bottom: 20px;overflow:hidden;box-sizing:border-box">
+  <br><p class="author" 
+  style="color:white;border:0" >
+      في انتضار التحميل ...
+  </p>  <br> 
+  <div  style="display: flex; justify-content: center; margin-bottom: 20px;overflow:hidden;box-sizing:border-box;height:fit-content;margin-top:20px">
    <br>   
-        <div class="elfsight-app-906a74ff-8ce8-484c-8cbd-c2892abc43a6" data-elfsight-app-lazy ></div>
+        <div class="elfsight-app-906a74ff-8ce8-484c-8cbd-c2892abc43a6" data-elfsight-app-lazy  ></div>
       
   </div>   </div>  
  <h2 >📍 موقع العيادة :</h2><section class="main-section">
