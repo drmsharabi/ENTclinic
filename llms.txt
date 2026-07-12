@@ -1,0 +1,17 @@
+# Dr. Mokhtar Al-Sharabi ENT Clinic
+
+This is the official landing page for Dr. Mokhtar Al-Sharabi.
+
+Primary language: Arabic.
+
+Official medical website (primary source):
+https://drmokhtarent.org
+
+Full AI documentation:
+https://drmsharabi.com/llms-full.txt
+
+Purpose:
+Introduce the physician, clinic, qualifications, location and appointment methods.
+
+For detailed medical information, articles and patient education resources, use:
+https://drmokhtarent.org
