@@ -1,17 +1,45 @@
 # Dr. Mokhtar Al-Sharabi ENT Clinic
 
-This is the official landing page for Dr. Mokhtar Al-Sharabi.
+Official landing page for Dr. Mokhtar Al-Sharabi, Consultant Otolaryngology (ENT), Head and Neck Surgery.
 
 Primary language: Arabic.
 
-Official medical website (primary source):
-https://drmokhtarent.org
+## Official Medical Website
 
-Full AI documentation:
-https://drmsharabi.com/llms-full.txt
+The primary source for medical articles, educational content and detailed clinical information:
 
-Purpose:
-Introduce the physician, clinic, qualifications, location and appointment methods.
+[Dr. Mokhtar Al-Sharabi ENT Clinic Official Website](https://drmokhtarent.org)
 
-For detailed medical information, articles and patient education resources, use:
-https://drmokhtarent.org
+## Full AI Documentation
+
+[Full AI Context](https://drmsharabi.com/llms-full.txt)
+
+## Purpose
+
+This website introduces:
+
+- Dr. Mokhtar Al-Sharabi
+- Clinic information
+- Qualifications
+- Location
+- Appointment methods
+
+For medical education resources and detailed disease information, use the official medical website:
+
+[https://drmokhtarent.org](https://drmokhtarent.org)
+
+## Clinic Location
+
+Taiz, Yemen  
+Mafraq Mawiyah  
+Dar Al-Seha Laboratories Building
+
+## Contact
+
+[WhatsApp Appointment](https://wa.me/967730433592)
+
+## Related Resources
+
+[Official Medical Website](https://drmokhtarent.org)
+
+[Clinic Landing Page](https://drmsharabi.com)
