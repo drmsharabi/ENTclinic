@@ -1,0 +1,13 @@
+# تخزين الصور، الخطوط، CSS، و JS لمدة سنة (31536000 ثانية)
+/images/*
+/assets/*
+/*.css
+/*.js
+/*.woff
+/*.woff2
+  Cache-Control: max-age=31536000, immutable
+
+# منع تخزين ملفات HTML نفسها مؤقتاً (لضمان ظهور التحديثات فوراً)
+/*.html
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
