@@ -572,26 +572,15 @@ text-shadow: 0 0  2px  rgba(555, 255, 255, .6) !important;
   footer {  box-shadow: 0 -17px  0  var(--light-color);
     padding: 20px 0 20px 0!important;
   margin: 40px 0!important;
-     border-top: 12px solid var(--body-color);border-radius: 40px 40px 0 0;
+     border-top: 12px solid var(--body-color);border-radius: 40px 40px 0 0;text-align: center;justify-content: center;
 
   
   }
 }
-   .address-container{ position: fixed; bottom:4px; right:0% ;left;8%;font-size: 8.5px; font-weight: bold;background:var(--background-gradient-li);
-                      padding:0 3px 0 15px!important 
-    ;width:100%;font-weight:400!important;color:var(--primary-dark);font-size:2px;border-block:1.5px solid var(--border-color);box-shadow: 0 .3px 0   1px #00d9ff; z-index:9997}
-   .address-card{flex-wrap:nowrap;position: relative;;width:100%;max-width:none;color: var(--primary);
-       ;font-size:8.5px
-   }
-   
 
- @media (min-width: 650px) {
-    .address-container{scale: 1.2;padding: 3px 3px 1px 2px;width:100%;max-width:none;
-      left:8px;right: 10%!important;bottom: 20px;border-block:2.5px solid var(--body-color);box-shadow: 0 3px 0    #00b0cf
-    } .address-card{
-         ;font-size: 19px; padding-right:8px 
-     }
- }
+ 
+
+ 
  
 [class*="Carousel__CarouselArrowControlContainer-sc"]:first-child {
 margin-right: -10px !important;scale:1.1;
@@ -804,8 +793,17 @@ scale:1.5!important;padding: 20px 120px;
 
     }
      .main-image{width:70%!important;max-width:700px;height:auto;display:block;margin:30px auto;border:3px solid var(--body-color);border-radius:15px}
+       .address-card{position: fixed; bottom:4px; right:0% ;left;0;font-size: .5rem; font-weight: 700;background:var(--background-gradient-li);color: black;
+                      padding:0 3px 
+    ;width:100%;color:var(--primary-dark);border-block:1.5px solid var(--border-color);box-shadow: 0 1px 0    #00d9ff; z-index:9997}
+              
     @media(min-width:650px){
                .main-image{max-width:80%!important;margin:30px auto!important;border-radius:22px;border:5px double var(--border-light);}
+               
+
+    .address-card{font-size: 1.3rem!important;padding: 3px 13px 1px 2px;bottom: 17px;border-block:2.5px solid var(--body-color);box-shadow: 0 3px 0    #00b0cf  ;font-size: 22px!important;width: 90%;
+    
+ }
               }
            
             
@@ -1093,11 +1091,11 @@ rel="noopener noreferrer" class="booking-button whatsapp"  style="background:var
     آخر تحديث: </p>
 <p style="color:var(--text-gr)"><time datetime="2026-05-13" >23 يونيو 2026</time>
   </p>
-<hr><div class="address-container">
-        <div class="address-card">ركن مفرق ماوية، مبنى مختبرات دار الصحة، تعز، 
+<hr><div class="address-card"> <span>
+      ركن مفرق ماوية، مبنى مختبرات دار الصحة، تعز، 
      
-        اليمن</div>
-      </div></section>
+        اليمن</span></div>
+   </section>
       </main>
 <footer>
 
