@@ -845,8 +845,7 @@ width="17"
 
 
    <div class="nav-container">
-        <button class="more-btn" id="moreBtn">☰</button>
-  
+       <button class="more-btn" id="moreBtn" aria-label="فتح القائمة">☰</button>
 
     <!-- ال
     قائمة المنسدلة -->
@@ -1134,24 +1133,30 @@ rel="noopener noreferrer" class="booking-button whatsapp"  style="background:var
 
       <div class="sub-title" style="font-size:70%">© 2026 جميع الحقوق محفوظة - عيادة الدكتور/ مختار الشرعبي -- </div><br>
 </footer>
+
  <script>
- 
 const moreBtn = document.getElementById('moreBtn');
 const dropdown = document.getElementById('dropdownMenu');
 
-moreBtn.addEventListener('click', function(e) {
-  e.stopPropagation();
-  dropdown.classList.toggle('show');
-});
+if (moreBtn && dropdown) {
+  moreBtn.onclick = function(e) {
+    e.stopPropagation();
+    dropdown.classList.toggle('show');
+  };
 
-document.addEventListener('click', function(e) {
-  if (!moreBtn.contains(e.target) && !dropdown.contains(e.target)) {
-    dropdown.classList.remove('show');
-  }
-});
+  document.onclick = function(e) {
+    if (!dropdown.contains(e.target) && !moreBtn.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  };
+}
 </script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+eruda.init();
+</script>
  
   </body>
   </html>
